@@ -52,7 +52,7 @@ export default function Organization() {
         “Valley for All” marks the latest project for Leadership Hermosa Beach, a community-based organization that fosters a life-long love for the city by educating existing and potential local leaders. 
       </p>
 
-      <a href="www.lhb.org/">More about LHB</a>
+      <a href="http://www.leadershiphermosa.org/">More about LHB</a>
       <div className="space"></div>
 
     </StyledOrg>

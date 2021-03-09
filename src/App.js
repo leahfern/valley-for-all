@@ -20,7 +20,7 @@ const StyledApp = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .blur {

@@ -35,6 +35,10 @@ const StyledOrg = styled.div`
     font-weight: bold;
     border-radius: 10px;
 
+    :hover {
+      transform: scale(1.1);
+      transition: .5s;
+    }
   }
 
   .space {

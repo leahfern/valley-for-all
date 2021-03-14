@@ -4,7 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -39,6 +39,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	min-height: 100vh;
 }
 ol, ul {
 	list-style: none;

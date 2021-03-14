@@ -4,30 +4,33 @@ import styled from 'styled-components';
 
 const StyledNav = styled.nav`
   position: fixed;
+  top: 0;
   width: 100%;
   height: 50px;
   line-height: 50px;
   display: flex;
   justify-content: space-evenly;
-  margin: auto;
-  color: red;
   background-color: white;
   z-index: 1;
 
   a {
     height: 100%;
-    width: 200px;
     color: green;
     text-transform: uppercase;
     text-decoration: none;
+    width: 20%;
     
     :last-child {
       color: white;
       background-color: green;
+      
+      :hover {
+        background-color: darkgreen;
+      }
     }
 
     :hover {
-      background: green;
+      background: darkgreen;
       color: white;
       transition: .5s;
     }

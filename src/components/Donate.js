@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
+const StyledDonate = styled.div`
+
+`;
+
+
 
 export default function Donate() {
   return (
-    <div className="component-container">
-      
-    </div>
+    <StyledDonate className="component-container">
+
+    </StyledDonate>
   )
 }

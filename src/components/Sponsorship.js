@@ -29,7 +29,7 @@ const StyledSponsorship = styled.div`
   }
 
   h4 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #36454F;
     width: 500px;
     margin: 0 auto;
@@ -97,10 +97,17 @@ const StyledSponsorship = styled.div`
     padding: 1rem .5rem;
     font-size: 1.2rem;
     list-style-image: url({star})
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
   }
   li {
     margin: 1rem 0;
     line-height: 1.5;
+
+    :before {
+      content: faStar
+    }
   }
 
   button {
@@ -127,9 +134,9 @@ const star = <FontAwesomeIcon icon={faStar} />
 
 export default function Sponsorship() {
   const [hidden, setHidden] = useState({
-    platinum: true,
-    gold: true,
-    silver: true
+    platinum: false,
+    gold: false,
+    silver: false
   })
 
   const handleHidden = (e) => {
@@ -153,12 +160,12 @@ export default function Sponsorship() {
           <h4 className="platinum" data-name="platinum" onClick={handleHidden}>PLATINUM - $5,000+</h4>
           <div className={ hidden.platinum ? "hidden" : "default"}>
             <ul>
-              <li>Most prominent, permanent dedication within Valley Park as major supporter of the project</li>
-              <li>Featured inclusion within Sponsors Page on project website including company logo, overview and link </li>
-              <li>Top billing on main event banner to be displayed when final park improvements are unveiled in June</li>
-              <li>Social media recognition as a Platinum Sponsor on Leadership Hermosa Beach channels (i.e. Facebook, Instagram)</li>
-              <li>Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
-              <li>Mention of company as Platinum Sponsor in ongoing outreach to local media</li>
+              <li>{star} Most prominent, permanent dedication within Valley Park as major supporter of the project</li>
+              <li>{star} Featured inclusion within Sponsors Page on project website including company logo, overview and link </li>
+              <li>{star} Top billing on main event banner to be displayed when final park improvements are unveiled in June</li>
+              <li>{star} Social media recognition as a Platinum Sponsor on Leadership Hermosa Beach channels (i.e. Facebook, Instagram)</li>
+              <li>{star} Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
+              <li>{star} Mention of company as Platinum Sponsor in ongoing outreach to local media</li>
             </ul>
             <button>Become a Platinum Sponsor</button>
           </div>
@@ -167,11 +174,11 @@ export default function Sponsorship() {
           <h4 className="gold" data-name="gold" onClick={handleHidden}>GOLD - $2,500+</h4>
           <div className={ hidden.gold ? "hidden" : "default"}>
             <ul>
-              <li>Prominent, permanent recognition within Valley Park as major supporter of this project</li>
-              <li>Featured inclusion within Sponsors Page on project website including company logo and link</li>
-              <li>Secondary billing on main event banner to be displayed when final park improvements are unveiled in June</li>
-              <li>Social media recognition as Gold Sponsor on Leadership Hermosa Beach channels (i.e. Facebook, Instagram)</li>
-              <li>Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
+              <li>{star} Prominent, permanent recognition within Valley Park as major supporter of this project</li>
+              <li>{star} Featured inclusion within Sponsors Page on project website including company logo and link</li>
+              <li>{star} Secondary billing on main event banner to be displayed when final park improvements are unveiled in June</li>
+              <li>{star} Social media recognition as Gold Sponsor on Leadership Hermosa Beach channels (i.e. Facebook, Instagram)</li>
+              <li>{star} Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
             </ul>
             <button>Become a Gold Sponsor</button>
           </div>
@@ -180,8 +187,8 @@ export default function Sponsorship() {
           <h4 className="silver" data-name="silver" onClick={handleHidden}>SILVER - $1,000+</h4>
           <div className={ hidden.silver ? "hidden" : "default"}>
             <ul>
-              <li>Permanent recognition within Valley Park as a major supporter of this project</li>
-              <li>Featured inclusion within Sponsors Page on project website featuring company logo and link</li>
+              <li>{star} Permanent recognition within Valley Park as a major supporter of this project</li>
+              <li>{star} Featured inclusion within Sponsors Page on project website featuring company logo and link</li>
             </ul>
             <button>Become a Silver Sponsor</button>
           </div>

@@ -11,7 +11,7 @@ import parkImg from './assets/images/valley-park.png';
 import Checkout from './components/Checkout';
 
 const StyledApp = styled.div`
-  background-image: linear-gradient(RGBa(5, 90, 25, .5), rgba(4, 66, 19, .5), rgba(5, 90, 25, .5)), url(${parkImg});
+  background-image: linear-gradient(RGBa(5, 90, 25, .5), rgba(12, 12, 12, .7), rgba(5, 90, 25, .5)), url(${parkImg});
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

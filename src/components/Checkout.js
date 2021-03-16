@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PayPalBtn from './PayPalBtn';
 
 import styled from 'styled-components';
+import PayPalTest from './PayPalTest';
 
 const StyledCheckout = styled.div`
   color: white;
@@ -23,6 +24,9 @@ const paymentHandler = () => console.log("Success!");
 
 export default function Checkout(props) {
   const {payAmount, donationType} = props;
+  const [checkout, setCheckout] = useState(false);
+
+  const total = 500
 
   return (
     <StyledCheckout classname="component-container">
@@ -51,11 +55,24 @@ export default function Checkout(props) {
 
       <div className="payment-div">
         <h4>Select a payment type:</h4>
-        <PayPalBtn
+
+        {/* <PayPalBtn
           amount = {payAmount}
           currency = {'USD'}
-          onSuccess={paymentHandler}/>
+          onSuccess={paymentHandler}/> */}
       </div>
+      {(checkout === true) 
+        ? <div className="payment-div">
+          <PayPalTest 
+            total={total}
+          />
+        </div> 
+
+        :<div>
+          <h1>React-PayPal</h1>
+          <button onClick={() => {setCheckout(true)}} className="checkout-button">Checkout</button>
+        </div>
+      }
     </StyledCheckout>
   )
 }

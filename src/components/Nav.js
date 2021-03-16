@@ -15,23 +15,12 @@ const StyledNav = styled.nav`
 
   a {
     height: 100%;
-    color: green;
+    color: RGB(34, 93, 28);
     text-transform: uppercase;
     text-decoration: none;
-    width: 20%;
-    
-    :last-child {
-      color: white;
-      background-color: green;
-      
-      :hover {
-        background-color: darkgreen;
-      }
-    }
+    padding: 0 1rem;
 
     :hover {
-      background: darkgreen;
-      color: white;
       transition: .5s;
     }
   }
@@ -40,9 +29,8 @@ export default function Nav() {
   return (
     <StyledNav>
       <Link to="/">Home</Link>
-      <Link to="/project">Project</Link>
-      <Link to="/organization">Organization</Link>
-      <Link to="/sponsorship">Become a Sponsor</Link>
+      <Link to="/about">About</Link>
+      <Link to="/sponsorship">Sponsor</Link>
       <Link to="/donate">Donate</Link>
     </StyledNav>
   )

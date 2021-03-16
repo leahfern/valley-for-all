@@ -10,9 +10,11 @@ const StyledHome = styled.div`
     color: white;
     letter-spacing: 5px;
     max-width: 90%;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
+    font-weight: 900;
   }
   h3 {
+    font-weight: 700;
     font-size: 1.4rem;
     text-transform: uppercase;
     color: white;
@@ -24,13 +26,12 @@ const StyledHome = styled.div`
   a {
     margin: 3rem auto 1rem auto;
     padding: 1rem;
-    background-color: RGB(196, 35, 42);
+    background-color: RGB(64, 150, 190);
     width: 150px;
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
-
     :hover {
       transform: scale(1.1);
       transition: .5s;
@@ -44,8 +45,8 @@ export default function Home() {
       <div className="hero">
         <div className="blur">
           <h1>Valley For All</h1>
-          <h3>A project by Leadership Hermosa Beach Class of 2021</h3>
-          <Link to="/project">Learn more</Link>
+          <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
+          <Link to="/about">Learn more</Link>
         </div>
       </div>
     </StyledHome>

@@ -1,37 +1,111 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+
 
 const StyledSponsorship = styled.div`
-  color: white;
+  max-width: 90%;
+  margin: 0 auto;
   padding-top: 50px;
+  padding-bottom: 3rem;
+  color: white;
+
+  #levels {
+    padding-top: 2rem;
+  }
 
   h2 {
+    font-weight: 700;
     font-size: 3rem;
-    padding: 1rem .5rem 3rem .5rem;
+    color: white;
+    margin: 5rem auto 3rem auto;
+    text-transform: uppercase;
+  }
+  h4, ul {
+    font-weight: 500;
+    width: 600px;
+    max-width: 100%;
   }
 
   h4 {
     font-size: 2rem;
-    color: red;
-    background: white;
+    color: #36454F;
     width: 500px;
     margin: 0 auto;
-    padding: 0 .5rem;
+    padding: .5rem;
   }
+  h4.platinum {
+    background: 
+    linear-gradient(
+      -72deg,
+      #dedeff,
+      #ffffff 16%,
+      #dedeff 21%,
+      #ffffff 24%,
+      #555564 27%,
+      #dedeff 36%,
+      #ffffff 45%,
+      #ffffff 60%,
+      #dedeff 72%,
+      #ffffff 80%,
+      #dedeff 84%,
+      #555564
+    );
+  }
+  h4.gold {
+    background: 
+    linear-gradient(
+      -72deg,
+      #ffde45,
+      #ffffff 16%,
+      #ffde45 21%,
+      #ffffff 24%,
+      #452100 27%,
+      #ffde45 36%,
+      #ffffff 45%,
+      #ffffff 60%,
+      #ffde45 72%,
+      #ffffff 80%,
+      #ffde45 84%,
+      #452100
+    );
+  }
+  h4.silver {
+    background: 
+    linear-gradient(
+      -72deg,
+      #dedede,
+      #ffffff 16%,
+      #dedede 21%,
+      #ffffff 24%,
+      #454545 27%,
+      #dedede 36%,
+      #ffffff 45%,
+      #ffffff 60%,
+      #dedede 72%,
+      #ffffff 80%,
+      #dedede 84%,
+      #a1a1a1
+    );
+  }
+  
   ul {
     text-align: left;
     width: 500px;
     margin: 0 auto;
     padding: 1rem .5rem;
     font-size: 1.2rem;
+    list-style-image: url({star})
   }
-  .level {
-    padding: 1rem 0;
+  li {
+    margin: 1rem 0;
+    line-height: 1.5;
   }
 
   button {
     background-color: RGB(64, 150, 190);
-    margin: 1rem auto 1rem auto;
+    margin: 1rem auto 3rem auto;
     padding: .8rem;
     color: white;
     text-decoration: none;
@@ -44,40 +118,73 @@ const StyledSponsorship = styled.div`
       transition: .5s;
     }
   }
+  .hidden {
+    display: none;
+  }
 `;
+const star = <FontAwesomeIcon icon={faStar} />
+
 
 export default function Sponsorship() {
+  const [hidden, setHidden] = useState({
+    platinum: true,
+    gold: true,
+    silver: true
+  })
+
+  const handleHidden = (e) => {
+    const name = e.target.dataset.name
+    hidden[name] === true
+    ? setHidden({
+      ...hidden,
+      [name]: false
+    })
+    : setHidden({
+      ...hidden,
+      [name]: true
+    })
+  }
+
   return (
     <StyledSponsorship className="component-container">
-      <h2>Sponsorship Opportunities</h2>
+      <h2>Valley For All <br /> Sponsorship Opportunities</h2>
       <section id="levels">
-      <div className="level">
-          <h4>Level 1 Sponsor - $1,000 +</h4>
+        <div className="level">
+          <h4 className="platinum" data-name="platinum" onClick={handleHidden}>PLATINUM - $5,000+</h4>
+          <div className={ hidden.platinum ? "hidden" : "default"}>
             <ul>
-              <li>Permanent recognition in the park</li>
-              <li>Social media mentions</li>
+              <li>Most prominent, permanent dedication within Valley Park as major supporter of the project</li>
+              <li>Featured inclusion within Sponsors Page on project website including company logo, overview and link </li>
+              <li>Top billing on main event banner to be displayed when final park improvements are unveiled in June</li>
+              <li>Social media recognition as a Platinum Sponsor on Leadership Hermosa Beach channels (i.e. Facebook, Instagram)</li>
+              <li>Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
+              <li>Mention of company as Platinum Sponsor in ongoing outreach to local media</li>
             </ul>
-            <button>Become a Level 1 Sponsor</button>
+            <button>Become a Platinum Sponsor</button>
+          </div>
         </div>
         <div className="level">
-          <h4>Level 2 Sponsor - $2,000 +</h4>
+          <h4 className="gold" data-name="gold" onClick={handleHidden}>GOLD - $2,500+</h4>
+          <div className={ hidden.gold ? "hidden" : "default"}>
             <ul>
-              <li>Permanent recognition in the park</li>
-              <li>Social media mentions</li>
-              <li>Dedicated social media posts</li>
-              <li></li>
+              <li>Prominent, permanent recognition within Valley Park as major supporter of this project</li>
+              <li>Featured inclusion within Sponsors Page on project website including company logo and link</li>
+              <li>Secondary billing on main event banner to be displayed when final park improvements are unveiled in June</li>
+              <li>Social media recognition as Gold Sponsor on Leadership Hermosa Beach channels (i.e. Facebook, Instagram)</li>
+              <li>Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
             </ul>
-            <button>Become a Level 2 Sponsor</button>
+            <button>Become a Gold Sponsor</button>
+          </div>
         </div>
         <div className="level">
-          <h4>Level 3 Sponsor - $5,000 +</h4>
+          <h4 className="silver" data-name="silver" onClick={handleHidden}>SILVER - $1,000+</h4>
+          <div className={ hidden.silver ? "hidden" : "default"}>
             <ul>
-              <li>Permanent recognition in the park</li>
-              <li>Social media mentions</li>
-              <li>Dedicated social media posts</li>
-              <li>Banner at unveiling event</li>
+              <li>Permanent recognition within Valley Park as a major supporter of this project</li>
+              <li>Featured inclusion within Sponsors Page on project website featuring company logo and link</li>
             </ul>
-            <button>Become a Level 3 Sponsor</button>
+            <button>Become a Silver Sponsor</button>
+          </div>
         </div>
       </section>
     </StyledSponsorship>

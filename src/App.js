@@ -3,8 +3,7 @@ import './App.css';
 import Nav from './components/Nav';
 import {Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
-import Project from './components/Project';
-import Organization from './components/Organization.js';
+import About from './components/About';
 import Sponsorship from './components/Sponsorship.js';
 import Donate from './components/Donate';
 import styled from 'styled-components';
@@ -12,42 +11,42 @@ import parkImg from './assets/images/valley-park.png';
 import Checkout from './components/Checkout';
 
 const StyledApp = styled.div`
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4), rgba(0, 0, 0, 0)), url(${parkImg});
+  background-image: linear-gradient(RGBa(5, 90, 25, .5), rgba(0, 90, 0, .5), rgba(5, 90, 25, .5)), url(${parkImg});
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  font-family: 'Roboto Slab', serif;
 
-
+  .navPadding{
+    height: 50px;
+  }
   .blur {
-    margin-top: 50px;
-    height: 100%;
-    backdrop-filter: blur(6px);
+    min-height: 100vh;
+    // backdrop-filter: blur(20px);
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
   }
 
-`
 
+`
 
 function App() {
   return (
     <StyledApp className="App">
-      <Nav />
-        <div className="blur">
+      <div className="blur">
+        <Nav /> 
+        <div className="content">
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/project" component={Project} />
-            <Route path="/organization" component={Organization} />
+            <Route path="/about" component={About} />
             <Route path="/sponsorship" component={Sponsorship}/>
             <Route path="/donate" component={Donate} />
             <Route path="/checkout" component={Checkout} />
           </Switch>
-         </div>
+        </div>
+      </div>
     </StyledApp>
   );
 }

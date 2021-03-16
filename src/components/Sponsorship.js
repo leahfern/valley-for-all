@@ -19,9 +19,15 @@ const StyledSponsorship = styled.div`
     font-weight: 700;
     font-size: 3rem;
     color: white;
-    margin: 5rem auto 3rem auto;
+    margin: 5rem auto 1rem auto;
     text-transform: uppercase;
   }
+  h3 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
   h4, ul {
     font-weight: 500;
     width: 600px;
@@ -98,8 +104,8 @@ const StyledSponsorship = styled.div`
     font-size: 1.2rem;
     list-style-image: url({star})
     margin-left: 0;
-    padding-left: 1em;
-    text-indent: -1em;
+    padding-left: 1.5rem;
+    text-indent: -1.5em;
   }
   li {
     margin: 1rem 0;
@@ -154,7 +160,8 @@ export default function Sponsorship() {
 
   return (
     <StyledSponsorship className="component-container">
-      <h2>Valley For All <br /> Sponsorship Opportunities</h2>
+      <h2>Valley For All</h2>
+      <h3>Sponsorship Opportunities</h3>
       <section id="levels">
         <div className="level">
           <h4 className="platinum" data-name="platinum" onClick={handleHidden}>PLATINUM - $5,000+</h4>

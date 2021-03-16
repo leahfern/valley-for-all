@@ -22,7 +22,7 @@ const StyledApp = styled.div`
   }
   .blur {
     min-height: 100vh;
-    // backdrop-filter: blur(20px);
+    backdrop-filter: blur(3px);
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -29,7 +29,7 @@ const StyledSponsorship = styled.div`
   }
 
   h4, ul {
-    font-weight: 500;
+    font-weight: 400;
     width: 600px;
     max-width: 100%;
   }
@@ -39,7 +39,9 @@ const StyledSponsorship = styled.div`
     color: #36454F;
     width: 500px;
     margin: 0 auto;
-    padding: .5rem;
+    padding: 1rem 0;
+    font-weight: 500;
+    border-radius: 3px;
   }
   h4.platinum {
     background: 
@@ -49,7 +51,7 @@ const StyledSponsorship = styled.div`
       #ffffff 16%,
       #dedeff 21%,
       #ffffff 24%,
-      #555564 27%,
+      #dedeff 27%,
       #dedeff 36%,
       #ffffff 45%,
       #ffffff 60%,
@@ -67,7 +69,7 @@ const StyledSponsorship = styled.div`
       #ffffff 16%,
       #ffde45 21%,
       #ffffff 24%,
-      #452100 27%,
+      #ffde45 27%,
       #ffde45 36%,
       #ffffff 45%,
       #ffffff 60%,
@@ -85,7 +87,7 @@ const StyledSponsorship = styled.div`
       #ffffff 16%,
       #dedede 21%,
       #ffffff 24%,
-      #454545 27%,
+      #999999 27%,
       #dedede 36%,
       #ffffff 45%,
       #ffffff 60%,
@@ -98,7 +100,7 @@ const StyledSponsorship = styled.div`
   
   ul {
     text-align: left;
-    width: 500px;
+    width: 800px;
     margin: 0 auto;
     padding: 1rem .5rem;
     font-size: 1.2rem;
@@ -117,7 +119,7 @@ const StyledSponsorship = styled.div`
   }
 
   button {
-    background-color: RGB(64, 150, 190);
+    background-color: #009FF7;
     margin: 1rem auto 3rem auto;
     padding: .8rem;
     color: white;
@@ -125,15 +127,21 @@ const StyledSponsorship = styled.div`
     font-weight: bold;
     border-radius: 10px;
     border: none;
+    font-size: 1rem;
+    font-family: inherit;
 
     :hover {
       transform: scale(1.1);
       transition: .5s;
     }
+    :focus {
+      outline: none;
+    }
   }
   .hidden {
     display: none;
   }
+
 `;
 const star = <FontAwesomeIcon icon={faStar} />
 

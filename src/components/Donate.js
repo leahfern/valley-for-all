@@ -10,6 +10,12 @@ margin: 0 auto;
 padding-top: 50px;
 padding-bottom: 3rem;
 color: white;
+label {
+  width: 300px;
+}
+input {
+  width: 300px;
+}
 h2 {
   font-weight: 700;
   font-size: 3rem;
@@ -26,6 +32,9 @@ h3 {
   width: 300px;
   max-width: 80%;
   margin: 2rem auto;
+}
+button {
+  margin: 1rem 0;
 }
 `;
 

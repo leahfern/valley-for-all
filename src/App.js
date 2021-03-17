@@ -14,6 +14,7 @@ const StyledApp = styled.div`
   background-image: linear-gradient(RGBa(5, 90, 25, .5), rgba(12, 12, 12, .7), rgba(5, 90, 25, .5)), url(${parkImg});
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center center;
   background-size: cover;
   font-family: 'Roboto Slab', serif;
 

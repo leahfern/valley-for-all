@@ -25,15 +25,17 @@ const StyledNav = styled.nav`
     text-decoration: none;
     padding: 0 1rem;
     border-bottom: 3px solid transparent;
+    z-index: 3;
 
     :hover {
       color: lightgrey;
       transition: .5s;
-      border-bottom: 3px solid RGB(64, 150, 190);
+      border-bottom: 3px solid #009FF7;
     }
   }
   img {
     height: 50px;
+    z-index: 0;
   }
 `
 export default function Nav() {

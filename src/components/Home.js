@@ -26,15 +26,29 @@ const StyledHome = styled.div`
   a {
     margin: 3rem auto 1rem auto;
     padding: 1rem;
-    background-color: RGB(64, 150, 190);
-    width: 150px;
+    background-color: #009FF7;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
     border-radius: 10px;
     :hover {
       transform: scale(1.1);
       transition: .5s;
+    }
+  }
+  @media(min-width: 1600px) {
+    h1 {
+      font-size: 8rem;
+      margin: 3rem auto;
+    }
+    h3 {
+      font-size: 2.5rem;
+    }
+    a {
+      font-size: 2rem;
+      padding: 1.5rem;
+      margin-top: 6rem;
     }
   }
 `

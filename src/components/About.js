@@ -17,11 +17,11 @@ const StyledAbout = styled.div`
   }
   h2, p {
     color: white;
-    width: 600px;
+    width: 800px;
     max-width: 100%;
   }
   p {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.2rem;
     padding: 1rem 0;
     margin: 0 auto;
@@ -29,9 +29,9 @@ const StyledAbout = styled.div`
   }
   iframe {
     margin: 3rem 0;
-    height: 400px;
+    height: 50vw;
+    max-height: 580px;
     max-width: 90%;
-    width: 600px;
   }
 `
 
@@ -91,8 +91,7 @@ export default function About() {
       <p className="lastp">
         Encouraging community engagement, “Valley for All” will feature upgraded amenities, improved area conditions and a more functional space for all park-goers in Valley Park.
       </p>
-
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQeIIT9XxrwtVq5dtXu0flVXcKGLS88PLmdXSVXrQ8cBLKflxsu4ESnJUrQ5mroA0b5Fcqh_jki35y2/embed?start=true&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Valley For All slideshow"></iframe>
+      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQeIIT9XxrwtVq5dtXu0flVXcKGLS88PLmdXSVXrQ8cBLKflxsu4ESnJUrQ5mroA0b5Fcqh_jki35y2/embed?start=false&loop=false&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Valley For All slideshow"></iframe>
 
       <StyledOrg className="component-container">
 

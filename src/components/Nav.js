@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import lhbLogo from '../assets/images/lhb-logo.png';
 
 const StyledNav = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 2.5%;
   width: 95%;
   margin: 0 auto;
   height: 60px;

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PayPalBtn from './PayPalBtn';
 
 import styled from 'styled-components';
 import PayPalTest from './PayPalTest';
@@ -13,14 +12,6 @@ const StyledCheckout = styled.div`
     color: white;
   }
 `;
-
-// paymentHandler = (details, data) => {
-//   /** Here you can call your backend API
-//     endpoint and update the database */
-//   console.log(details, data);
-// }
-
-const paymentHandler = () => console.log("Success!");
 
 export default function Checkout(props) {
   const {payAmount, donationType} = props;
@@ -73,6 +64,11 @@ export default function Checkout(props) {
           <button onClick={() => {setCheckout(true)}} className="checkout-button">Checkout</button>
         </div>
       }
+      <div className="disclaimers">
+        <p>
+          Leadership Hermosa
+        </p>
+      </div>
     </StyledCheckout>
   )
 }

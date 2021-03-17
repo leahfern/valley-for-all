@@ -52,17 +52,16 @@ export default function PayPalTest(props) {
   }, [total]);
 
   if (paid) {
-    return <StyledTest>Payment successful.!</StyledTest>;
+    return <StyledTest>Payment successful. THANK YOU for your donation!</StyledTest>;
   }
 
   // If any error occurs
   if (error) {
-    return <StyledTest>Error Occurred in processing payment.! Please try again.</StyledTest>;
+    return <StyledTest>Error Occurred in processing payment! Please try again.</StyledTest>;
   }
   
   return (
     <StyledTest>
-      <h4>Total Amount in USD : ${`${props.total}`}</h4>
       <div ref={paypalRef} />
     </StyledTest>
   )

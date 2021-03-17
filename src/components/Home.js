@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom';
 
 const StyledHome = styled.div`
   h1 {
-    padding-top: 1rem;
     font-size: 5rem;
     text-transform: uppercase;
     color: white;
     letter-spacing: 5px;
     max-width: 90%;
-    margin: 50px auto 0 auto;
+    // margin: 50px auto 0 auto;
+    margin: 0 auto;
     font-weight: 900;
   }
   h3 {

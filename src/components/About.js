@@ -11,7 +11,7 @@ const StyledAbout = styled.div`
   h2 {
     font-size: 3rem;
     color: white;
-    margin: 5rem auto 3rem auto;
+    margin: 3rem auto 3rem auto;
     text-transform: uppercase;
     font-weight: 700;
   }

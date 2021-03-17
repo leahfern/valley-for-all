@@ -21,8 +21,7 @@ const StyledApp = styled.div`
     height: 50px;
   }
   .blur {
-    min-height: 100vh;
-    // backdrop-filter: blur(3px);
+    min-height: calc(100vh - 60px);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -35,8 +34,8 @@ const StyledApp = styled.div`
 function App() {
   return (
     <StyledApp className="App">
+      <Nav /> 
       <div className="blur">
-        <Nav /> 
         <div className="content">
           <Switch>
             <Route exact path="/" component={Home} />

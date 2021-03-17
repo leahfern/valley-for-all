@@ -37,6 +37,15 @@ const StyledNav = styled.nav`
     height: 50px;
     z-index: 0;
   }
+  @media(max-width: 615px) {
+    justify-content: center;
+    a {
+      font-size: .8rem;
+    }
+    .links {
+      width: 100%;
+    }
+  }
 `
 export default function Nav() {
   return (

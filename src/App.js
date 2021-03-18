@@ -43,7 +43,8 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/sponsorship" component={Sponsorship}/>
-            <Route path="/donate" component={MailChecks} />
+            <Route exact path="/donate" component={Donate} />
+            <Route exact path="/donate/check" component={MailChecks} />
           </Switch>
         </div>
       </div>

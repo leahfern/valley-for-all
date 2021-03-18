@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import styled from 'styled-components';
 import PayPalTest from './PayPalTest';
-
 
 const StyledDonate = styled.div`
 max-width: 90%;
@@ -10,7 +9,7 @@ margin: 0 auto;
 padding-top: 50px;
 color: white;
 label {
-  width: 300px;
+  font-weight: bold;
 }
 input {
   width: 100%;
@@ -21,7 +20,7 @@ input {
   line-height: 1.2;
   border: none;
   background: transparent;
-  margin: 0 auto 1rem;
+  margin: 0 auto 2rem;
   border-bottom 3px solid white;
   font-family: inherit;
   :focus {
@@ -60,7 +59,7 @@ form {
 
 button {
   background-color: #009FF7;
-  margin: 1rem auto 3rem auto;
+  margin: 1rem auto;
   padding: .8rem;
   color: white;
   text-decoration: none;
@@ -85,6 +84,9 @@ button {
 .centered {
   text-align: center;
 }
+.nonprofit {
+  padding-bottom: 3rem;
+}
 `;
 
 const initialValues = {
@@ -98,10 +100,27 @@ export default function Donate() {
   const [checkout, setCheckout] = useState(false);
   const [formValues, setFormValues] = useState(initialValues)
 
-  const handleSubmit = e => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setCheckout(true);
-    //this is where we will send the info captured on the form to be 
+    try {
+      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Sheet1', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify([[formValues.name, formValues.email, formValues.phone, formValues.amount, new Date().toLocaleString()]])
+      });
+      await response.json()
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
   }
 
   return (
@@ -119,20 +138,43 @@ export default function Donate() {
             name="name" 
             type="text"
             placeholder="John Smith"
+            value={formValues.name}
+            onChange={handleChange}
             required
-          /><br />
+          />
         </label>
         <label>
           Email address:
-          <input type="email" name="email" placeholder="john@smith.com" required /><br />
+          <input
+            type="email"
+            name="email"
+            placeholder="john@smith.com"
+            value={formValues.email}
+            onChange={handleChange}
+            required
+          />
         </label>
         <label>
           Phone number:
-          <input type="tel" name="phone" placeholder="310-867-5309"/><br />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="310-867-5309"
+            value={formValues.phone}
+            onChange={handleChange}
+          />
         </label>
         <label>
           Donation amount:
-          <input type="number" name="amount" placeholder="50.00" min="1" required/><br />
+          <input
+            type="number"
+            name="amount"
+            placeholder="50.00"
+            min="1"
+            value={formValues.amount}
+            onChange={handleChange}
+            required
+          />
         </label>
         <div className="centered">
           <button className={checkout ? "checkout-button hidden" : "checkout-button"}>Continue</button>
@@ -147,15 +189,15 @@ export default function Donate() {
       </div>
       {(checkout === true) 
         ? <div className="payment-div">
-          <h4>Select a payment type:</h4>
           <PayPalTest 
             total={formValues.amount}
+            setFormValues={setFormValues}
           />
         </div> 
 
         : ''
       }
-      <p>All Donations are 100% tax deductible. The Leadership Hermosa Beach tax ID no. is 06-1721283<br />
+      <p className="nonprofit">All Donations are 100% tax deductible. The Leadership Hermosa Beach tax ID no. is 06-1721283<br />
       Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254</p>
     </StyledDonate>
   )

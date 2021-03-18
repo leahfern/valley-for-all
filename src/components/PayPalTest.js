@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const StyledTest = styled.div`
   margin: 0 auto;
-
 `
 
 export default function PayPalTest(props) {

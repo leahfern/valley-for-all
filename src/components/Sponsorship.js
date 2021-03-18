@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons'
-
+import {Link} from 'react-router-dom';
 
 const StyledSponsorship = styled.div`
   max-width: 90%;
@@ -62,6 +62,7 @@ const StyledSponsorship = styled.div`
     );
   }
   h4.gold {
+    margin-top: 5rem;
     background: 
     linear-gradient(
       -72deg,
@@ -80,6 +81,7 @@ const StyledSponsorship = styled.div`
     );
   }
   h4.silver {
+    margin-top: 5rem;
     background: 
     linear-gradient(
       -72deg,
@@ -106,6 +108,7 @@ const StyledSponsorship = styled.div`
     font-size: 1.2rem;
     list-style-image: url({star})
     margin-left: 0;
+    margin-bottom: 1rem;
     padding-left: 1.5rem;
     text-indent: -1.5em;
   }
@@ -118,24 +121,18 @@ const StyledSponsorship = styled.div`
     }
   }
 
-  button {
+  a {
+    margin: 1rem auto 1rem auto;
+    padding: 1rem;
     background-color: #009FF7;
-    margin: 1rem auto 3rem auto;
-    padding: .8rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 10px;
-    border: none;
     font-size: 1rem;
-    font-family: inherit;
-
+    border-radius: 10px;
     :hover {
       transform: scale(1.1);
       transition: .5s;
-    }
-    :focus {
-      outline: none;
     }
   }
   .hidden {
@@ -182,7 +179,7 @@ export default function Sponsorship() {
               <li>{star} Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
               <li>{star} Mention of company as Platinum Sponsor in ongoing outreach to local media</li>
             </ul>
-            <button>Become a Platinum Sponsor</button>
+            <Link to="/donate">Become a Platinum Sponsor</Link>
           </div>
         </div>
         <div className="level">
@@ -195,7 +192,7 @@ export default function Sponsorship() {
               <li>{star} Social media recognition as Gold Sponsor on Leadership Hermosa Beach channels (i.e. Facebook, Instagram)</li>
               <li>{star} Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
             </ul>
-            <button>Become a Gold Sponsor</button>
+            <Link to="/donate">Become a Gold Sponsor</Link>
           </div>
         </div>
         <div className="level">
@@ -205,7 +202,7 @@ export default function Sponsorship() {
               <li>{star} Permanent recognition within Valley Park as a major supporter of this project</li>
               <li>{star} Featured inclusion within Sponsors Page on project website featuring company logo and link</li>
             </ul>
-            <button>Become a Silver Sponsor</button>
+            <Link to="/donate">Become a Silver Sponsor</Link>
           </div>
         </div>
       </section>

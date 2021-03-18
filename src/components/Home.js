@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import thermometer from '../assets/images/thermometer.png';
 
 const StyledHome = styled.div`
   h1 {
@@ -10,7 +11,7 @@ const StyledHome = styled.div`
     letter-spacing: 5px;
     max-width: 90%;
     // margin: 50px auto 0 auto;
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
     font-weight: 900;
   }
   h3 {
@@ -24,7 +25,7 @@ const StyledHome = styled.div`
 
   }
   a {
-    margin: 3rem auto 1rem auto;
+    margin: 1rem auto 1rem auto;
     padding: 1rem;
     background-color: #009FF7;
     color: white;
@@ -32,23 +33,40 @@ const StyledHome = styled.div`
     font-weight: bold;
     font-size: 1rem;
     border-radius: 10px;
+    text-transform: uppercase;
     :hover {
       transform: scale(1.1);
       transition: .5s;
     }
   }
+  img {
+    width: 600px;
+    max-width: 90%;
+    padding-bottom: 2rem;
+    margin: 2rem auto;
+    border-bottom: 5px solid #009FF7; 
+  }
+  @media(max-width: 615px) {
+    h1 {
+      margin-top: 2rem;
+      font-size: 4rem;
+    }
+  }
   @media(min-width: 1600px) {
     h1 {
-      font-size: 8rem;
-      margin: 3rem auto;
+      font-size: 7rem;
+      margin: 2rem auto;
     }
     h3 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     a {
-      font-size: 2rem;
+      font-size: 1.5rem;
       padding: 1.5rem;
-      margin-top: 6rem;
+      margin: 2rem auto;
+    }
+    img {
+      width: 700px;
     }
   }
 `
@@ -60,7 +78,8 @@ export default function Home() {
         <div className="blur">
           <h1>Valley For All</h1>
           <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
-          <Link to="/about">Learn more</Link>
+          <img src={thermometer} alt="fundraising status" />
+          <Link to="/donate">Donate today</Link>
         </div>
       </div>
     </StyledHome>

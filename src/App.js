@@ -9,6 +9,7 @@ import Donate from './components/Donate';
 import styled from 'styled-components';
 import parkImg from './assets/images/valley-park.png';
 import Checkout from './components/Checkout';
+import MailChecks from './components/MailChecks';
 
 const StyledApp = styled.div`
   background-image: linear-gradient(RGBa(5, 90, 25, .5), rgba(12, 12, 12, .7), rgba(5, 90, 25, .5)), url(${parkImg});
@@ -42,8 +43,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/sponsorship" component={Sponsorship}/>
-            <Route path="/donate" component={Donate} />
-            <Route path="/checkout" component={Checkout} />
+            <Route path="/donate" component={MailChecks} />
           </Switch>
         </div>
       </div>

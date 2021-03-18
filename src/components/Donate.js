@@ -8,13 +8,27 @@ const StyledDonate = styled.div`
 max-width: 90%;
 margin: 0 auto;
 padding-top: 50px;
-padding-bottom: 3rem;
 color: white;
 label {
   width: 300px;
 }
 input {
-  width: 300px;
+  width: 100%;
+  height: 45px;
+  display: block;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.2;
+  border: none;
+  background: transparent;
+  margin: 0 auto 1rem;
+  border-bottom 3px solid white;
+  font-family: inherit;
+  :focus {
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #009FF7;
+  }
 }
 h2 {
   font-weight: 700;
@@ -24,17 +38,52 @@ h2 {
   text-transform: uppercase;
 }
 h3 {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: 2rem;
   text-transform: uppercase;
+}
+ h4 {
+   font-size: 1.2rem;
+   margin-bottom: 1rem;
+ }
+form {
+  text-align: left;
+  width: 600px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 .payment-div {
   width: 300px;
   max-width: 80%;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
+
 button {
-  margin: 1rem 0;
+  background-color: #009FF7;
+  margin: 1rem auto 3rem auto;
+  padding: .8rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  position: center;
+
+  :hover {
+    transform: scale(1.1);
+    transition: .5s;
+  }
+  :focus {
+    outline: none;
+  }
+}
+.hidden {
+  display: none;
+}
+.centered {
+  text-align: center;
 }
 `;
 
@@ -69,22 +118,25 @@ export default function Donate() {
           <input
             name="name" 
             type="text"
+            placeholder="John Smith"
             required
           /><br />
         </label>
         <label>
           Email address:
-          <input type="email" name="email" required/><br />
+          <input type="email" name="email" placeholder="john@smith.com" required /><br />
         </label>
         <label>
           Phone number:
-          <input type="tel" name="phone" /><br />
+          <input type="tel" name="phone" placeholder="310-867-5309"/><br />
         </label>
         <label>
           Donation amount:
-          <input type="number" name="amount" required/><br />
+          <input type="number" name="amount" placeholder="50.00" min="1" required/><br />
         </label>
-        <button className="checkout-button">Continue</button>
+        <div className="centered">
+          <button className={checkout ? "checkout-button hidden" : "checkout-button"}>Continue</button>
+        </div>
       </form>
 
       <div className="payment-div">
@@ -103,6 +155,8 @@ export default function Donate() {
 
         : ''
       }
+      <p>All Donations are 100% tax deductible. The Leadership Hermosa Beach tax ID no. is 06-1721283<br />
+      Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254</p>
     </StyledDonate>
   )
 }

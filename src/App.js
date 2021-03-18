@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Nav from './components/Nav';
 import {Route, Switch} from 'react-router-dom';
@@ -8,7 +7,6 @@ import Sponsorship from './components/Sponsorship.js';
 import Donate from './components/Donate';
 import styled from 'styled-components';
 import parkImg from './assets/images/valley-park.png';
-import Checkout from './components/Checkout';
 import MailChecks from './components/MailChecks';
 
 const StyledApp = styled.div`
@@ -23,13 +21,12 @@ const StyledApp = styled.div`
     height: 50px;
   }
   .blur {
-    min-height: calc(100vh - 60px);
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
 
 `
 

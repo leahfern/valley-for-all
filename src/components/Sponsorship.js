@@ -19,7 +19,7 @@ const StyledSponsorship = styled.div`
     font-weight: 700;
     font-size: 3rem;
     color: white;
-    margin: 3rem auto 1rem auto;
+    margin: 9rem auto 1rem auto;
     text-transform: uppercase;
   }
   h3 {

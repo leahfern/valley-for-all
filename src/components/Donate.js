@@ -6,8 +6,8 @@ import PayPalTest from './PayPalTest';
 const StyledDonate = styled.div`
 max-width: 90%;
 margin: 0 auto;
-padding-top: 50px;
 color: white;
+padding-top: 30px;
 label {
   font-weight: bold;
 }
@@ -33,7 +33,7 @@ h2 {
   font-weight: 700;
   font-size: 3rem;
   color: white;
-  margin: 3rem auto 1rem auto;
+  margin: 10rem auto 1rem auto;
   text-transform: uppercase;
 }
 h3 {

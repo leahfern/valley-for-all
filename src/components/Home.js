@@ -10,8 +10,7 @@ const StyledHome = styled.div`
     color: white;
     letter-spacing: 5px;
     max-width: 90%;
-    // margin: 50px auto 0 auto;
-    margin: 2rem auto 0 auto;
+    margin: 11rem auto 0 auto;
     font-weight: 900;
   }
   h3 {
@@ -46,16 +45,22 @@ const StyledHome = styled.div`
     margin: 2rem auto;
     border-bottom: 5px solid #009FF7; 
   }
-  @media(max-width: 615px) {
+  @media(max-width: 787px) {
     h1 {
-      margin-top: 2rem;
+      margin-top: 11rem;
       font-size: 4rem;
+    }
+  }
+  @media(max-width: 410px ) {
+    h1 {
+      font-size: 3.5rem;
     }
   }
   @media(min-width: 1600px) {
     h1 {
-      font-size: 7rem;
-      margin: 2rem auto;
+      font-size: 6.5rem;
+      margin-bottom: .5rem;
+      margin-top: 10rem;
     }
     h3 {
       font-size: 2rem;

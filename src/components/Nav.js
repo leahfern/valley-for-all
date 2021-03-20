@@ -67,10 +67,11 @@ width: 100%;
     }
   }
   .logo-container {
-    padding: 0 2rem;
+    padding-left: 3rem;
   }
   .donate {
     width: 200px;
+    padding-right: 3rem;
     a {
       border: none;
       background: green;
@@ -121,6 +122,10 @@ width: 100%;
     }
     .bottom-nav {
       justify-content: center;
+
+      .logo-container {
+        padding: 0;
+      }
     }
   }
   @media(max-width: 500px ) {
@@ -128,9 +133,11 @@ width: 100%;
       justify-content: space-evenly;
     }
     .donate {
-      width: auto;
+      width: 25%;
       margin: 0;
-      margin-left: 5px;
+      margin-left: 0;
+      // padding-right: .5rem;
+      text-align: left;
       a {
         margin: 0;
         line-height: 1.5;
@@ -138,13 +145,13 @@ width: 100%;
       }
     }
     .links {
-      width: 60%
+      width: 75%;
       padding: 0;
       margin: 0;
-      justify-content: space-between;
+      justify-content: space-evenly;
       a {
         margin: 0;
-        padding: .25rem;
+        padding: 0;
       }
     }
     

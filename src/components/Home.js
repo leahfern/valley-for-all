@@ -19,7 +19,7 @@ const StyledHome = styled.div`
     text-transform: uppercase;
     color: white;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: .5rem 0;
     max-width: 90%;
 
   }
@@ -51,9 +51,13 @@ const StyledHome = styled.div`
       font-size: 4rem;
     }
   }
-  @media(max-width: 410px ) {
+  @media(max-width: 500px ) {
     h1 {
-      font-size: 3.5rem;
+      margin-top: 9rem;
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 1rem;
     }
   }
   @media(min-width: 1600px) {
@@ -64,6 +68,8 @@ const StyledHome = styled.div`
     }
     h3 {
       font-size: 1.8rem;
+      padding: 0;
+      padding-bottom: .5rem;
     }
     a {
       font-size: 1.5rem;

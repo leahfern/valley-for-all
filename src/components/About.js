@@ -56,6 +56,7 @@ const StyledOrg = styled.div`
   img {
     width: 300px;
     padding: 1rem 0;
+    max-width: 100%;
   }
 
   a {

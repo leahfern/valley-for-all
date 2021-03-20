@@ -58,12 +58,12 @@ const StyledHome = styled.div`
   }
   @media(min-width: 1600px) {
     h1 {
-      font-size: 6.5rem;
+      font-size: 6rem;
       margin-bottom: .5rem;
-      margin-top: 10rem;
+      margin-top: 11rem;
     }
     h3 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     a {
       font-size: 1.5rem;

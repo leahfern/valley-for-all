@@ -90,7 +90,7 @@ width: 100%;
     justify-content: space-between;
     a {
       font-size: .8rem;
-      margin: 0;
+      margin: 0 1.5rem;
     }
     .logo-container {
       width: 100%;
@@ -103,7 +103,7 @@ width: 100%;
       margin: 0;
 
       a {
-        margin: 0;
+        margin: 0 1.5rem;
       }
     }
     .donate {
@@ -112,7 +112,9 @@ width: 100%;
       margin: 0;
     }
     .top-nav {
-      
+      li {
+        font-size: .9rem;
+      }
       a {
         font-size: 1.2rem;
       }
@@ -121,16 +123,29 @@ width: 100%;
       justify-content: center;
     }
   }
-  @media(max-width: 410px ) {
+  @media(max-width: 500px ) {
+    .bottom-nav {
+      justify-content: space-evenly;
+    }
     .donate {
       width: auto;
-      padding: 0;
-      padding-right: 1rem;
+      margin: 0;
+      margin-left: 5px;
+      a {
+        margin: 0;
+        line-height: 1.5;
+        padding: .25rem;
+      }
     }
     .links {
       padding: 0;
-      padding-left: .5rem;
+      margin: 0;
+      a {
+        margin: 0;
+        padding: .25rem;
+      }
     }
+    
   }
   @media(min-width: 1600px) {
     a {

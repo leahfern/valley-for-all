@@ -138,8 +138,10 @@ width: 100%;
       }
     }
     .links {
+      width: 60%
       padding: 0;
       margin: 0;
+      justify-content: space-between;
       a {
         margin: 0;
         padding: .25rem;

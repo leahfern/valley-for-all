@@ -16,9 +16,15 @@ width: 100%;
     background: #009FF7;
     font-size: 1rem;
     font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2.5;
     a {
       color: white;
       font-size: 1.2rem;
+      padding: 0;
+      margin: .5rem;
+      border: none;
       :hover {
         border: none;
         color: lightgrey;
@@ -28,10 +34,9 @@ width: 100%;
       display: flex;
       margin: 0 2rem;
       align-items: center;
-      line-height: 2;
     }
-    li, a {
-      margin: 0 .15rem;
+    .email {
+      margin: 0 2rem;
     }
   }
   .bottom-nav {
@@ -59,6 +64,12 @@ width: 100%;
     z-index: 3;
     font-size: 1rem;
     margin: 0 1rem;
+    :first-child {
+      line-height: 1.5;
+    }
+    :nth-child(2) {
+      line-height: 1.5;
+    }
 
     :hover {
       color: darkgreen;
@@ -113,11 +124,12 @@ width: 100%;
       margin: 0;
     }
     .top-nav {
-      li {
-        font-size: .9rem;
-      }
+      font-size: .9rem;
       a {
         font-size: 1.2rem;
+      }
+      .email {
+        display: none;
       }
     }
     .bottom-nav {
@@ -175,10 +187,13 @@ export default function Nav() {
     <StyledNav>
       <div className="top-nav">
         <ul>
-        <li>Follow Us On </li>
-        <li><a href="https://www.facebook.com/ValleyforAll">{facebook}</a></li>
-        {/* <li><a href="#">{insta}</a></li> */}
+          <li>Follow Us On: </li>
+          <li><a href="https://www.facebook.com/ValleyforAll">{facebook}</a></li>
+          <li><a href="https://www.instagram.com/ValleyForAll">{insta}</a></li>
         </ul>
+        <div className="email">
+          ValleyForAll@gmail.com
+        </div>
       </div>
       <div className="bottom-nav">
         <div className="logo-container">
@@ -187,7 +202,7 @@ export default function Nav() {
         <div className = "links">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/sponsorship">Sponsor</Link>
+          <Link to="/sponsorship">Become A<br />Sponsor</Link>
         </div>
         <div className="donate">
           <Link to="/donate">Donate</Link>

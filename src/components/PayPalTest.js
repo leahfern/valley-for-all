@@ -37,7 +37,7 @@ const StyledTest = styled.div`
 export default function PayPalTest(props) {
   const [paid, setPaid] = React.useState(false);
   const [error, setError] = React.useState(null);
-  const { total, setFormValues } = props;
+  const { total, setFormValues, type } = props;
 
   const paypalRef = React.useRef();
   
@@ -51,7 +51,7 @@ export default function PayPalTest(props) {
             intent: "CAPTURE",
             purchase_units: [
               {
-                description: "Valley For All",
+                description: `Valley For All ${type}`,
                 amount: {
                   currency_code: "USD",
                   value: total,

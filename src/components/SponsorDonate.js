@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 import styled from 'styled-components';
 import PayPalTest from './PayPalTest';
 
@@ -87,30 +86,51 @@ button {
 .nonprofit {
   padding-bottom: 3rem;
 }
+.level {
+  width: 100%;
+  text-indent: 1rem;
+
+  :first-child {
+    margin-top: 1rem;
+  }
+  label {
+    font-weight: 400;
+  }
+}
+.radio {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  margin-right: .5rem;
+}
 `;
 
 const initialValues = {
-  name: '',
+  companyName: '',
+  contactName: '',
+  contactTitle: '',
   email: '',
   phone: '',
   amount: '',
+  level: ''
 }
 
-export default function Donate() {
+export default function SponsorDonate() {
   const [checkout, setCheckout] = useState(false);
   const [formValues, setFormValues] = useState(initialValues)
 
+  const { companyName, contactName, contactTitle, email, phone, level, amount } = formValues;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setCheckout(true);
     try {
-      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Individual', {
+      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Sponsors', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify([[formValues.name, formValues.email, formValues.phone, formValues.amount, new Date().toLocaleString()]])
+        body: JSON.stringify([[companyName, contactName, contactTitle, email, phone, level, amount, new Date().toLocaleString()]])
       });
       await response.json()
     } catch (err) {
@@ -119,8 +139,10 @@ export default function Donate() {
   }
 
   const handleChange = e => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+    const { name, value, type, checked } = e.target;
+    const newValue = type === 'checkbox' ? checked : value
+
+    setFormValues({ ...formValues, [name]: newValue });
   }
 
   return (
@@ -129,22 +151,44 @@ export default function Donate() {
         VALLEY FOR ALL
       </h2>
       <h3>
-        DONATE
+        SPONSOR PAYMENT
       </h3>
       <form onSubmit={handleSubmit}>
-        <label>
-          Name:
+      <label>
+          Business/Organization Name:
           <input
-            name="name" 
+            name="companyName" 
             type="text"
-            placeholder="John Smith"
-            value={formValues.name}
+            placeholder="ABC Corp"
+            value={formValues.companyName}
             onChange={handleChange}
             required
           />
         </label>
         <label>
-          Email address:
+          Contact Name:
+          <input
+            name="contactName" 
+            type="text"
+            placeholder="John Smith"
+            value={formValues.contactName}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Contact Title:
+          <input
+            name="contactTitle" 
+            type="text"
+            placeholder="CFO"
+            value={formValues.contactTitle}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Contact email address:
           <input
             type="email"
             name="email"
@@ -155,7 +199,7 @@ export default function Donate() {
           />
         </label>
         <label>
-          Phone number:
+          Contact phone number:
           <input
             type="tel"
             name="phone"
@@ -165,11 +209,56 @@ export default function Donate() {
           />
         </label>
         <label>
+          Sponsorship Level:
+          <div className="level">
+            <input
+              className="radio"
+              type="radio"
+              name="level"
+              value="platinum"
+              id="platinum"
+              checked={formValues.level === "platinum"}
+              onChange={handleChange}
+            />
+            <label for="platinum">
+              Platinum - $5,000 +
+            </label>
+          </div>
+          <div className="level">
+            <input
+              className="radio"
+              type="radio"
+              name="level"
+              value="gold"
+              id="gold"
+              checked={formValues.level === "gold"}
+              onChange={handleChange}
+            />
+            <label for="gold">
+              Gold - $2,500 +
+            </label>
+          </div>
+          <div className="level">
+            <input
+              className="radio"
+              type="radio"
+              name="level"
+              value="silver"
+              id="silver"
+              checked={formValues.level === "silver"}
+              onChange={handleChange}
+            />
+            <label for="silver">
+              Silver - $1,000 +
+            </label>
+          </div>
+        </label>
+        <label>
           Donation amount:
           <input
             type="number"
             name="amount"
-            placeholder="50.00"
+            placeholder="1,000.00"
             min="1"
             value={formValues.amount}
             onChange={handleChange}
@@ -192,10 +281,9 @@ export default function Donate() {
           <PayPalTest 
             total={formValues.amount}
             setFormValues={setFormValues}
-            type="Donation"
+            type={`${formValues.level} Sponsorship`}
           />
         </div> 
-
         : ''
       }
       <p className="nonprofit">All Donations are 100% tax deductible. The Leadership Hermosa Beach tax ID no. is 06-1721283<br />

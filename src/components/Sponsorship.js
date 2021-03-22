@@ -179,7 +179,7 @@ export default function Sponsorship() {
               <li>{star} Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
               <li>{star} Mention of company as Platinum Sponsor in ongoing outreach to local media</li>
             </ul>
-            <Link to="/donate">Become a Platinum Sponsor</Link>
+            <Link to="/sponsorship/payment">Become a Platinum Sponsor</Link>
           </div>
         </div>
         <div className="level">
@@ -192,7 +192,7 @@ export default function Sponsorship() {
               <li>{star} Social media recognition as Gold Sponsor on Leadership Hermosa Beach channels (i.e. Facebook, Instagram)</li>
               <li>{star} Inclusion in Leadership Hermosa Beach email newsletter to current and past members</li>
             </ul>
-            <Link to="/donate">Become a Gold Sponsor</Link>
+            <Link to="/sponsorship/payment">Become a Gold Sponsor</Link>
           </div>
         </div>
         <div className="level">
@@ -202,7 +202,7 @@ export default function Sponsorship() {
               <li>{star} Permanent recognition within Valley Park as a major supporter of this project</li>
               <li>{star} Featured inclusion within Sponsors Page on project website featuring company logo and link</li>
             </ul>
-            <Link to="/donate">Become a Silver Sponsor</Link>
+            <Link to="/sponsorship/payment">Become a Silver Sponsor</Link>
           </div>
         </div>
       </section>

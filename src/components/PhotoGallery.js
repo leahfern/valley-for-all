@@ -3,6 +3,30 @@ import Gallery from 'react-grid-gallery';
 import styled from 'styled-components';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import img1 from '../assets/images/gallery/img-1-lg.jpg';
+import img1Thumb from '../assets/images/gallery/img-1-thumb.jpg';
+import img2 from '../assets/images/gallery/img-2-lg.jpg';
+import img2Thumb from '../assets/images/gallery/img-2-thumb.jpg';
+import img3 from '../assets/images/gallery/img-3-lg.jpg';
+import img3Thumb from '../assets/images/gallery/img-3-thumb.jpg';
+import img4 from '../assets/images/gallery/img-4-lg.jpg';
+import img4Thumb from '../assets/images/gallery/img-4-thumb.jpg';
+import img5 from '../assets/images/gallery/img-5-lg.jpg';
+import img5Thumb from '../assets/images/gallery/img-5-thumb.jpg';
+import img6 from '../assets/images/gallery/img-6-lg.jpg';
+import img6Thumb from '../assets/images/gallery/img-6-thumb.jpg';
+import img7 from '../assets/images/gallery/img-7-lg.jpg';
+import img7Thumb from '../assets/images/gallery/img-7-thumb.jpg';
+import img8 from '../assets/images/gallery/img-8-lg.jpg';
+import img8Thumb from '../assets/images/gallery/img-8-thumb.jpg';
+import img9 from '../assets/images/gallery/img-9-lg.jpg';
+import img9Thumb from '../assets/images/gallery/img-9-thumb.jpg';
+import img10 from '../assets/images/gallery/img-10-lg.jpg';
+import img10Thumb from '../assets/images/gallery/img-10-thumb.jpg';
+import img11 from '../assets/images/gallery/img-11-lg.jpg';
+import img11Thumb from '../assets/images/gallery/img-11-thumb.jpg';
+import img12 from '../assets/images/gallery/img-12-lg.jpg';
+import img12Thumb from '../assets/images/gallery/img-12-thumb.jpg';
 
 
 export default class PhotoGallery extends React.Component {
@@ -53,74 +77,74 @@ PhotoGallery.propTypes = {
 PhotoGallery.defaultProps = {
   images: [
       {
-          src: "https://drive.google.com/uc?export=view&id=1GGE7P4fUuuxGuD23wWTcL4TRLZe4XRWg",
-          thumbnail: "https://drive.google.com/uc?export=view&id=1GGE7P4fUuuxGuD23wWTcL4TRLZe4XRWg",
+          src: img1,
+          thumbnail: img1Thumb,
+          thumbnailWidth: 240,
+          thumbnailHeight: 320
+      },
+      {
+          src: img2,
+          thumbnail: img2Thumb,
           thumbnailWidth: 320,
           thumbnailHeight: 240
       },
       {
-        src: "https://drive.google.com/uc?export=view&id=109mXNTiXxORasQPwk_FuIzUPuqiwNBsw",
-        thumbnail: "https://drive.google.com/uc?export=view&id=109mXNTiXxORasQPwk_FuIzUPuqiwNBsw",
-        thumbnailWidth: 240,
-        thumbnailHeight: 320
-      },
-      {
-          src: "https://drive.google.com/uc?export=view&id=1XjxYlBWvjxkh_ehMW4kzDxBOFP3qOuRS",
-          thumbnail: "https://drive.google.com/uc?export=view&id=1XjxYlBWvjxkh_ehMW4kzDxBOFP3qOuRS",
+          src: img3,
+          thumbnail: img3Thumb,
           thumbnailWidth: 320,
           thumbnailHeight: 240
       },
       {
-          src: "https://drive.google.com/uc?export=view&id=1CojqVajB0eDawdxLWkR9qlvXz3pNy_Y5",
-          thumbnail: "https://drive.google.com/uc?export=view&id=1CojqVajB0eDawdxLWkR9qlvXz3pNy_Y5",
+          src: img4,
+          thumbnail: img4Thumb,
           thumbnailWidth: 320,
           thumbnailHeight: 240
       },
       {
-          src: "https://drive.google.com/uc?export=view&id=1DQ00JOxrFJRx3SXT8LScywU_Lbp0fTNt",
-          thumbnail: "https://drive.google.com/uc?export=view&id=1DQ00JOxrFJRx3SXT8LScywU_Lbp0fTNt",
+          src: img5,
+          thumbnail: img5Thumb,
           thumbnailWidth: 320,
           thumbnailHeight: 240
       },
       {
-          src: "https://drive.google.com/uc?export=view&id=16Btv24dIgKMwJb-aHgEpMAxJEfP4knJY",
-          thumbnail: "https://drive.google.com/uc?export=view&id=16Btv24dIgKMwJb-aHgEpMAxJEfP4knJY",
+          src: img6,
+          thumbnail: img6Thumb,
           thumbnailWidth: 320,
           thumbnailHeight: 240
       },
       {
-          src: "https://drive.google.com/uc?export=view&id=1mQMToNhW8K2VvJR_SNu4ShHNS7I2Yvrl",
-          thumbnail: "https://drive.google.com/uc?export=view&id=1mQMToNhW8K2VvJR_SNu4ShHNS7I2Yvrl",
-          thumbnailWidth: 320,
-          thumbnailHeight: 240
-      },
-      {
-          src: "https://drive.google.com/uc?export=view&id=1X87cYbSQL1IGfHCBIb6ZrzWYA546VIFl",
-          thumbnail: "https://drive.google.com/uc?export=view&id=1X87cYbSQL1IGfHCBIb6ZrzWYA546VIFl",
-          thumbnailWidth: 320,
-          thumbnailHeight: 240
-      },
-      {
-        src: "https://drive.google.com/uc?export=view&id=1mGoISZ6_WRcL62OZv6rlz-l5McoOKjNV",
-        thumbnail: "https://drive.google.com/uc?export=view&id=1mGoISZ6_WRcL62OZv6rlz-l5McoOKjNV",
-        thumbnailWidth: 240,
-        thumbnailHeight: 320
-      },
-      {
-        src: "https://drive.google.com/uc?export=view&id=1S4nkx3ItDQi8O83WZmjwTyCqkeXTTiKY",
-        thumbnail: "https://drive.google.com/uc?export=view&id=1S4nkx3ItDQi8O83WZmjwTyCqkeXTTiKY",
+        src: img7,
+        thumbnail: img7Thumb,
         thumbnailWidth: 320,
         thumbnailHeight: 240
       },
       {
-        src: "https://drive.google.com/uc?export=view&id=1ozbWufSwGIt7wRnPhBFHJE347ytajj65",
-        thumbnail: "https://drive.google.com/uc?export=view&id=1ozbWufSwGIt7wRnPhBFHJE347ytajj65",
+        src: img8,
+        thumbnail: img8Thumb,
         thumbnailWidth: 320,
         thumbnailHeight: 240
       },
       {
-        src: "https://drive.google.com/uc?export=view&id=1e4qpUknRBeAhzm7qHcEEV17ESUff15Ed",
-        thumbnail: "https://drive.google.com/uc?export=view&id=1e4qpUknRBeAhzm7qHcEEV17ESUff15Ed",
+        src: img9,
+        thumbnail: img9Thumb,
+        thumbnailWidth: 240,
+        thumbnailHeight: 320
+      },
+      {
+        src: img10,
+        thumbnail: img10Thumb,
+        thumbnailWidth: 320,
+        thumbnailHeight: 240
+      },
+      {
+        src: img11,
+        thumbnail: img11Thumb,
+        thumbnailWidth: 320,
+        thumbnailHeight: 240
+      },
+      {
+        src: img12,
+        thumbnail: img12Thumb,
         thumbnailWidth: 240,
         thumbnailHeight: 320
       }

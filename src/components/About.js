@@ -6,7 +6,6 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import PhotoGallery from './PhotoGallery';
 
 const StyledAbout = styled.div`
-  max-width: 90%;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 3rem;
@@ -21,14 +20,15 @@ const StyledAbout = styled.div`
     text-transform: uppercase;
   }
   h3 {
+    margin: 0 auto;
     margin-bottom: 2rem;
     font-size: 2rem;
     text-transform: uppercase;
+    max-width: 90%;
   }
   h2, p, ul {
-    color: white;
     width: 800px;
-    max-width: 100%;
+    max-width: 90%;
   }
   p {
     font-weight: 400;
@@ -45,21 +45,11 @@ const StyledAbout = styled.div`
   }
   li {
     margin: .5rem 0;
-
-    // :before {
-    //   content: faStar
-    // }
-  }
-  iframe {
-    margin: 3rem 0;
-    height: 50vw;
-    max-height: 580px;
-    max-width: 90%;
   }
   .gallery-container {
+    max-width: 100%;
     width: 900px;
     margin: 2rem auto;
-    max-width: 100%;
     display: block;
   }
 `

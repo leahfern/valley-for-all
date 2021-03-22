@@ -53,60 +53,77 @@ PhotoGallery.propTypes = {
 PhotoGallery.defaultProps = {
   images: [
       {
-          src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-          thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+          src: "https://drive.google.com/uc?export=view&id=1GGE7P4fUuuxGuD23wWTcL4TRLZe4XRWg",
+          thumbnail: "https://drive.google.com/uc?export=view&id=1GGE7P4fUuuxGuD23wWTcL4TRLZe4XRWg",
           thumbnailWidth: 320,
-          thumbnailHeight: 174,
-          caption: "After Rain (Jeshu John - designerspics.com)"
+          thumbnailHeight: 240
       },
       {
-          src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
-          thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
+        src: "https://drive.google.com/uc?export=view&id=109mXNTiXxORasQPwk_FuIzUPuqiwNBsw",
+        thumbnail: "https://drive.google.com/uc?export=view&id=109mXNTiXxORasQPwk_FuIzUPuqiwNBsw",
+        thumbnailWidth: 240,
+        thumbnailHeight: 320
+      },
+      {
+          src: "https://drive.google.com/uc?export=view&id=1XjxYlBWvjxkh_ehMW4kzDxBOFP3qOuRS",
+          thumbnail: "https://drive.google.com/uc?export=view&id=1XjxYlBWvjxkh_ehMW4kzDxBOFP3qOuRS",
           thumbnailWidth: 320,
-          thumbnailHeight: 183,
-          caption: "37H (gratispgraphy.com)"
+          thumbnailHeight: 240
       },
       {
-          src: "https://c7.staticflickr.com/9/8106/28941228886_86d1450016_b.jpg",
-          thumbnail: "https://c7.staticflickr.com/9/8106/28941228886_86d1450016_n.jpg",
-          thumbnailWidth: 271,
-          thumbnailHeight: 320,
-          caption: "Orange Macro (Tom Eversley - isorepublic.com)"
-      },
-      {
-          src: "https://c6.staticflickr.com/9/8342/28897193381_800db6419e_b.jpg",
-          thumbnail: "https://c6.staticflickr.com/9/8342/28897193381_800db6419e_n.jpg",
+          src: "https://drive.google.com/uc?export=view&id=1CojqVajB0eDawdxLWkR9qlvXz3pNy_Y5",
+          thumbnail: "https://drive.google.com/uc?export=view&id=1CojqVajB0eDawdxLWkR9qlvXz3pNy_Y5",
           thumbnailWidth: 320,
-          thumbnailHeight: 213,
-          caption: "201H (gratisography.com)"
+          thumbnailHeight: 240
       },
       {
-          src: "https://c8.staticflickr.com/9/8104/28973555735_ae7c208970_b.jpg",
-          thumbnail: "https://c8.staticflickr.com/9/8104/28973555735_ae7c208970_n.jpg",
+          src: "https://drive.google.com/uc?export=view&id=1DQ00JOxrFJRx3SXT8LScywU_Lbp0fTNt",
+          thumbnail: "https://drive.google.com/uc?export=view&id=1DQ00JOxrFJRx3SXT8LScywU_Lbp0fTNt",
           thumbnailWidth: 320,
-          thumbnailHeight: 213,
-          caption: "Flower Interior Macro (Tom Eversley - isorepublic.com)"
+          thumbnailHeight: 240
       },
       {
-          src: "https://c1.staticflickr.com/9/8707/28868704912_cba5c6600e_b.jpg",
-          thumbnail: "https://c1.staticflickr.com/9/8707/28868704912_cba5c6600e_n.jpg",
+          src: "https://drive.google.com/uc?export=view&id=16Btv24dIgKMwJb-aHgEpMAxJEfP4knJY",
+          thumbnail: "https://drive.google.com/uc?export=view&id=16Btv24dIgKMwJb-aHgEpMAxJEfP4knJY",
           thumbnailWidth: 320,
-          thumbnailHeight: 213,
-          caption: "Man on BMX (Tom Eversley - isorepublic.com)"
+          thumbnailHeight: 240
       },
       {
-          src: "https://c4.staticflickr.com/9/8578/28357117603_97a8233cf5_b.jpg",
-          thumbnail: "https://c4.staticflickr.com/9/8578/28357117603_97a8233cf5_n.jpg",
+          src: "https://drive.google.com/uc?export=view&id=1mQMToNhW8K2VvJR_SNu4ShHNS7I2Yvrl",
+          thumbnail: "https://drive.google.com/uc?export=view&id=1mQMToNhW8K2VvJR_SNu4ShHNS7I2Yvrl",
           thumbnailWidth: 320,
-          thumbnailHeight: 213,
-          caption: "Ropeman - Thailand (Tom Eversley - isorepublic.com)"
+          thumbnailHeight: 240
       },
       {
-          src: "https://c1.staticflickr.com/9/8056/28354485944_148d6a5fc1_b.jpg",
-          thumbnail: "https://c1.staticflickr.com/9/8056/28354485944_148d6a5fc1_n.jpg",
-          thumbnailWidth: 257,
-          thumbnailHeight: 320,
-          caption: "A photo by 贝莉儿 NG. (unsplash.com)"
+          src: "https://drive.google.com/uc?export=view&id=1X87cYbSQL1IGfHCBIb6ZrzWYA546VIFl",
+          thumbnail: "https://drive.google.com/uc?export=view&id=1X87cYbSQL1IGfHCBIb6ZrzWYA546VIFl",
+          thumbnailWidth: 320,
+          thumbnailHeight: 240
+      },
+      {
+        src: "https://drive.google.com/uc?export=view&id=1mGoISZ6_WRcL62OZv6rlz-l5McoOKjNV",
+        thumbnail: "https://drive.google.com/uc?export=view&id=1mGoISZ6_WRcL62OZv6rlz-l5McoOKjNV",
+        thumbnailWidth: 240,
+        thumbnailHeight: 320
+      },
+      {
+        src: "https://drive.google.com/uc?export=view&id=1S4nkx3ItDQi8O83WZmjwTyCqkeXTTiKY",
+        thumbnail: "https://drive.google.com/uc?export=view&id=1S4nkx3ItDQi8O83WZmjwTyCqkeXTTiKY",
+        thumbnailWidth: 320,
+        thumbnailHeight: 240
+      },
+      {
+        src: "https://drive.google.com/uc?export=view&id=1ozbWufSwGIt7wRnPhBFHJE347ytajj65",
+        thumbnail: "https://drive.google.com/uc?export=view&id=1ozbWufSwGIt7wRnPhBFHJE347ytajj65",
+        thumbnailWidth: 320,
+        thumbnailHeight: 240
+      },
+      {
+        src: "https://drive.google.com/uc?export=view&id=1e4qpUknRBeAhzm7qHcEEV17ESUff15Ed",
+        thumbnail: "https://drive.google.com/uc?export=view&id=1e4qpUknRBeAhzm7qHcEEV17ESUff15Ed",
+        thumbnailWidth: 240,
+        thumbnailHeight: 320
       }
+
   ]
 };

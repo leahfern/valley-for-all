@@ -4,13 +4,14 @@ import {Link} from 'react-router-dom';
 import thermometer from '../assets/images/thermometer.png';
 
 const StyledHome = styled.div`
+  padding-top: 50px;
   h1 {
     font-size: 5rem;
     text-transform: uppercase;
     color: white;
     letter-spacing: 5px;
     max-width: 90%;
-    margin: 11rem auto 0 auto;
+    margin: 9rem auto 0 auto;
     font-weight: 900;
   }
   h3 {
@@ -18,7 +19,7 @@ const StyledHome = styled.div`
     font-size: 1.4rem;
     text-transform: uppercase;
     color: white;
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
     padding: .5rem 0;
     max-width: 90%;
 
@@ -47,14 +48,15 @@ const StyledHome = styled.div`
   }
   @media(max-width: 787px) {
     h1 {
-      margin-top: 11rem;
+      margin-top: 9rem;
       font-size: 4rem;
     }
   }
   @media(max-width: 500px ) {
     h1 {
-      margin-top: 9rem;
+      margin-top: 8rem;
       font-size: 3rem;
+      letter-spacing: 1px;
     }
     h3 {
       font-size: 1rem;
@@ -64,7 +66,7 @@ const StyledHome = styled.div`
     h1 {
       font-size: 6rem;
       margin-bottom: .5rem;
-      margin-top: 11rem;
+      margin-top: 8rem;
     }
     h3 {
       font-size: 1.8rem;

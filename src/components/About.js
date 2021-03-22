@@ -18,6 +18,7 @@ const StyledAbout = styled.div`
     color: white;
     margin: 9rem auto 0 auto;
     text-transform: uppercase;
+    line-height: 1;
   }
   h3 {
     margin: 0 auto;
@@ -25,6 +26,7 @@ const StyledAbout = styled.div`
     font-size: 2rem;
     text-transform: uppercase;
     max-width: 90%;
+    line-height: 1;
   }
   h2, p, ul {
     width: 800px;
@@ -71,7 +73,7 @@ const StyledOrg = styled.div`
     margin: 0 auto 2rem auto;
     line-height: 1.5;
   }
-
+  
   img {
     width: 300px;
     padding: 1rem 0;

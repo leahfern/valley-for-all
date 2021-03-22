@@ -7,7 +7,7 @@ const StyledDonate = styled.div`
   max-width: 90%;
   margin: 0 auto;
   color: white;
-  padding-top: 30px;
+  padding-top: 50px;
   label {
     font-weight: bold;
   }
@@ -33,7 +33,7 @@ const StyledDonate = styled.div`
     font-weight: 700;
     font-size: 3rem;
     color: white;
-    margin: 10rem auto 1rem auto;
+    margin: 9rem auto 1rem auto;
     text-transform: uppercase;
   }
   h3 {

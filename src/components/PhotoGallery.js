@@ -3,8 +3,6 @@ import Gallery from 'react-grid-gallery';
 import styled from 'styled-components';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import img1 from '../assets/images/gallery/img-1-lg.jpg';
-import img1Thumb from '../assets/images/gallery/img-1-thumb.jpg';
 import img2 from '../assets/images/gallery/img-2-lg.jpg';
 import img2Thumb from '../assets/images/gallery/img-2-thumb.jpg';
 import img3 from '../assets/images/gallery/img-3-lg.jpg';
@@ -21,12 +19,13 @@ import img8 from '../assets/images/gallery/img-8-lg.jpg';
 import img8Thumb from '../assets/images/gallery/img-8-thumb.jpg';
 import img9 from '../assets/images/gallery/img-9-lg.jpg';
 import img9Thumb from '../assets/images/gallery/img-9-thumb.jpg';
-import img10 from '../assets/images/gallery/img-10-lg.jpg';
-import img10Thumb from '../assets/images/gallery/img-10-thumb.jpg';
 import img11 from '../assets/images/gallery/img-11-lg.jpg';
 import img11Thumb from '../assets/images/gallery/img-11-thumb.jpg';
 import img12 from '../assets/images/gallery/img-12-lg.jpg';
 import img12Thumb from '../assets/images/gallery/img-12-thumb.jpg';
+import img13 from '../assets/images/gallery/img-13-lg.jpg';
+import img13Thumb from '../assets/images/gallery/img-13-thumb.jpg';
+
 
 
 export default class PhotoGallery extends React.Component {
@@ -77,22 +76,16 @@ PhotoGallery.propTypes = {
 PhotoGallery.defaultProps = {
   images: [
       {
-          src: img1,
-          thumbnail: img1Thumb,
-          thumbnailWidth: 240,
-          thumbnailHeight: 320
-      },
-      {
           src: img2,
           thumbnail: img2Thumb,
           thumbnailWidth: 320,
           thumbnailHeight: 240
       },
       {
-          src: img3,
-          thumbnail: img3Thumb,
-          thumbnailWidth: 320,
-          thumbnailHeight: 240
+        src: img12,
+        thumbnail: img12Thumb,
+        thumbnailWidth: 240,
+        thumbnailHeight: 320
       },
       {
           src: img4,
@@ -113,6 +106,12 @@ PhotoGallery.defaultProps = {
           thumbnailHeight: 240
       },
       {
+        src: img13,
+        thumbnail: img13Thumb,
+        thumbnailWidth: 240,
+        thumbnailHeight: 320
+      },
+      {
         src: img7,
         thumbnail: img7Thumb,
         thumbnailWidth: 320,
@@ -131,22 +130,10 @@ PhotoGallery.defaultProps = {
         thumbnailHeight: 320
       },
       {
-        src: img10,
-        thumbnail: img10Thumb,
-        thumbnailWidth: 320,
-        thumbnailHeight: 240
-      },
-      {
         src: img11,
         thumbnail: img11Thumb,
         thumbnailWidth: 320,
         thumbnailHeight: 240
-      },
-      {
-        src: img12,
-        thumbnail: img12Thumb,
-        thumbnailWidth: 240,
-        thumbnailHeight: 320
       }
 
   ]

@@ -28,7 +28,7 @@ z-index: 1;
       border: none;
       :hover {
         border: none;
-        color: lightgrey;
+        color: green;
       }
     }
     ul {
@@ -71,12 +71,6 @@ z-index: 1;
     z-index: 3;
     font-size: 1rem;
     margin: 0 1rem;
-    :first-child {
-      line-height: 2;
-    }
-    :nth-child(2) {
-      line-height: 2;
-    }
 
     :hover {
       color: darkgreen;
@@ -173,7 +167,7 @@ z-index: 1;
       justify-content: space-evenly;
       a {
         margin: 0;
-        padding: 0;
+        padding: .25rem 0;
       }
     }
     
@@ -222,7 +216,7 @@ export default function Nav() {
         <div className = "links">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/sponsorship">Become A<br />Sponsor</Link>
+          <Link to="/sponsorship">Sponsor Us</Link>
         </div>
         <div className="donate">
           <Link to="/donate">Donate</Link>

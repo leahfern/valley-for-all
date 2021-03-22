@@ -10,7 +10,8 @@ const StyledNav = styled.nav`
 position: fixed;
 color: white;
 width: 100%;
-  .top-nav {
+z-index: 1;
+  #top-nav {
     width: 100%;
     height: 40px;
     background: #009FF7;
@@ -37,6 +38,13 @@ width: 100%;
     }
     .email {
       margin: 0 2rem;
+
+      a {
+        text-transform: none;
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+      }
     }
   }
   .bottom-nav {
@@ -46,7 +54,6 @@ width: 100%;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    z-index: 1;
     background-color: white;
     padding: 1rem 0;
   }
@@ -124,7 +131,7 @@ width: 100%;
       padding: 0;
       margin: 0;
     }
-    .top-nav {
+    #top-nav {
       font-size: .9rem;
       a {
         font-size: 1.2rem;
@@ -186,16 +193,26 @@ export default function Nav() {
   const facebook = <FontAwesomeIcon icon={faFacebook} />
   const insta = <FontAwesomeIcon icon={faInstagram} />
 
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("top-nav").style.display = "none";
+    } else {
+      document.getElementById("top-nav").style.display = "flex";
+    }
+  }
+
   return (
     <StyledNav>
-      <div className="top-nav">
+      <div id="top-nav">
         <ul>
           <li>Follow Us On: </li>
           <li><a href="https://www.facebook.com/ValleyforAll">{facebook}</a></li>
           <li><a href="https://www.instagram.com/ValleyForAll">{insta}</a></li>
         </ul>
         <div className="email">
-          ValleyForAll@gmail.com
+          <a href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a>
         </div>
       </div>
       <div className="bottom-nav">

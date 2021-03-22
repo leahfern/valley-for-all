@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import lhbLogo from '../assets/images/lhb-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import PhotoGallery from './PhotoGallery';
 
 const StyledAbout = styled.div`
   max-width: 90%;
@@ -11,6 +12,7 @@ const StyledAbout = styled.div`
   padding-bottom: 3rem;
   color: white;
   line-height: 1.5;
+  z-index: -1;
   h2 {
     font-size: 3rem;
     color: white;
@@ -48,6 +50,12 @@ const StyledAbout = styled.div`
     height: 50vw;
     max-height: 580px;
     max-width: 90%;
+  }
+  .gallery-container {
+    width: 900px;
+    margin: 2rem auto;
+    max-width: 100%;
+    display: block;
   }
 `
 
@@ -95,7 +103,7 @@ const StyledOrg = styled.div`
   }
 `
 
-export default function About() {
+export default function AboutGallery() {
   const star = <FontAwesomeIcon icon={faStar} />
 
   return (
@@ -117,8 +125,9 @@ export default function About() {
       <p className="lastp">
         Encouraging community engagement, “Valley for All” will feature upgraded amenities, improved area conditions and a more functional space for all park-goers in Valley Park.
       </p>
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQeIIT9XxrwtVq5dtXu0flVXcKGLS88PLmdXSVXrQ8cBLKflxsu4ESnJUrQ5mroA0b5Fcqh_jki35y2/embed?start=false&loop=false&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Valley For All slideshow"></iframe>
-
+      <div className="gallery-container">
+        <PhotoGallery />
+      </div>
       <StyledOrg className="component-container">
 
         <img src={lhbLogo} alt="leadership hermosa beach logo" />

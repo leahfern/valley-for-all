@@ -106,8 +106,6 @@ const StyledSponsorship = styled.div`
     margin: 0 auto;
     padding: 1rem .5rem;
     font-size: 1.2rem;
-    list-style-image: url({star})
-    margin-left: 0;
     margin-bottom: 1rem;
     padding-left: 1.5rem;
     text-indent: -1.5em;

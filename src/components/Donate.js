@@ -4,89 +4,96 @@ import styled from 'styled-components';
 import PayPalTest from './PayPalTest';
 
 const StyledDonate = styled.div`
-max-width: 90%;
-margin: 0 auto;
-color: white;
-padding-top: 30px;
-label {
-  font-weight: bold;
-}
-input {
-  width: 100%;
-  height: 45px;
-  display: block;
-  font-size: 1rem;
-  color: white;
-  line-height: 1.2;
-  border: none;
-  background: transparent;
-  margin: 0 auto 2rem;
-  border-bottom 3px solid white;
-  font-family: inherit;
-  :focus {
-    border: none;
-    outline: none;
-    border-bottom: 3px solid #009FF7;
-  }
-}
-h2 {
-  font-weight: 700;
-  font-size: 3rem;
-  color: white;
-  margin: 10rem auto 1rem auto;
-  text-transform: uppercase;
-}
-h3 {
-  margin-bottom: 3rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
- h4 {
-   font-size: 1.2rem;
-   margin-bottom: 1rem;
- }
-form {
-  text-align: left;
-  width: 600px;
   max-width: 90%;
   margin: 0 auto;
-}
-.payment-div {
-  width: 300px;
-  max-width: 80%;
-  margin: 1rem auto;
-}
-
-button {
-  background-color: #009FF7;
-  margin: 1rem auto;
-  padding: .8rem;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
-  border: none;
-  font-size: 1rem;
-  font-family: inherit;
-  position: center;
+  padding-top: 30px;
+  label {
+    font-weight: bold;
+  }
+  input {
+    width: 100%;
+    height: 45px;
+    display: block;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.2;
+    border: none;
+    background: transparent;
+    margin: 0 auto 2rem;
+    border-bottom 3px solid white;
+    font-family: inherit;
+    :focus {
+      border: none;
+      outline: none;
+      border-bottom: 3px solid #009FF7;
+    }
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    color: white;
+    margin: 10rem auto 1rem auto;
+    text-transform: uppercase;
+  }
+  h3 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  p {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 90%;
+    padding-bottom: 2rem;
+    line-height: 1.5;
+  }
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  form {
+    text-align: left;
+    width: 600px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .payment-div {
+    width: 300px;
+    max-width: 80%;
+    margin: 1rem auto;
+  }
 
-  :hover {
-    transform: scale(1.1);
-    transition: .5s;
+  button {
+    background-color: #009FF7;
+    margin: 1rem auto;
+    padding: .8rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+    position: center;
+
+    :hover {
+      transform: scale(1.1);
+      transition: .5s;
+    }
+    :focus {
+      outline: none;
+    }
   }
-  :focus {
-    outline: none;
+  .hidden {
+    display: none;
   }
-}
-.hidden {
-  display: none;
-}
-.centered {
-  text-align: center;
-}
-.nonprofit {
-  padding-bottom: 3rem;
-}
+  .centered {
+    text-align: center;
+  }
+  .nonprofit {
+    padding-bottom: 3rem;
+  }
 `;
 
 const initialValues = {
@@ -131,6 +138,12 @@ export default function Donate() {
       <h3>
         DONATE
       </h3>
+      <p>
+        Leadership Hermosa Beach Class of 2021 greatly appreciates any donation you can make -- your support will go directly to the improvements Valley Park deserves.
+      </p>
+      <p>
+      Donate $50 or more and receive a limited-edition gift while supplies last! Gifts will be distributed to donors during the Valley for All unveiling ceremony at Valley Park in 2021.
+      </p>
       <form onSubmit={handleSubmit}>
         <label>
           Name:
@@ -198,7 +211,7 @@ export default function Donate() {
 
         : ''
       }
-      <p className="nonprofit">All Donations are 100% tax deductible. The Leadership Hermosa Beach tax ID no. is 06-1721283<br />
+      <p className="nonprofit">All Donations are 100% tax deductible. PayPal takes a fee of up to 2.9% + $0.30 from each donation.<br />
       Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254</p>
     </StyledDonate>
   )

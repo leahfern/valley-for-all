@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import lhbLogo from '../assets/images/lhb-logo.png';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const StyledAbout = styled.div`
   max-width: 90%;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 3rem;
+  color: white;
+  line-height: 1.5;
   h2 {
     font-size: 3rem;
     color: white;
@@ -15,17 +18,30 @@ const StyledAbout = styled.div`
     text-transform: uppercase;
     font-weight: 700;
   }
-  h2, p {
+  h2, p, ul {
     color: white;
     width: 800px;
     max-width: 100%;
   }
   p {
     font-weight: 400;
-    font-size: 1.2rem;
     padding: 1rem 0;
     margin: 0 auto;
-    line-height: 1.5;
+  }
+  ul {
+    text-align: left;
+    margin: 0 auto;
+    width: 435px;
+    max-width: 80%;
+    padding-left: 1.4rem;
+    text-indent: -1.4em;
+  }
+  li {
+    margin: .5rem 0;
+
+    // :before {
+    //   content: faStar
+    // }
   }
   iframe {
     margin: 3rem 0;
@@ -80,14 +96,23 @@ const StyledOrg = styled.div`
 `
 
 export default function About() {
+  const star = <FontAwesomeIcon icon={faStar} />
+
   return (
     <StyledAbout className="component-container">
       <h2>
         Valley For All
       </h2>
       <p>
-        “Valley for All” is a local community project committed to improving and restoring the popular, high-traffic lower BBQ area of Valley Park in Hermosa Beach -- a space in dire need of attention.
+        “Valley for All” is a local community project committed to beautifying and restoring the popular, high-traffic lower BBQ area of Valley Park in Hermosa Beach. As the space is in dire need of attention, this project will perform key improvements, including:
       </p>
+      <ul>
+      <li>{star} The installation of a new entrance ramp</li>
+      <li>{star} Ground leveling throughout the perimeter</li>
+      <li>{star} Replacement of key amenities, such as the BBQs and sink</li>
+      <li>{star} General power washing and cleanup </li>
+      <li>{star} Other necessary maintenance upgrades </li>
+      </ul>
 
       <p className="lastp">
         Encouraging community engagement, “Valley for All” will feature upgraded amenities, improved area conditions and a more functional space for all park-goers in Valley Park.

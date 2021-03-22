@@ -28,7 +28,7 @@ z-index: 1;
       border: none;
       :hover {
         border: none;
-        color: green;
+        color: #36454F;
       }
     }
     ul {

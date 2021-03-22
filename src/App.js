@@ -6,7 +6,7 @@ import About from './components/About';
 import Sponsorship from './components/Sponsorship.js';
 import Donate from './components/Donate';
 import styled from 'styled-components';
-import parkImg from './assets/images/valley-park.png';
+import parkImg from './assets/images/valley-park.jpg';
 import MailChecks from './components/MailChecks';
 import SponsorDonate from './components/SponsorDonate';
 

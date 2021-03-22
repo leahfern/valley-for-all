@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import thermometer from '../assets/images/thermometer.png';
 
 const StyledHome = styled.div`
-  padding-top: 50px;
+  margin-top: 50px;
   h1 {
     font-size: 5rem;
     text-transform: uppercase;

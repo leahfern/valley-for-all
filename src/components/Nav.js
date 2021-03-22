@@ -65,10 +65,10 @@ width: 100%;
     font-size: 1rem;
     margin: 0 1rem;
     :first-child {
-      line-height: 1.5;
+      line-height: 2;
     }
     :nth-child(2) {
-      line-height: 1.5;
+      line-height: 2;
     }
 
     :hover {
@@ -106,6 +106,7 @@ width: 100%;
     }
     .logo-container {
       width: 100%;
+      margin-bottom: .5rem;
     }
     img {
       height: 40px;
@@ -144,11 +145,13 @@ width: 100%;
     .bottom-nav {
       justify-content: space-evenly;
     }
+    .logo-container {
+      margin-bottom: 1rem;
+    }
     .donate {
       width: 25%;
       margin: 0;
       margin-left: 0;
-      // padding-right: .5rem;
       text-align: left;
       a {
         margin: 0;

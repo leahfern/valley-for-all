@@ -14,11 +14,16 @@ const StyledAbout = styled.div`
   line-height: 1.5;
   z-index: -1;
   h2 {
+    font-weight: 700;
     font-size: 3rem;
     color: white;
-    margin: 9rem auto 3rem auto;
+    margin: 9rem auto 0 auto;
     text-transform: uppercase;
-    font-weight: 700;
+  }
+  h3 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
   }
   h2, p, ul {
     color: white;
@@ -111,6 +116,7 @@ export default function About() {
       <h2>
         Valley For All
       </h2>
+      <h3>About our project</h3>
       <p>
         “Valley for All” is a local community project committed to beautifying and restoring the popular, high-traffic lower BBQ area of Valley Park in Hermosa Beach. As the space is in dire need of attention, this project will perform key improvements, including:
       </p>
@@ -123,7 +129,7 @@ export default function About() {
       </ul>
 
       <p className="lastp">
-        Encouraging community engagement, “Valley for All” will feature upgraded amenities, improved area conditions and a more functional space for all park-goers in Valley Park.
+        Encouraging outdoor engagement when needed the most, "Valley for All" will feature restored area conditions that offer a more functional, inclusive and accessible space for our entire community.  
       </p>
       <div className="gallery-container">
         <PhotoGallery />

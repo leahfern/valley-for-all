@@ -142,7 +142,7 @@ export default function Donate() {
         Leadership Hermosa Beach Class of 2021 greatly appreciates any donation you can make -- your support will go directly to the improvements Valley Park deserves.
       </p>
       <p>
-      Donate $50 or more and receive a limited-edition gift while supplies last! Gifts will be distributed to donors during the Valley for All unveiling ceremony at Valley Park in 2021.
+      Donate $50 or more and receive a limited-edition gift while supplies last! Gifts will be distributed to donors during the Valley for All unveiling ceremony at Valley Park in June 2021.
       </p>
       <form onSubmit={handleSubmit}>
         <label>

@@ -115,7 +115,7 @@ export default function About() {
       </ul>
 
       <p className="lastp">
-        Encouraging community engagement, “Valley for All” will feature upgraded amenities, improved area conditions and a more functional space for all park-goers in Valley Park.
+        Encouraging outdoor engagement when needed the most, "Valley for All" will feature restored area conditions that offer a more functional, inclusive and accessible space for our entire community.
       </p>
       <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQeIIT9XxrwtVq5dtXu0flVXcKGLS88PLmdXSVXrQ8cBLKflxsu4ESnJUrQ5mroA0b5Fcqh_jki35y2/embed?start=false&loop=false&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Valley For All slideshow"></iframe>
 

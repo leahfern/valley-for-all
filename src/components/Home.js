@@ -10,11 +10,11 @@ const StyledHome = styled.div`
   max-width: 90%;
   margin: 0 auto;
   h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     text-transform: uppercase;
     color: white;
     letter-spacing: 5px;
-    margin: 9rem auto 0 auto;
+    margin: 7rem auto 0 auto;
     font-weight: 900;
   }
   h3 {
@@ -26,7 +26,7 @@ const StyledHome = styled.div`
     padding: .5rem 0;
 
   }
-  a {
+  a.link {
     margin: 20rem auto 1rem auto;
     padding: 1rem;
     background-color: #009FF7;
@@ -94,7 +94,7 @@ export default function Home() {
         <h1>Valley For All</h1>
         <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
         <img src={thermometer} alt="fundraising status" />
-        <Link to="/donate">Donate today</Link>
+        <Link to="/donate" className="link">Donate today</Link>
       </div>
     </StyledHome>
   )

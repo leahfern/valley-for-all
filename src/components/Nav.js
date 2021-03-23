@@ -203,7 +203,7 @@ export default function Nav() {
       <div id="top-nav">
         <ul>
           <li>Follow Us On: </li>
-          <li><a href="https://www.facebook.com/ValleyforAll">{facebook}</a></li>
+          <li><a href="https://www.facebook.com/ValleyForAll">{facebook}</a></li>
           <li><a href="https://www.instagram.com/ValleyForAll">{insta}</a></li>
         </ul>
         <div className="email">

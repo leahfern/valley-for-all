@@ -43,7 +43,7 @@ const StyledSponsorship = styled.div`
   }
   .tableContainer {
     overflow-x: auto;
-    width: 90%;
+    width: 100%;
     margin: 1rem auto 3rem auto;
   }
   table {

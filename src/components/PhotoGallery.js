@@ -25,7 +25,8 @@ import img12 from '../assets/images/gallery/img-12-lg.jpg';
 import img12Thumb from '../assets/images/gallery/img-12-thumb.jpg';
 import img13 from '../assets/images/gallery/img-13-lg.jpg';
 import img13Thumb from '../assets/images/gallery/img-13-thumb.jpg';
-
+import map from '../assets/images/gallery/map.png';
+import mapThumb from '../assets/images/gallery/map-thumb.png';
 
 
 export default class PhotoGallery extends React.Component {
@@ -76,8 +77,8 @@ PhotoGallery.propTypes = {
 PhotoGallery.defaultProps = {
   images: [
       {
-          src: img2,
-          thumbnail: img2Thumb,
+          src: map,
+          thumbnail: mapThumb,
           thumbnailWidth: 320,
           thumbnailHeight: 240
       },
@@ -88,10 +89,10 @@ PhotoGallery.defaultProps = {
         thumbnailHeight: 320
       },
       {
-          src: img4,
-          thumbnail: img4Thumb,
-          thumbnailWidth: 320,
-          thumbnailHeight: 240
+        src: img2,
+        thumbnail: img2Thumb,
+        thumbnailWidth: 320,
+        thumbnailHeight: 240
       },
       {
           src: img5,

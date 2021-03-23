@@ -115,9 +115,9 @@ export default function Home() {
           <Link to="/donate" className="link">Donate today</Link>
         </div>
       </StyledHome>
-      <StyledSponsors className="sponsors">
+      {/* <StyledSponsors className="sponsors">
         <h2>Thank you to our sponsors!</h2>
-      </StyledSponsors>
+      </StyledSponsors> */}
     </>
   )
 }

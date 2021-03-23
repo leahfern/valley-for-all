@@ -81,7 +81,6 @@ const StyledSponsorship = styled.div`
       font-weight: 600;
       text-align: center;
       padding: .5rem;
-      border-bottom: 1px solid grey;
     }
     td {
       padding: .5rem 1rem;
@@ -89,10 +88,14 @@ const StyledSponsorship = styled.div`
     tr.levels th {
       padding: 2rem 0;
       font-size: 1rem;
+      width: 200px;
     }
     th.category {
       background: #36454F;
       color: white;
+      vertical-align: middle;
+      border-bottom: 1px solid grey;
+      line-height: 1.2;
     }
     ul {
       padding-top: .25rem;
@@ -110,62 +113,17 @@ const StyledSponsorship = styled.div`
 
   .platinum {
     border-bottom: 1px solid grey;
-    background: 
-    linear-gradient(
-      -90deg,
-      #dedeff,
-      #ffffff 16%,
-      #dedeff 21%,
-      #ffffff 24%,
-      #dedeff 27%,
-      #dedeff 36%,
-      #ffffff 45%,
-      #ffffff 60%,
-      #dedeff 72%,
-      #ffffff 80%,
-      #dedeff 84%,
-      #555564
-    );
+    background: #E5E4E2;
   }
   .gold {
     border-bottom: 1px solid grey;
     margin-top: 5rem;
-    background: 
-    linear-gradient(
-      -90deg,
-      #ffde45,
-      #ffffff 16%,
-      #ffde45 21%,
-      #ffffff 24%,
-      #ffde45 27%,
-      #ffde45 36%,
-      #ffffff 45%,
-      #ffffff 60%,
-      #ffde45 72%,
-      #ffffff 80%,
-      #ffde45 84%,
-      #452100
-    );
+    background: #FFD700;
   }
   .silver {
     border-bottom: 1px solid grey;
     margin-top: 5rem;
-    background: 
-    linear-gradient(
-      -90deg,
-      #dedede,
-      #ffffff 16%,
-      #dedede 21%,
-      #ffffff 24%,
-      #cccccc 27%,
-      #dedede 36%,
-      #ffffff 45%,
-      #ffffff 60%,
-      #dedede 72%,
-      #ffffff 80%,
-      #dedede 84%,
-      #555555
-    );
+    background: #C0C0C0;
   }
   @media(max-width: 835px) {
     .tableContainer {
@@ -201,10 +159,14 @@ export default function Sponsorship() {
       <h3>Sponsorship Opportunities</h3>
       <div className="tableContainer">
         <table>
+          <col style={{width:" 16%"}} />
+          <col style={{width:" 28%"}}  />
+          <col style={{width:" 28%"}}  />
+          <col style={{width:" 28%"}}  />
           <tr className="levels">
             <th></th>
-            <th className="platinum">Platinum sponsor</th>
-            <th className="gold">Gold sponsor</th>
+            <th className="platinum">Platinum Sponsor</th>
+            <th className="gold">Gold Sponsor</th>
             <th className="silver">Silver Sponsor</th>
           </tr>
           <tr>

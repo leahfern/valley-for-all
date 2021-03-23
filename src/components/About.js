@@ -113,11 +113,11 @@ export default function About() {
         “Valley for All” is a local community project committed to beautifying and restoring the popular, high-traffic lower BBQ area of Valley Park in Hermosa Beach. As the space is in dire need of attention, this project will perform key improvements, including:
       </p>
       <ul>
-      <li>{star} The installation of a new entrance ramp</li>
-      <li>{star} Ground leveling throughout the perimeter</li>
-      <li>{star} Replacement of key amenities, such as the BBQs and sink</li>
-      <li>{star} General power washing and cleanup </li>
-      <li>{star} Other necessary maintenance upgrades </li>
+        <li>{star} The installation of a new entrance ramp</li>
+        <li>{star} Ground leveling throughout the perimeter</li>
+        <li>{star} Replacement of key amenities, such as the BBQs and sink</li>
+        <li>{star} General power washing and cleanup </li>
+        <li>{star} Other necessary maintenance upgrades </li>
       </ul>
 
       <p className="lastp">

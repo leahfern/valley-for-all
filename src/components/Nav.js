@@ -29,6 +29,7 @@ z-index: 1;
       :hover {
         border: none;
         color: #36454F;
+        transition: .1s;
       }
     }
     ul {

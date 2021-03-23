@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 
+const star = <FontAwesomeIcon icon={faStar} />
+
 const StyledSponsorship = styled.div`
   width: 1000px;
   max-width: 90%;
@@ -41,6 +43,11 @@ const StyledSponsorship = styled.div`
     border-radius: 10px;
     text-transform: uppercase;
   }
+  span {
+    font-size: .7rem;
+    position: relative;
+    bottom: 2px;
+  }
   .tableContainer {
     overflow-x: auto;
     width: 100%;
@@ -76,6 +83,10 @@ const StyledSponsorship = styled.div`
     }
     li {
       padding: .25rem 0;
+
+      :before {
+        content: ${star};
+      }
     }
   }
 
@@ -141,7 +152,6 @@ const StyledSponsorship = styled.div`
   
 
 `;
-const star = <FontAwesomeIcon icon={faStar} />
 
 
 export default function Sponsorship() {
@@ -186,21 +196,21 @@ export default function Sponsorship() {
             <th className="category">Website Inclusion</th>
             <td className="platinum">
               <ul>
-                <li>{star} Logo</li>
-                <li>{star} Overview</li>
-                <li>{star} Link</li>
+                <li><span>{star}</span> Logo</li>
+                <li><span>{star}</span> Overview</li>
+                <li><span>{star}</span> Link</li>
               </ul>
             </td>
             <td className="gold">
               <ul>
-                <li>{star} Logo</li>
-                <li>{star} Link</li>
+                <li><span>{star}</span> Logo</li>
+                <li><span>{star}</span> Link</li>
               </ul>
             </td>
             <td className="silver">
               <ul>
-                <li>{star} Logo</li>
-                <li>{star} Link</li>
+                <li><span>{star}</span> Logo</li>
+                <li><span>{star}</span> Link</li>
               </ul>
             </td>
           </tr>
@@ -209,24 +219,24 @@ export default function Sponsorship() {
             <td className="platinum">
               Recognized as Platinum Sponsor
               <ul>
-                <li>{star} 3x FB Posts</li>
-                <li>{star} 2x IG Posts</li>
-                <li>{star} 1x Dedicated FB Post</li>
-                <li>{star} 1x Dedicated IG Post</li>
+                <li><span>{star}</span> 3x FB Posts</li>
+                <li><span>{star}</span> 2x IG Posts</li>
+                <li><span>{star}</span> 1x Dedicated FB Post</li>
+                <li><span>{star}</span> 1x Dedicated IG Post</li>
               </ul>
             </td>
             <td className="gold">
               Recognized as Gold Sponsor
               <ul>
-                <li>{star} 3x FB Posts</li>
-                <li>{star} 2x IG Posts</li>
+                <li><span>{star}</span> 3x FB Posts</li>
+                <li><span>{star}</span> 2x IG Posts</li>
               </ul>
             </td>
             <td className="silver">
               Recognized as Silver Sponsor
               <ul>
-                <li>{star} 2x FB Posts</li>
-                <li>{star} 1x IG Post</li>
+                <li><span>{star}</span> 2x FB Posts</li>
+                <li><span>{star}</span> 1x IG Post</li>
               </ul>
             </td>
           </tr>

@@ -89,6 +89,7 @@ const StyledSponsorship = styled.div`
       padding: 2rem 0;
       font-size: 1rem;
       width: 200px;
+      line-height: 1.2;
     }
     th.category {
       background: #36454F;
@@ -147,9 +148,9 @@ export default function Sponsorship() {
           <col style={{width:" 28%"}}  />
           <tr className="levels">
             <th></th>
-            <th className="platinum">Platinum Sponsor</th>
-            <th className="gold">Gold Sponsor</th>
-            <th className="silver">Silver Sponsor</th>
+            <th className="platinum">Platinum Sponsor<br />$5,000 +</th>
+            <th className="gold">Gold Sponsor<br />$2,500 +</th>
+            <th className="silver">Silver Sponsor<br />$1,000 +</th>
           </tr>
           <tr>
             <th className="category">Permanent Dedication In Valley Park</th>

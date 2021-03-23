@@ -7,8 +7,6 @@ import {Link} from 'react-router-dom';
 const star = <FontAwesomeIcon icon={faStar} />
 
 const StyledSponsorship = styled.div`
-  width: 1000px;
-  max-width: 90%;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 3rem;
@@ -20,15 +18,19 @@ const StyledSponsorship = styled.div`
     color: white;
     margin: 9rem auto 1rem auto;
     text-transform: uppercase;
+    width: 1000px;
+    max-width: 90%;
   }
   h3 {
     margin-bottom: 2rem;
     font-size: 2rem;
     text-transform: uppercase;
+    width: 1000px;
+    max-width: 90%;
   }
   p {
-    width: 90%;
-    max-width: 900px;
+    width: 900px;
+    max-width: 90%;
     margin: 1rem auto;
     padding-top: 2rem;
     font-size: 1.2rem;
@@ -63,7 +65,7 @@ const StyledSponsorship = styled.div`
   }
   .tableContainer {
     overflow-x: auto;
-    width: 100%;
+    width: 90%;
     margin: 1rem auto 3rem auto;
   }
   table {
@@ -164,8 +166,11 @@ const StyledSponsorship = styled.div`
       #555555
     );
   }
-  
-
+  @media(max-width: 835px) {
+    .tableContainer {
+      width: 100%;
+    }
+  }
 `;
 
 

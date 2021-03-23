@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -134,24 +134,6 @@ const StyledSponsorship = styled.div`
 
 
 export default function Sponsorship() {
-  const [hidden, setHidden] = useState({
-    platinum: false,
-    gold: false,
-    silver: false
-  })
-
-  const handleHidden = (e) => {
-    const name = e.target.dataset.name
-    hidden[name] === true
-    ? setHidden({
-      ...hidden,
-      [name]: false
-    })
-    : setHidden({
-      ...hidden,
-      [name]: true
-    })
-  }
 
   return (
     <StyledSponsorship className="component-container">

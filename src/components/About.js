@@ -16,7 +16,7 @@ const StyledAbout = styled.div`
     font-weight: 700;
     font-size: 3rem;
     color: white;
-    margin: 9rem auto 0 auto;
+    margin: 9rem auto .5rem auto;
     text-transform: uppercase;
     line-height: 1;
   }

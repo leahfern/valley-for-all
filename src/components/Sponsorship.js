@@ -32,6 +32,7 @@ const StyledSponsorship = styled.div`
     margin: 1rem auto;
     padding-top: 2rem;
     font-size: 1.2rem;
+    line-height: 1.2;
   }
   a {
     padding: 1rem;
@@ -42,6 +43,18 @@ const StyledSponsorship = styled.div`
     font-size: 1rem;
     border-radius: 10px;
     text-transform: uppercase;
+  }
+  a.contact {
+    font-size: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: auto;
+    background: transparent;
+    text-transform: none;
+    font-weight: 400;
+    text-decoration: underline;
   }
   span {
     font-size: .7rem;
@@ -266,8 +279,8 @@ export default function Sponsorship() {
           </tr>
         </table>
       </div>
-      <Link to="/sponsorship/payment">Sponsor Us today</Link>
-      <p>*For personalized sponsorship packages or questions, contact Fundraising Chair Eric Foster at erfoster@gmail.com or 310-877-3822</p>
+      <Link id="sponsorClick" to="/sponsorship/payment">Sponsor Us today</Link>
+      <p>*For personalized sponsorship packages or questions, contact Fundraising Chair Eric Foster at <a className="contact" href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a className="contact" href="tel:310-877-3822">310-877-3822</a></p>
     </StyledSponsorship>
   )
 }

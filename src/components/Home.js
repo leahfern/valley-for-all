@@ -87,15 +87,37 @@ const StyledHome = styled.div`
   }
 `
 
+const StyledSponsors = styled.div`
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+
+  h2 {
+    padding: 4rem 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    max-width: 90%;
+    margin: 0 auto;
+    line-height: 1;
+    color: green;
+
+  }
+`;
+
 export default function Home() {
   return (
-    <StyledHome className="component-container">
-      <div className="hero">
-        <h1>Valley For All</h1>
-        <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
-        <img src={thermometer} alt="fundraising status" />
-        <Link to="/donate" className="link">Donate today</Link>
-      </div>
-    </StyledHome>
+    <>
+      <StyledHome className="component-container">
+        <div className="hero">
+          <h1>Valley For All</h1>
+          <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
+          <img src={thermometer} alt="fundraising status" />
+          <Link to="/donate" className="link">Donate today</Link>
+        </div>
+      </StyledHome>
+      <StyledSponsors className="sponsors">
+        <h2>Thank you to our sponsors!</h2>
+      </StyledSponsors>
+    </>
   )
 }

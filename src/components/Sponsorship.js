@@ -16,17 +16,18 @@ const StyledSponsorship = styled.div`
     font-weight: 700;
     font-size: 3rem;
     color: white;
-    margin: 9rem auto 1rem auto;
+    margin: 9rem auto .5rem auto;
     text-transform: uppercase;
     width: 1000px;
     max-width: 90%;
   }
   h3 {
+    margin: 0 auto;
     margin-bottom: 2rem;
     font-size: 2rem;
     text-transform: uppercase;
-    width: 1000px;
     max-width: 90%;
+    line-height: 1;
   }
   p {
     width: 900px;
@@ -217,8 +218,8 @@ export default function Sponsorship() {
             <td className="platinum">
               <ul>
                 <li><span>{star}</span> Logo</li>
-                <li><span>{star}</span> Overview</li>
                 <li><span>{star}</span> Link</li>
+                <li><span>{star}</span> Overview</li>
               </ul>
             </td>
             <td className="gold">

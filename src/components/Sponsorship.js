@@ -59,7 +59,7 @@ const StyledSponsorship = styled.div`
   span {
     font-size: .7rem;
     position: relative;
-    bottom: 2px;
+    bottom: 1px;
   }
   .tableContainer {
     overflow-x: auto;
@@ -73,24 +73,26 @@ const StyledSponsorship = styled.div`
     min-width: 750px;
     text-align: left;
     margin: 0 auto;
+    font-size: .9rem;
     th {
       font-weight: 600;
       text-align: center;
-      padding: 1rem;
+      padding: .5rem;
       border-bottom: 1px solid grey;
     }
     td {
-      padding: .5rem 1.5rem;
+      padding: .5rem 1rem;
     }
     tr.levels th {
       padding: 2rem 0;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     th.category {
       background: #36454F;
       color: white;
     }
     ul {
+      padding-top: .25rem;
       padding-left: 1.4rem;
       text-indent: -1.4em;
     }
@@ -152,14 +154,14 @@ const StyledSponsorship = styled.div`
       #ffffff 16%,
       #dedede 21%,
       #ffffff 24%,
-      #999999 27%,
+      #cccccc 27%,
       #dedede 36%,
       #ffffff 45%,
       #ffffff 60%,
       #dedede 72%,
       #ffffff 80%,
       #dedede 84%,
-      #a1a1a1
+      #555555
     );
   }
   

@@ -125,7 +125,7 @@ export default function SponsorDonate() {
     e.preventDefault();
     setCheckout(true);
     try {
-      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Sponsors', {
+      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Sponsors-NOEDIT', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

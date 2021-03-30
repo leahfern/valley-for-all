@@ -112,7 +112,7 @@ export default function Donate() {
     e.preventDefault();
     setCheckout(true);
     try {
-      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Individual', {
+      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Individual-NOEDIT', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

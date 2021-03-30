@@ -86,7 +86,7 @@ const StyledSponsorship = styled.div`
       padding: .5rem 1rem;
     }
     tr.levels th {
-      padding: 2rem 0;
+      padding: 1rem 0;
       font-size: 1rem;
       width: 200px;
       line-height: 1.2;

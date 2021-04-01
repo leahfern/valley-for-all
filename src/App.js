@@ -40,7 +40,7 @@ const StyledApp = styled.div`
 function App() {
   return (
     <StyledApp className="App">
-      <RouteChangeTracker>
+      {/* <RouteChangeTracker> */}
       <Nav /> 
       <div className="blur">
         <div className="content">
@@ -54,7 +54,7 @@ function App() {
           </Switch>
         </div>
       </div>
-      </RouteChangeTracker>
+      {/* </RouteChangeTracker> */}
     </StyledApp>
   );
 }

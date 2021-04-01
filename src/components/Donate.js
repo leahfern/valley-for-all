@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import ReactGA from 'react-ga';
 
 import styled from 'styled-components';
 import PayPalTest from './PayPalTest';
@@ -107,6 +108,11 @@ export default function Donate() {
   const [checkout, setCheckout] = useState(false);
   const [formValues, setFormValues] = useState(initialValues)
 
+  useEffect(() => {
+
+    //report page view
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();

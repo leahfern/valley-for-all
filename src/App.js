@@ -43,7 +43,7 @@ function App() {
     ReactGA.initialize(TRACKING_ID);
 
     //report page view
-    ReactGA.pageview('/')
+    ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
 
   return (

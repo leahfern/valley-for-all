@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import thermometer from '../assets/images/thermometer.png';
+import ReactGA from 'react-ga';
 
 const StyledHome = styled.div`
   padding-top: 50px;
@@ -105,6 +106,12 @@ const StyledSponsors = styled.div`
 `;
 
 export default function Home() {
+
+  useEffect(() => {
+        //report page view
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
+  
   return (
     <>
       <StyledHome className="component-container">

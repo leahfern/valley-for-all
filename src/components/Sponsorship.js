@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 const star = <FontAwesomeIcon icon={faStar} />
-
+  
 const StyledSponsorship = styled.div`
   margin: 0 auto;
   padding-top: 50px;
@@ -135,6 +136,11 @@ const StyledSponsorship = styled.div`
 
 
 export default function Sponsorship() {
+
+  useEffect(() => {
+    //report page view
+  ReactGA.pageview('/sponsorship')
+}, [])
 
   return (
     <StyledSponsorship className="component-container">

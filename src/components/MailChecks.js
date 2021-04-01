@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import ReactGA from 'react-ga';
 
 const StyledChecks = styled.div`
   color: white;
@@ -29,6 +30,12 @@ const StyledChecks = styled.div`
 `
 
 export default function MailChecks() {
+
+  useEffect(() => {
+      //report page view
+    ReactGA.pageview('/donate/check')
+  }, [])
+  
   return (
     <StyledChecks className="component-container">
       <h2>

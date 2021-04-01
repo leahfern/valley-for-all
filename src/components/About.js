@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import lhbLogo from '../assets/images/lhb-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import PhotoGallery from './PhotoGallery';
+import ReactGA from 'react-ga';
 
 const StyledAbout = styled.div`
   margin: 0 auto;
@@ -101,6 +102,12 @@ const StyledOrg = styled.div`
 `
 
 export default function About() {
+
+  useEffect(() => {
+      //report page view
+    ReactGA.pageview('/about')
+  }, [])
+
   const star = <FontAwesomeIcon icon={faStar} />
 
   return (

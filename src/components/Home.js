@@ -109,7 +109,7 @@ export default function Home() {
 
   useEffect(() => {
         //report page view
-    ReactGA.pageview(window.location.pathname + window.location.search)
+    ReactGA.pageview('/')
   }, [])
   
   return (

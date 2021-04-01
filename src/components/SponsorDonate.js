@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import PayPalTest from './PayPalTest';
+import ReactGA from 'react-ga';
 
 const StyledDonate = styled.div`
 max-width: 90%;
@@ -120,6 +121,11 @@ export default function SponsorDonate() {
   const [formValues, setFormValues] = useState(initialValues)
 
   const { companyName, contactName, contactTitle, email, phone, level, amount } = formValues;
+
+  useEffect(() => {
+      //report page view
+    ReactGA.pageview('/sponsorship/payment')
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();

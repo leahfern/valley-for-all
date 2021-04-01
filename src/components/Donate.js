@@ -111,7 +111,7 @@ export default function Donate() {
   useEffect(() => {
 
     //report page view
-    ReactGA.pageview(window.location.pathname + window.location.search)
+    ReactGA.pageview('/donate')
   }, [])
 
   const handleSubmit = async (e) => {

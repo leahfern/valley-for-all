@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import {Route, Switch} from 'react-router-dom';
@@ -10,11 +11,10 @@ import parkImg from './assets/images/valley-park.jpg';
 import MailChecks from './components/MailChecks';
 import SponsorDonate from './components/SponsorDonate';
 import ReactGA from 'react-ga';
-import RouteChangeTracker from './components/RouteChangeTracker';
 
 //google analytics
 const TRACKING_ID = "UA-193586281-1";
-ReactGA.initialize(TRACKING_ID);
+
 
 const StyledApp = styled.div`
   background-image: linear-gradient(RGBa(5, 90, 25, .5), rgba(12, 12, 12, .7), rgba(5, 90, 25, .5)), url(${parkImg});
@@ -38,9 +38,16 @@ const StyledApp = styled.div`
 `
 
 function App() {
+
+  useEffect(() => {
+    ReactGA.initialize(TRACKING_ID);
+
+    //report page view
+    ReactGA.pageview('/')
+  }, [])
+
   return (
     <StyledApp className="App">
-      {/* <RouteChangeTracker> */}
       <Nav /> 
       <div className="blur">
         <div className="content">
@@ -54,7 +61,6 @@ function App() {
           </Switch>
         </div>
       </div>
-      {/* </RouteChangeTracker> */}
     </StyledApp>
   );
 }

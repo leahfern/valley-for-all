@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import thermometer from '../assets/images/thermometer.png';
 import ReactGA from 'react-ga';
+import tortuga from '../assets/images/sponsors/tortuga.png';
 
 const StyledHome = styled.div`
   padding-top: 50px;
@@ -92,7 +93,7 @@ const StyledSponsors = styled.div`
   width: 100%;
   background-color: white;
   z-index: 1;
-
+  padding-bottom: 5rem;
   h2 {
     padding: 4rem 0;
     font-size: 2rem;
@@ -102,6 +103,50 @@ const StyledSponsors = styled.div`
     line-height: 1;
     color: green;
 
+  }
+  .sponsors {
+    display: flex;
+    justify-content: center;
+  }
+  .platinum{
+    font-size: 3.75rem;
+    img {
+      width: 500px;
+    }
+  }
+  .gold {
+    font-size: 2.5rem;
+    img {
+      width: 250px;
+      max-width: 95%;
+    }
+    
+  }
+  .silver {
+    margin-bottom: 2rem;
+    img {
+      width: 125px;
+    }
+    font-size: 1rem;
+    h4 {
+      width: 125px;
+      padding: 1rem 0;
+    }
+  }
+  a {
+    margin: 20rem auto 1rem auto;
+    padding: 1rem;
+    background-color: #009FF7;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    :hover {
+      transform: scale(1.1);
+      transition: .5s;
+    }
   }
 `;
 
@@ -122,9 +167,19 @@ export default function Home() {
           <Link to="/donate" className="link">Donate today</Link>
         </div>
       </StyledHome>
-      {/* <StyledSponsors className="sponsors">
+      <StyledSponsors>
         <h2>Thank you to our sponsors!</h2>
-      </StyledSponsors> */}
+        <div className="platinum sponsors">
+            
+        </div>
+        <div className="gold sponsors">
+          <img src={tortuga} alt="Tortuga Wealth Management"/>
+        </div>
+        <div className="silver sponsors">
+          <h4 className="silver">Ryan and Karen Nowicki</h4>
+        </div>
+        <Link to="/sponsorship">Sponsor Us</Link>
+      </StyledSponsors>
     </>
   )
 }

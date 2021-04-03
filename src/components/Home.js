@@ -151,6 +151,14 @@ const StyledSponsors = styled.div`
       transition: .5s;
     }
   }
+  @media(max-width: 500px) {
+    .gold {
+      img {
+        height: auto;
+        max-height: 200px;
+      }
+    }
+  }
 `;
 
 export default function Home() {

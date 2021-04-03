@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import styled from 'styled-components';
 import PayPalTest from './PayPalTest';
+import ReactGA from 'react-ga';
 
 const StyledDonate = styled.div`
   max-width: 90%;
@@ -107,11 +108,11 @@ export default function Donate() {
   const [checkout, setCheckout] = useState(false);
   const [formValues, setFormValues] = useState(initialValues)
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   //report page view
-  //   ReactGA.pageview('/donate')
-  // }, [])
+    //report page view
+    ReactGA.pageview('/donate')
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();

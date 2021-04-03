@@ -11,6 +11,7 @@ import parkImg from './assets/images/valley-park.jpg';
 import MailChecks from './components/MailChecks';
 import SponsorDonate from './components/SponsorDonate';
 import ReactGA from 'react-ga';
+import BottomNav from './components/BottomNav';
 
 //google analytics
 const TRACKING_ID = "UA-193586281-1";
@@ -58,6 +59,7 @@ function App() {
           </Switch>
         </div>
       </div>
+      <BottomNav />
     </StyledApp>
   );
 }

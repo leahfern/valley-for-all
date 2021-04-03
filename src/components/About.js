@@ -82,7 +82,7 @@ const StyledOrg = styled.div`
   }
 
   a {
-    background-color: RGB(64, 150, 190);
+    background-color: #009FF7;
     margin: 3rem auto;
     padding: .8rem;
     color: white;

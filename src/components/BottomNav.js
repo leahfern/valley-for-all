@@ -60,6 +60,9 @@ const StyledBottomNav = styled.div`
     ul {
       display: none;
     }
+    .email {
+      margin: 0 auto;
+    }
   }
 `;
 

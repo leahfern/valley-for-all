@@ -52,7 +52,7 @@ const StyledBottomNav = styled.div`
       padding: 0;
     }
   }
-  @media(max-width: 780px) {
+  @media(max-width: 787px) {
     font-size: .9rem;
     a {
       font-size: 1.2rem;

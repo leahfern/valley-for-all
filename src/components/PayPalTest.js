@@ -32,6 +32,14 @@ const StyledTest = styled.div`
       background: #14a8f7;
     }
   }
+  .assistance {
+    color: white;
+    font-size: 1rem;
+
+    a {
+      color: white;
+    }
+  }
 `
 
 export default function PayPalTest(props) {
@@ -93,6 +101,7 @@ export default function PayPalTest(props) {
       <h4>Select a payment type:</h4>
       <Link to="/donate/check" className="checkpayment">Check Payment</Link>
       <div ref={paypalRef} />
+      <p className="assistance">Having trouble? Contact Eric Foster at <a href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a href="tel:310-877-3822">310-877-3822</a></p>
     </StyledTest>
   )
 }

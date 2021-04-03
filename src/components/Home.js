@@ -44,7 +44,7 @@ const StyledHome = styled.div`
     }
   }
   img {
-    width: 600px;
+    width: 400px;
     max-width: 100%;
     padding-bottom: 2rem;
     margin: 2rem auto 3rem auto;
@@ -95,7 +95,7 @@ const StyledSponsors = styled.div`
   z-index: 1;
   padding-bottom: 5rem;
   h2 {
-    padding: 4rem 0;
+    padding: 4rem 0 2rem 0;
     font-size: 2rem;
     text-transform: uppercase;
     max-width: 90%;
@@ -112,13 +112,14 @@ const StyledSponsors = styled.div`
     font-size: 3.75rem;
     img {
       width: 500px;
+      max-width: 100%;
     }
   }
   .gold {
     font-size: 2.5rem;
     img {
       width: 250px;
-      max-width: 95%;
+      max-width: 75%;
     }
     
   }
@@ -126,6 +127,7 @@ const StyledSponsors = styled.div`
     margin-bottom: 2rem;
     img {
       width: 125px;
+      max-width: 50%;
     }
     font-size: 1rem;
     h4 {
@@ -133,6 +135,7 @@ const StyledSponsors = styled.div`
       padding: 1rem 0;
     }
   }
+
   a {
     margin: 20rem auto 1rem auto;
     padding: 1rem;

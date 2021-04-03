@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 import ReactGA from 'react-ga';
+import Sponsors from './Sponsors';
 
 const star = <FontAwesomeIcon icon={faStar} />
   
@@ -143,103 +144,106 @@ export default function Sponsorship() {
 }, [])
 
   return (
-    <StyledSponsorship className="component-container">
-      <h2>Valley For All</h2>
-      <h3>Sponsorship Opportunities</h3>
-      <div className="tableContainer">
-        <table>
-          <col style={{width:" 16%"}} />
-          <col style={{width:" 28%"}}  />
-          <col style={{width:" 28%"}}  />
-          <col style={{width:" 28%"}}  />
-          <tr className="levels">
-            <th></th>
-            <th className="platinum">Platinum Sponsor<br />$5,000 +</th>
-            <th className="gold">Gold Sponsor<br />$2,500 +</th>
-            <th className="silver">Silver Sponsor<br />$1,000 +</th>
-          </tr>
-          <tr>
-            <th className="category">Permanent Dedication In Valley Park</th>
-            <td className="platinum">Most Prominent Positioning</td>
-            <td className="gold">Prominent Positioning</td>
-            <td className="silver">Included</td>
-          </tr>
-          <tr>
-            <th className="category">Website Inclusion</th>
-            <td className="platinum">
-              <ul>
-                <li><span>{star}</span> Logo</li>
-                <li><span>{star}</span> Link</li>
-                <li><span>{star}</span> Overview</li>
-              </ul>
-            </td>
-            <td className="gold">
-              <ul>
-                <li><span>{star}</span> Logo</li>
-                <li><span>{star}</span> Link</li>
-              </ul>
-            </td>
-            <td className="silver">
-              <ul>
-                <li><span>{star}</span> Logo</li>
-                <li><span>{star}</span> Link</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th className="category">Social Media Recognition</th>
-            <td className="platinum">
-              Recognized as Platinum Sponsor
-              <ul>
-                <li><span>{star}</span> 3x FB Posts</li>
-                <li><span>{star}</span> 2x IG Posts</li>
-                <li><span>{star}</span> 1x Dedicated FB Post</li>
-                <li><span>{star}</span> 1x Dedicated IG Post</li>
-              </ul>
-            </td>
-            <td className="gold">
-              Recognized as Gold Sponsor
-              <ul>
-                <li><span>{star}</span> 3x FB Posts</li>
-                <li><span>{star}</span> 2x IG Posts</li>
-              </ul>
-            </td>
-            <td className="silver">
-              Recognized as Silver Sponsor
-              <ul>
-                <li><span>{star}</span> 2x FB Posts</li>
-                <li><span>{star}</span> 1x IG Post</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th className="category">Event Banner at Unveiling Event</th>
-            <td className="platinum">Recognized as Platinum Sponsor</td>
-            <td className="gold">Recognized as Gold Sponsor</td>
-            <td></td>
-          </tr>
-          <tr>
-            <th className="category">Leadership Hermosa Beach Email Newsletter</th>
-            <td className="platinum">Inclusion and Recognized as Platinum Sponsor</td>
-            <td className="gold">Inclusion and Recognized as Gold Sponsor</td>
-            <td></td>
-          </tr>
-          <tr>
-            <th className="category">Media Outreach</th>
-            <td className="platinum">Recognized as Platinum Sponsor</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th className="category">Verbal Recognition at Unveiling Ceremony</th>
-            <td className="platinum">Recognition of Company as Platinum Sponsor</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </div>
-      <Link id="sponsorClick" to="/sponsorship/payment">Sponsor Us today</Link>
-      <p>*For personalized sponsorship packages or questions, contact Fundraising Chair Eric Foster at <a className="contact" href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a className="contact" href="tel:310-877-3822">310-877-3822</a></p>
-    </StyledSponsorship>
+    <>
+      <StyledSponsorship className="component-container">
+        <h2>Valley For All</h2>
+        <h3>Sponsorship Opportunities</h3>
+        <div className="tableContainer">
+          <table>
+            <col style={{width:" 16%"}} />
+            <col style={{width:" 28%"}}  />
+            <col style={{width:" 28%"}}  />
+            <col style={{width:" 28%"}}  />
+            <tr className="levels">
+              <th></th>
+              <th className="platinum">Platinum Sponsor<br />$5,000 +</th>
+              <th className="gold">Gold Sponsor<br />$2,500 +</th>
+              <th className="silver">Silver Sponsor<br />$1,000 +</th>
+            </tr>
+            <tr>
+              <th className="category">Permanent Dedication In Valley Park</th>
+              <td className="platinum">Most Prominent Positioning</td>
+              <td className="gold">Prominent Positioning</td>
+              <td className="silver">Included</td>
+            </tr>
+            <tr>
+              <th className="category">Website Inclusion</th>
+              <td className="platinum">
+                <ul>
+                  <li><span>{star}</span> Logo</li>
+                  <li><span>{star}</span> Link</li>
+                  <li><span>{star}</span> Overview</li>
+                </ul>
+              </td>
+              <td className="gold">
+                <ul>
+                  <li><span>{star}</span> Logo</li>
+                  <li><span>{star}</span> Link</li>
+                </ul>
+              </td>
+              <td className="silver">
+                <ul>
+                  <li><span>{star}</span> Logo</li>
+                  <li><span>{star}</span> Link</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th className="category">Social Media Recognition</th>
+              <td className="platinum">
+                Recognized as Platinum Sponsor
+                <ul>
+                  <li><span>{star}</span> 3x FB Posts</li>
+                  <li><span>{star}</span> 2x IG Posts</li>
+                  <li><span>{star}</span> 1x Dedicated FB Post</li>
+                  <li><span>{star}</span> 1x Dedicated IG Post</li>
+                </ul>
+              </td>
+              <td className="gold">
+                Recognized as Gold Sponsor
+                <ul>
+                  <li><span>{star}</span> 3x FB Posts</li>
+                  <li><span>{star}</span> 2x IG Posts</li>
+                </ul>
+              </td>
+              <td className="silver">
+                Recognized as Silver Sponsor
+                <ul>
+                  <li><span>{star}</span> 2x FB Posts</li>
+                  <li><span>{star}</span> 1x IG Post</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th className="category">Event Banner at Unveiling Event</th>
+              <td className="platinum">Recognized as Platinum Sponsor</td>
+              <td className="gold">Recognized as Gold Sponsor</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th className="category">Leadership Hermosa Beach Email Newsletter</th>
+              <td className="platinum">Inclusion and Recognized as Platinum Sponsor</td>
+              <td className="gold">Inclusion and Recognized as Gold Sponsor</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th className="category">Media Outreach</th>
+              <td className="platinum">Recognized as Platinum Sponsor</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th className="category">Verbal Recognition at Unveiling Ceremony</th>
+              <td className="platinum">Recognition of Company as Platinum Sponsor</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <Link id="sponsorClick" to="/sponsorship/payment">Sponsor Us today</Link>
+        <p>*For personalized sponsorship packages or questions, contact Fundraising Chair Eric Foster at <a className="contact" href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a className="contact" href="tel:310-877-3822">310-877-3822</a></p>
+      </StyledSponsorship>
+    <Sponsors />
+    </>
   )
 }

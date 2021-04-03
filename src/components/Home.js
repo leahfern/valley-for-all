@@ -110,24 +110,27 @@ const StyledSponsors = styled.div`
   }
   .platinum{
     font-size: 3.75rem;
-    img {
+    a {
       width: 500px;
       max-width: 100%;
     }
   }
   .gold {
     font-size: 2.5rem;
-    img {
+    a {
       width: 250px;
-      max-width: 75%;
+      max-width: 70%;
     }
-    
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   .silver {
     margin-bottom: 2rem;
-    img {
+    a {
       width: 125px;
-      max-width: 50%;
+      max-width: 40%;
     }
     font-size: 1rem;
     h4 {
@@ -136,7 +139,7 @@ const StyledSponsors = styled.div`
     }
   }
 
-  a {
+  a.button {
     margin: 20rem auto 1rem auto;
     padding: 1rem;
     background-color: #009FF7;
@@ -151,14 +154,14 @@ const StyledSponsors = styled.div`
       transition: .5s;
     }
   }
-  @media(max-width: 500px) {
-    .gold {
-      img {
-        height: auto;
-        max-height: 200px;
-      }
-    }
-  }
+  // @media(max-width: 500px) {
+  //   .gold {
+  //     a {
+  //       height: auto;
+  //       max-height: 200px;
+  //     }
+  //   }
+  // }
 `;
 
 export default function Home() {
@@ -184,12 +187,14 @@ export default function Home() {
             
         </div>
         <div className="gold sponsors">
-          <img src={tortuga} alt="Tortuga Wealth Management"/>
+          <a href="http://www.tortugawealth.com/">
+            <img src={tortuga} alt="Tortuga Wealth Management"/>
+          </a>
         </div>
         <div className="silver sponsors">
           <h4 className="silver">Ryan and Karen Nowicki</h4>
         </div>
-        <Link to="/sponsorship">Sponsor Us</Link>
+        <Link to="/sponsorship" className="button">Sponsor Us</Link>
       </StyledSponsors>
     </>
   )

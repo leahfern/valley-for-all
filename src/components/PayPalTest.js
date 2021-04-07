@@ -50,8 +50,6 @@ export default function PayPalTest(props) {
   const paypalRef = React.useRef();
   
   React.useEffect(() => {
-    console.log(total)
-    console.log(props.total)
     window.paypal
       .Buttons({
         createOrder: (data, actions) => {
@@ -74,8 +72,8 @@ export default function PayPalTest(props) {
           setFormValues({name: '', email: '', phone: '', amount: ''})
         },
         onError: (err) => {
-        //   setError(err),
-          console.error(err);
+          setError(err);
+          // console.error(err);
         },
         style: {
           layout:  'vertical',
@@ -93,7 +91,7 @@ export default function PayPalTest(props) {
 
   // If any error occurs
   if (error) {
-    return <StyledTest className="status">Error Occurred in processing payment! Please try again.</StyledTest>;
+    return <StyledTest className="status">Error Occurred in processing payment! Please try again. If problems persist, please contact us at ValleyForAll@gmail.com.</StyledTest>;
   }
   
   return (

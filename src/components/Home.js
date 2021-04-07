@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import thermometer from '../assets/images/thermometer.png';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
+import Ticker from './Ticker';
 
 const StyledHome = styled.div`
   padding-top: 50px;
@@ -107,6 +108,7 @@ export default function Home() {
           <Link to="/donate" className="link">Donate today</Link>
         </div>
       </StyledHome>
+      {/* <Ticker /> */}
       <Sponsors />
     </>
   )

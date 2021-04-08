@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import thermometer from '../assets/images/thermometer.png';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
-import Ticker from './Ticker';
+// import Ticker from './Ticker';
 
 const StyledHome = styled.div`
   padding-top: 50px;
@@ -32,7 +32,7 @@ const StyledHome = styled.div`
   a.link {
     margin: 20rem auto 1rem auto;
     padding: 1rem;
-    background-color: #009FF7;
+    background-color: #329CD6;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -49,7 +49,7 @@ const StyledHome = styled.div`
     max-width: 100%;
     padding-bottom: 2rem;
     margin: 2rem auto 3rem auto;
-    border-bottom: 5px solid #009FF7; 
+    border-bottom: 5px solid #329CD6; 
     display: block;
   }
   @media(max-width: 787px) {

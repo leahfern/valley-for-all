@@ -1,7 +1,7 @@
 import React from 'react';
 import tortuga from '../assets/images/sponsors/tortuga.png';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 
 const StyledSponsors = styled.div`
   width: 100%;
@@ -19,7 +19,7 @@ const StyledSponsors = styled.div`
   }
   .sponsors {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
   }
   .platinum{
     font-size: 3.75rem;
@@ -55,7 +55,7 @@ const StyledSponsors = styled.div`
   a.button {
     margin: 20rem auto 1rem auto;
     padding: 1rem;
-    background-color: #009FF7;
+    background-color: #329CD6;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -70,6 +70,10 @@ const StyledSponsors = styled.div`
 `;
 
 export default function Sponsors() {
+
+  const { route } = useParams();
+  console.log(route);
+
   return (
     <StyledSponsors>
       <h2 className="effect-shine">Thank you to our sponsors!</h2>
@@ -84,7 +88,8 @@ export default function Sponsors() {
       <div className="silver sponsors">
         <h4 className="silver">Ryan and Karen Nowicki</h4>
       </div>
-      <Link to="/sponsorship" className="button">Sponsor Us</Link>
+      <Link to="/sponsorship" className={"button"} >Sponsor Us</Link>
     </StyledSponsors>
   )
 }
+{/* <button className={checkout ? "checkout-button hidden" : "checkout-button"}>Continue</button> */}

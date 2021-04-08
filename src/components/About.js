@@ -13,6 +13,7 @@ const StyledAbout = styled.div`
   color: white;
   line-height: 1.5;
   z-index: -1;
+  
   h2 {
     font-weight: 700;
     font-size: 3rem;
@@ -82,7 +83,7 @@ const StyledOrg = styled.div`
   }
 
   a {
-    background-color: #009FF7;
+    background-color: #329CD6;
     margin: 3rem auto;
     padding: .8rem;
     color: white;

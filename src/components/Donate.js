@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 import PayPalTest from './PayPalTest';
@@ -27,7 +27,7 @@ const StyledDonate = styled.div`
     :focus {
       border: none;
       outline: none;
-      border-bottom: 3px solid #009FF7;
+      border-bottom: 3px solid #329CD6;
     }
   }
   h2 {
@@ -66,7 +66,7 @@ const StyledDonate = styled.div`
   }
 
   button {
-    background-color: #009FF7;
+    background-color: #329CD6;
     margin: 1rem auto;
     padding: .8rem;
     color: white;
@@ -111,7 +111,7 @@ export default function Donate() {
   useEffect(() => {
 
     //report page view
-    ReactGA.pageview('/donate')
+    ReactGA.pageview('/donate/straight')
   }, [])
 
   const handleSubmit = async (e) => {
@@ -200,12 +200,6 @@ export default function Donate() {
         </div>
       </form>
 
-      <div className="payment-div">
-        {/* <PayPalBtn
-          amount = {payAmount}
-          currency = {'USD'}
-          onSuccess={paymentHandler}/> */}
-      </div>
       {(checkout === true) 
         ? <div className="payment-div">
           <PayPalTest 

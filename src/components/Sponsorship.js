@@ -41,7 +41,7 @@ const StyledSponsorship = styled.div`
   }
   a {
     padding: 1rem;
-    background-color: #009FF7;
+    background-color: #329CD6;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -211,6 +211,25 @@ export default function Sponsorship() {
                 <ul>
                   <li><span>{star}</span> 2x FB Posts</li>
                   <li><span>{star}</span> 1x IG Post</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th className="category">Recognition Pavers</th>
+              <td className="platinum">
+                <ul>
+                  <li><span>{star}</span> One 8" x 8" Paver</li>
+                  <li><span>{star}</span> One 4" x 8" Paver</li>
+                </ul>
+              </td>
+              <td className="gold">
+                <ul>
+                  <li><span>{star}</span> One 8" x 8" Paver</li>
+                </ul>
+              </td>
+              <td className="silver">
+                <ul>
+                  <li><span>{star}</span> One 4" x 8" Paver</li>
                 </ul>
               </td>
             </tr>

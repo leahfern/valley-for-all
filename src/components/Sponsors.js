@@ -7,7 +7,7 @@ const StyledSponsors = styled.div`
   width: 100%;
   background-color: white;
   z-index: 1;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   h2 {
     padding: 4rem 0 2rem 0;
     font-size: 2rem;
@@ -53,7 +53,6 @@ const StyledSponsors = styled.div`
   }
 
   a.button {
-    margin: 20rem auto 1rem auto;
     padding: 1rem;
     background-color: #329CD6;
     color: white;
@@ -67,12 +66,14 @@ const StyledSponsors = styled.div`
       transition: .5s;
     }
   }
+  .hidden {
+    display: none;
+  }
 `;
 
 export default function Sponsors() {
 
-  const { route } = useParams();
-  console.log(route);
+  const location = window.location.pathname;
 
   return (
     <StyledSponsors>
@@ -88,8 +89,7 @@ export default function Sponsors() {
       <div className="silver sponsors">
         <h4 className="silver">Ryan and Karen Nowicki</h4>
       </div>
-      <Link to="/sponsorship" className={"button"} >Sponsor Us</Link>
+      <Link to="/sponsorship" className={location === "/sponsorship" ? "button hidden" : "button"} >Sponsor Us</Link>
     </StyledSponsors>
   )
 }
-{/* <button className={checkout ? "checkout-button hidden" : "checkout-button"}>Continue</button> */}

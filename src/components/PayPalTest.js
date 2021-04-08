@@ -64,6 +64,9 @@ export default function PayPalTest(props) {
                 },
               },
             ],
+            application_context: {
+              shipping_preference: 'NO_SHIPPING'
+            }
           });
         },
         onApprove: async (data, actions) => {

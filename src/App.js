@@ -13,6 +13,7 @@ import SponsorDonate from './components/SponsorDonate';
 import ReactGA from 'react-ga';
 import BottomNav from './components/BottomNav';
 import Bricks from './components/Bricks';
+import DonateLanding from './components/DonateLanding';
 
 //google analytics
 const TRACKING_ID = "UA-193586281-1";
@@ -54,7 +55,8 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route exact path="/sponsorship" component={Sponsorship}/>
-            <Route exact path="/donate" component={Donate} />
+            <Route exact path="/donate" component={DonateLanding} />
+            <Route exact path="/donate/straight" component={Donate} />
             <Route exact path="/donate/check" component={MailChecks} />
             <Route exact path="/sponsorship/payment" component={SponsorDonate} />
             <Route exact path="/bricks" component={Bricks} />

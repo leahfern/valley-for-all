@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Gallery from 'react-grid-gallery';
-import styled from 'styled-components';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import img2 from '../assets/images/gallery/img-2-lg.jpg';
 import img2Thumb from '../assets/images/gallery/img-2-thumb.jpg';

@@ -9,22 +9,30 @@ const StyledBricks = styled.div`
   margin: 0 auto;
   color: white;
   padding-top: 30px;
+  line-height: 1.5;
 
   img {
     width: 100%;
+    border: 2px solid white;
   }
   .img-container {
     width: 500px;
     max-width: 90%;
+
+    span {
+      font-style: italic;
+    }
   }
   #top-content {
     width: 800px;
     max-width: 95%;
     margin: 0 auto;
+    padding-bottom: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    border-bottom: 5px solid #329CD6;
 
     p {
       width: 300px;
@@ -32,13 +40,43 @@ const StyledBricks = styled.div`
       font-size: 1.3rem;
       line-height: 1.5;
       padding: 1rem;
+      text-align: left;
+    }
+  }
+
+  #middle {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 90%;
+    border-bottom: 5px solid #329CD6; 
+
+    p {
+      text-align: justify;
+      margin: 2rem auto;
+      width: 700px;
+      max-width: 90%;
     }
   }
   label {
     font-weight: bold;
 
     span {
+      margin-top: .5rem;
+      margin-bottom: 1rem;
+      display: block;
       font-weight: normal;
+      font-size: .9rem;
+      line-height: 1.5;
+
+      span {
+        font-style:italic;
+        display: inline;
+        margin: 0 auto;
+      }
+    }
+
+    span#count {
+      margin-top: -1.2rem;
     }
   }
   input {
@@ -63,25 +101,28 @@ const StyledBricks = styled.div`
     font-weight: 700;
     font-size: 3rem;
     color: white;
-    margin: 10rem auto 1rem auto;
+    margin: 10rem auto .5rem auto;
     text-transform: uppercase;
+    line-height: 1;
   }
   h3 {
     margin-bottom: 3rem;
     font-size: 2rem;
     text-transform: uppercase;
+    line-height: 1;
   }
   form {
     text-align: left;
     width: 600px;
     max-width: 90%;
-    margin: 3rem auto 0 auto;
+    margin: 4rem auto 0 auto;
 
     h4 {
       text-align: center;
       text-transform: uppercase;
       font-weight: 700;
       margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
   }
   .payment-div {
@@ -117,15 +158,21 @@ const StyledBricks = styled.div`
   }
   .nonprofit {
     padding-bottom: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-align: center;
   }
   .brick {
     width: 100%;
     text-indent: 1rem;
-    :first-child {
-      margin-top: 1rem;
-    }
+    padding: .5rem;
     label {
       font-weight: 400;
+    }
+
+    :last-child {
+      margin-bottom: 1rem;
     }
   }
   .radio {
@@ -133,6 +180,7 @@ const StyledBricks = styled.div`
     width: auto;
     display: inline-block;
     margin-right: .5rem;
+    margin-bottom: 0;
   }
 `
 
@@ -146,7 +194,9 @@ const initialValues = {
 
 export default function Bricks() {
   const [checkout, setCheckout] = useState(false);
-  const [formValues, setFormValues] = useState(initialValues)
+  const [formValues, setFormValues] = useState(initialValues);
+  const [allowed, setAllowed] = useState(36);
+  const [remaining, setRemaining] = useState(36);
 
   const { name, email, phone, brick, brickName } = formValues;
 
@@ -160,8 +210,18 @@ export default function Bricks() {
   const handleChange = e => {
     const { name, value, type, checked } = e.target;
     const newValue = type === 'checkbox' ? checked : value
-
+    if (name === "brick") {
+      setAllowed(
+        value === "large"
+        ? 72
+        : 36
+      )
+    }
     setFormValues({ ...formValues, [name]: newValue });
+    if (name === "brickName") {
+      const trimmedValue = value.split('/').join('');
+      setRemaining(allowed - trimmedValue.length);
+    }
   }
 
   const handleSubmit = async (e) => {
@@ -186,15 +246,20 @@ export default function Bricks() {
       <h2>
         Valley For All
       </h2>
-      <h3>Buy a brick</h3>
+      <h3>Bricks</h3>
       <section id="top-content">
         <p>
-          Purchase one of our engraved bricks and become a permanent part of beautiful Valley Park!
+          Purchase an engraved brick and cement your legacy in Valley Park!
         </p>
         <div className="img-container">
           <img src={paver} alt="example paver from previous LHB project" />
-          <span>Example from recent LHB project</span>
+          <span>Example from a past LHB project</span>
         </div>
+      </section>
+      <section id="middle">
+        <p>Leadership Hermosa Beach Class of 2021 is giving individuals a chance to personalize a brick that will be a fixture in the lower barbecue area of Valley Park.</p>
+        
+        <p>Whether you utilize Valley Park's beautiful facilities through local organizations, for special events, or are simply an advocate of green spaces, you now have a limited time to engrave your name into a brick that will become a staple of this park for decades to come. All proceeds support the Valley For All project.</p>
       </section>
       <form onSubmit={handleSubmit}>
         <h4>Order Form</h4>
@@ -241,6 +306,7 @@ export default function Bricks() {
               id="small"
               checked={formValues.brick === "small"}
               onChange={handleChange}
+              required
             />
             <label htmlFor="small">
               4" x 8" - $160
@@ -255,6 +321,7 @@ export default function Bricks() {
               id="large"
               checked={formValues.brick === "large"}
               onChange={handleChange}
+              required
             />
             <label htmlFor="large">
               8" x 8" - $250
@@ -262,7 +329,16 @@ export default function Bricks() {
           </div>
         </label>
         <label>
-          Name(s) to appear on brick*:
+          Name(s) to appear on brick:<br />
+          <span>Enter the names of individuals or businesses/organizations you would like to appear on the brick. Please note that only names (no other messages) will be accepted. All engravings are subject to approval.<br />
+          <br />
+
+          4" x 8" bricks include three lines of 12 characters.<br/>
+          8" x 8" bricks include six lines of 12 characters. <br/><br/>
+
+          If you wish to specify line breaks, please use "/".<br />
+          <span>ex: "John & Jane/Smith", "Tortuga/Wealth/Management"</span><br /><br />
+          Please verify spelling.</span>
           <input
             name="brickName" 
             type="text"
@@ -270,13 +346,28 @@ export default function Bricks() {
             value={formValues.brickName}
             onChange={handleChange}
             required
+            maxLength={allowed + 6}
           />
-          <span>Please enter only names of individuals and/or businesses/organizations.</span>
+          <span id="count">Characters remaining: {remaining}</span>
         </label>
         <div className="centered">
           <button className={checkout ? "checkout-button hidden" : "checkout-button"}>Continue</button>
         </div>
       </form>
+      {(checkout === true) 
+        ? <div className="payment-div">
+          <PayPalTest 
+            total={formValues.brick === "large" ? 250.00 : 160.00}
+            setFormValues={setFormValues}
+            type={`${brick} brick`}
+          />
+        </div> 
+
+        : ''
+      }
+      <p className="nonprofit">All Donations are 100% tax deductible. PayPal takes a fee of up to 2.9% + $0.30 from each donation. To avoid fees, please consider sending a check.<br />
+      Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254</p>
+
     </StyledBricks>
   )
 }

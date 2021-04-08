@@ -50,6 +50,8 @@ export default function PayPalTest(props) {
   const paypalRef = React.useRef();
   
   React.useEffect(() => {
+    console.log(total)
+    console.log(type)
     window.paypal
       .Buttons({
         createOrder: (data, actions) => {
@@ -68,7 +70,7 @@ export default function PayPalTest(props) {
         },
         shippingPreference: "NO_SHIPPING",
         onApprove: async (data, actions) => {
-          const order = await actions.order.capture();
+          // const order = await actions.order.capture();
           setPaid(true);
           setFormValues({name: '', email: '', phone: '', amount: ''})
         },

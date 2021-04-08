@@ -13,6 +13,7 @@ const StyledAbout = styled.div`
   color: white;
   line-height: 1.5;
   z-index: -1;
+  
   h2 {
     font-weight: 700;
     font-size: 3rem;

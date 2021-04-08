@@ -67,7 +67,7 @@ z-index: 1;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
-    padding: .5rem;
+    padding: .35rem;
     border-bottom: 3px solid transparent;
     z-index: 3;
     font-size: 1rem;
@@ -80,10 +80,10 @@ z-index: 1;
     }
   }
   .logo-container {
-    padding-left: 3rem;
+    padding-left: 2rem;
   }
   .donate {
-    width: 200px;
+    width: 120px;
     padding-right: 3rem;
     a {
       border: none;
@@ -143,7 +143,7 @@ z-index: 1;
       }
     }
   }
-  @media(max-width: 500px ) {
+  @media(max-width: 549px ) {
     .bottom-nav {
       justify-content: space-evenly;
     }
@@ -151,10 +151,11 @@ z-index: 1;
       margin-bottom: 1rem;
     }
     .donate {
-      width: 25%;
+      width: auto;
       margin: 0;
       margin-left: 0;
       text-align: left;
+      padding-right: .5rem;
       a {
         margin: 0;
         line-height: 1.5;
@@ -217,6 +218,7 @@ export default function Nav() {
         <div className = "links">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
+          <Link to="/bricks">Bricks</Link>
           <Link to="/sponsorship">Sponsor Us</Link>
         </div>
         <div className="donate">

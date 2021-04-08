@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import thermometer from '../assets/images/thermometer.png';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
-import Ticker from './Ticker';
+// import Ticker from './Ticker';
 
 const StyledHome = styled.div`
   padding-top: 50px;

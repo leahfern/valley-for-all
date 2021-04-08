@@ -215,6 +215,25 @@ export default function Sponsorship() {
               </td>
             </tr>
             <tr>
+              <th className="category">Recognition Pavers</th>
+              <td className="platinum">
+                <ul>
+                  <li><span>{star}</span> One 8" x 8" Paver</li>
+                  <li><span>{star}</span> One 4" x 8" Paver</li>
+                </ul>
+              </td>
+              <td className="gold">
+                <ul>
+                  <li><span>{star}</span> One 8" x 8" Paver</li>
+                </ul>
+              </td>
+              <td className="silver">
+                <ul>
+                  <li><span>{star}</span> One 4" x 8" Paver</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
               <th className="category">Event Banner at Unveiling Event</th>
               <td className="platinum">Recognized as Platinum Sponsor</td>
               <td className="gold">Recognized as Gold Sponsor</td>

@@ -64,11 +64,9 @@ export default function PayPalTest(props) {
                 },
               },
             ],
-            application_context: {
-              shipping_preference: 'NO_SHIPPING'
-            }
           });
         },
+        shippingPreference: "NO_SHIPPING",
         onApprove: async (data, actions) => {
           const order = await actions.order.capture();
           setPaid(true);

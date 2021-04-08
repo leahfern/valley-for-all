@@ -55,7 +55,7 @@ const StyledSponsors = styled.div`
   a.button {
     margin: 20rem auto 1rem auto;
     padding: 1rem;
-    background-color: #009FF7;
+    background-color: #329CD6;
     color: white;
     text-decoration: none;
     font-weight: bold;

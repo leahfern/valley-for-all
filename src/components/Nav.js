@@ -14,7 +14,7 @@ z-index: 1;
   #top-nav {
     width: 100%;
     height: 40px;
-    background: #009FF7;
+    background: #329CD6;
     font-size: 1rem;
     font-weight: 500;
     display: flex;
@@ -76,7 +76,7 @@ z-index: 1;
     :hover {
       color: darkgreen;
       transition: .5s;
-      border-bottom: 3px solid #009FF7;
+      border-bottom: 3px solid #329CD6;
     }
   }
   .logo-container {

@@ -41,7 +41,7 @@ const StyledSponsorship = styled.div`
   }
   a {
     padding: 1rem;
-    background-color: #009FF7;
+    background-color: #329CD6;
     color: white;
     text-decoration: none;
     font-weight: bold;

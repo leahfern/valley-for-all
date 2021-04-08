@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const StyledTest = styled.div` 
   font-size: 2rem;
-  color: #009FF7;
+  color: #329CD6;
   padding: 1rem 0;
   line-height: 1.5;
   h4 {
@@ -17,7 +17,7 @@ const StyledTest = styled.div`
     width: 100%;
     border-radius: 3px;
     margin-bottom: 1rem;
-    background-color: #009FF7;
+    background-color: #329CD6;
     color: white;
     text-decoration: none;
     font-weight: bold;

@@ -7,7 +7,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 const StyledBottomNav = styled.div`
   width: 100%;
   height: 40px;
-  background: #009FF7;
+  background: #329CD6;
   font-size: 1rem;
   font-weight: 500;
   display: flex;

@@ -56,7 +56,7 @@ const StyledBricks = styled.div`
     :focus {
       border: none;
       outline: none;
-      border-bottom: 3px solid #009FF7;
+      border-bottom: 3px solid #329CD6;
     }
   }
   h2 {
@@ -90,7 +90,7 @@ const StyledBricks = styled.div`
     margin: 1rem auto;
   }
   button {
-    background-color: #009FF7;
+    background-color: #329CD6;
     margin: 1rem auto;
     padding: .8rem;
     color: white;

@@ -12,6 +12,7 @@ import MailChecks from './components/MailChecks';
 import SponsorDonate from './components/SponsorDonate';
 import ReactGA from 'react-ga';
 import BottomNav from './components/BottomNav';
+import Bricks from './components/Bricks';
 
 //google analytics
 const TRACKING_ID = "UA-193586281-1";
@@ -56,6 +57,7 @@ function App() {
             <Route exact path="/donate" component={Donate} />
             <Route exact path="/donate/check" component={MailChecks} />
             <Route exact path="/sponsorship/payment" component={SponsorDonate} />
+            <Route exact path="/bricks" component={Bricks} />
           </Switch>
         </div>
       </div>

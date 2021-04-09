@@ -19,7 +19,7 @@ const StyledLanding = styled.div`
     text-transform: uppercase;
   }
   h3 {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     font-size: 2rem;
     text-transform: uppercase;
   }
@@ -95,7 +95,7 @@ export default function DonateLanding() {
         VALLEY FOR ALL
       </h2>
       <h3>
-        DONATE
+        Ways to support us
       </h3>
       <div className="buttons">
         <button onClick = {(e)=> {
@@ -103,7 +103,7 @@ export default function DonateLanding() {
           history.push('/bricks');
         }}>
           <div>
-            Purchase a commemorative brick<br />
+            Purchase an engraved brick<br />
             <span>(starting at $160)</span>
           </div>
         </button>

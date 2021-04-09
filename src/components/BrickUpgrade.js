@@ -67,6 +67,7 @@ const StyledBricks = styled.div`
       font-weight: normal;
       font-size: .9rem;
       line-height: 1.5;
+      margin-left: .5rem;
 
       span {
         font-style:italic;
@@ -189,16 +190,17 @@ const initialValues = {
   email: '',
   phone: '',
   brick: '',
+  amount: '',
   brickName: ''
 }
 
-export default function Bricks() {
+export default function BrickUpgrade() {
   const [checkout, setCheckout] = useState(false);
   const [formValues, setFormValues] = useState(initialValues);
   const [allowed, setAllowed] = useState(48);
   const [remaining, setRemaining] = useState(48);
 
-  const { name, email, phone, brick, brickName } = formValues;
+  const { name, email, phone, brick, amount, brickName } = formValues;
 
 
   useEffect(() => {
@@ -228,12 +230,12 @@ export default function Bricks() {
     e.preventDefault();
     setCheckout(true);
     try {
-      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Bricks-NOEDIT', {
+      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=BrickUpgrades-NOEDIT', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify([[name, email, phone, brick, brickName, new Date().toLocaleString()]])
+        body: JSON.stringify([[name, email, phone, brick, amount, brickName, new Date().toLocaleString()]])
       });
       await response.json()
     } catch (err) {
@@ -246,10 +248,10 @@ export default function Bricks() {
       <h2>
         Valley For All
       </h2>
-      <h3>Bricks</h3>
+      <h3>UPGRADE TO A Brick</h3>
       <section id="top-content">
         <p>
-          Purchase an engraved brick and cement your legacy in Valley Park!
+          Upgrade your donation to include an engraved brick and cement your legacy in Valley Park!
         </p>
         <div className="img-container">
           <img src={paver} alt="example paver from previous LHB project" />
@@ -262,7 +264,8 @@ export default function Bricks() {
         <p>Whether you utilize Valley Park's beautiful facilities through local organizations, for special events, or are simply an advocate of green spaces, you now have a limited time to engrave your name into a brick that will become a staple of this park for decades to come. All proceeds support the Valley For All project.</p>
       </section>
       <form onSubmit={handleSubmit}>
-        <h4>Order Form</h4>
+        <h4>Upgrade Order Form</h4>
+        <span>As a previous donor to our project, you can now upgrade your donation to include an engraved brick! Please fill out the below details so we can combine your donations.<br /><br /></span>
         <label>
           Name:
           <input
@@ -329,8 +332,22 @@ export default function Bricks() {
           </div>
         </label>
         <label>
+          Additional donation amount:<br />
+          <span>Enter the additional amount to cover the difference between your previous donation and your selected brick size.<br />
+          <span>ex. If you previously donated $50 and would like to purchase a 4" x 8" brick, you should enter $110.</span></span>
+          <input
+            type="number"
+            name="amount"
+            placeholder="110.00"
+            min="1"
+            value={formValues.amount}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
           Name(s) to appear on brick:<br />
-          <span>Enter the names of individuals, families or businesses/organizations you would like to appear on the brick. Please note that only names (no other messages) will be accepted. All engravings are subject to approval.<br />
+          <span>Enter the names of individuals or businesses/organizations you would like to appear on the brick. Please note that only names (no other messages) will be accepted. All engravings are subject to approval.<br />
           <br />
 
           4" x 8" bricks include three lines of 16 characters.<br/>
@@ -357,9 +374,9 @@ export default function Bricks() {
       {(checkout === true) 
         ? <div className="payment-div">
           <PayPalTest 
-            total={formValues.brick === "large" ? 250.00 : 160.00}
+            total={formValues.amount}
             setFormValues={setFormValues}
-            type={`${brick} brick`}
+            type={`${brick} brick upgrade`}
           />
         </div> 
 

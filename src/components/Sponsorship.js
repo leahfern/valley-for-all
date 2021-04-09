@@ -161,10 +161,29 @@ export default function Sponsorship() {
               <th className="silver">Silver Sponsor<br />$1,000 +</th>
             </tr>
             <tr>
-              <th className="category">Permanent Dedication In Valley Park</th>
+              <th className="category">Primary Project Dedication In Valley Park</th>
               <td className="platinum">Most Prominent Positioning</td>
               <td className="gold">Prominent Positioning</td>
               <td className="silver">Included</td>
+            </tr>
+            <tr>
+              <th className="category">Recognition Bricks (Pavers)</th>
+              <td className="platinum">
+                <ul>
+                  <li><span>{star}</span> One 8" x 8" Paver</li>
+                  <li><span>{star}</span> One 4" x 8" Paver</li>
+                </ul>
+              </td>
+              <td className="gold">
+                <ul>
+                  <li><span>{star}</span> One 8" x 8" Paver</li>
+                </ul>
+              </td>
+              <td className="silver">
+                <ul>
+                  <li><span>{star}</span> One 4" x 8" Paver</li>
+                </ul>
+              </td>
             </tr>
             <tr>
               <th className="category">Website Inclusion</th>
@@ -211,25 +230,6 @@ export default function Sponsorship() {
                 <ul>
                   <li><span>{star}</span> 2x FB Posts</li>
                   <li><span>{star}</span> 1x IG Post</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th className="category">Recognition Pavers</th>
-              <td className="platinum">
-                <ul>
-                  <li><span>{star}</span> One 8" x 8" Paver</li>
-                  <li><span>{star}</span> One 4" x 8" Paver</li>
-                </ul>
-              </td>
-              <td className="gold">
-                <ul>
-                  <li><span>{star}</span> One 8" x 8" Paver</li>
-                </ul>
-              </td>
-              <td className="silver">
-                <ul>
-                  <li><span>{star}</span> One 4" x 8" Paver</li>
                 </ul>
               </td>
             </tr>

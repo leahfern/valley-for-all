@@ -67,6 +67,7 @@ const StyledBricks = styled.div`
       font-weight: normal;
       font-size: .9rem;
       line-height: 1.5;
+      margin-left: .5rem;
 
       span {
         font-style:italic;

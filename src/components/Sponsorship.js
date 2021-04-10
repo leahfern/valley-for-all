@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
+import { useHistory } from 'react-router';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
 
@@ -39,15 +40,21 @@ const StyledSponsorship = styled.div`
     font-size: 1.2rem;
     line-height: 1.2;
   }
-  a {
+  button {
     padding: 1rem;
     background-color: #329CD6;
     color: white;
     text-decoration: none;
+    font-family: inherit;
     font-weight: bold;
     font-size: 1rem;
+    border: none;
     border-radius: 10px;
     text-transform: uppercase;
+    transition: .5s;
+    :hover {
+      transform: scale(1.05);
+    }
   }
   a.contact {
     font-size: inherit;
@@ -116,17 +123,17 @@ const StyledSponsorship = styled.div`
 
   .platinum {
     border-bottom: 1px solid grey;
-    background: #E5E4E2;
+    background: RGB(241, 240, 255, .67);
   }
   .gold {
     border-bottom: 1px solid grey;
     margin-top: 5rem;
-    background: #FFD700;
+    background: rgba(248, 215, 1,.77);
   }
   .silver {
     border-bottom: 1px solid grey;
     margin-top: 5rem;
-    background: #C0C0C0;
+    background: rgba(192, 192, 192,.77);
   }
   @media(max-width: 835px) {
     .tableContainer {
@@ -138,10 +145,17 @@ const StyledSponsorship = styled.div`
 
 export default function Sponsorship() {
 
+  const history = useHistory();
+
   useEffect(() => {
     //report page view
   ReactGA.pageview('/sponsorship')
 }, [])
+
+  const handleClick = e => {
+    e.preventDefault();
+    history.push('/sponsorship/payment');
+  }
 
   return (
     <>
@@ -259,7 +273,7 @@ export default function Sponsorship() {
             </tr>
           </table>
         </div>
-        <Link id="sponsorClick" to="/sponsorship/payment">Sponsor Us today</Link>
+        <button onClick={handleClick} id="sponsorClick">Sponsor Us today</button>
         <p>*For personalized sponsorship packages or questions, contact Fundraising Chair Eric Foster at <a className="contact" href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a className="contact" href="tel:310-877-3822">310-877-3822</a></p>
       </StyledSponsorship>
     <Sponsors />

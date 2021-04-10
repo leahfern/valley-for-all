@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import PhotoGallery from './PhotoGallery';
 import ReactGA from 'react-ga';
+import {useHistory} from 'react-router';
 
 const StyledAbout = styled.div`
   margin: 0 auto;
@@ -82,18 +83,20 @@ const StyledOrg = styled.div`
     max-width: 100%;
   }
 
-  a {
+  button {
+    padding: 1rem;
     background-color: #329CD6;
-    margin: 3rem auto;
-    padding: .8rem;
     color: white;
     text-decoration: none;
+    font-family: inherit;
     font-weight: bold;
+    font-size: 1rem;
+    border: none;
     border-radius: 10px;
-
+    text-transform: uppercase;
+    transition: .5s;
     :hover {
-      transform: scale(1.1);
-      transition: .5s;
+      transform: scale(1.05);
     }
   }
 
@@ -103,13 +106,13 @@ const StyledOrg = styled.div`
 `
 
 export default function About() {
+  const history = useHistory();
+  const star = <FontAwesomeIcon icon={faStar} />
 
   useEffect(() => {
       //report page view
     ReactGA.pageview('/about')
   }, [])
-
-  const star = <FontAwesomeIcon icon={faStar} />
 
   return (
     <StyledAbout className="component-container">
@@ -143,7 +146,7 @@ export default function About() {
           “Valley for All” marks the latest project for Leadership Hermosa Beach, a community-based organization that fosters a life-long love for the city by educating existing and potential local leaders. 
         </p>
 
-        <a href="http://www.leadershiphermosa.org/">More about LHB</a>
+        <button onClick={() => window.location.href = 'http://www.leadershiphermosa.org/'}>More about LHB</button>
         <div className="space"></div>
 
         </StyledOrg>

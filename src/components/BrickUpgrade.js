@@ -144,7 +144,7 @@ const StyledBricks = styled.div`
     font-family: inherit;
     position: center;
     :hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       transition: .5s;
     }
     :focus {

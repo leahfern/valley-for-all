@@ -132,23 +132,20 @@ const StyledBricks = styled.div`
     margin: 1rem auto;
   }
   button {
-    background-color: #329CD6;
     margin: 1rem auto;
-    padding: .8rem;
+    padding: 1rem;
+    background-color: #329CD6;
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    border: none;
-    font-size: 1rem;
     font-family: inherit;
-    position: center;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: .5s;
     :hover {
-      transform: scale(1.1);
-      transition: .5s;
-    }
-    :focus {
-      outline: none;
+      transform: scale(1.05);
     }
   }
   .hidden {
@@ -160,7 +157,7 @@ const StyledBricks = styled.div`
   .nonprofit {
     padding-bottom: 3rem;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
     line-height: 1.5;
     text-align: center;
   }

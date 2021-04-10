@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import lhbLogo from '../assets/images/lhb-logo.png';
@@ -57,17 +57,48 @@ z-index: 1;
     flex-wrap: wrap;
     background-color: white;
     padding: 1rem 0;
+    .link-item {
+      height: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      :hover .underline{
+        margin: 0 auto;
+        width: 30%;
+        border-bottom: 3px solid #329CD6;
+      }
+      a:focus ~ .underline {
+        width: 70%;
+      }
+    }
+    .underline {
+      margin: 0 auto;
+      width: 30%;
+      height: 1px;
+      border-bottom: 3px solid transparent;
+      transition: width 1s, color .5s;
+    }
+    .active {
+      width: 70%;
+      border-bottom: 3px solid #329CD6;
+    }
   }
   .links {
     display: flex;
     justify-content: space-evenly;
+
+    a {
+      line-height: 2.5;
+
+    }
   }
   a {
     color: RGB(46, 129, 0);
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
-    padding: .35rem;
+    height: 100%;
     border-bottom: 3px solid transparent;
     z-index: 3;
     font-size: 1rem;
@@ -76,7 +107,6 @@ z-index: 1;
     :hover {
       color: darkgreen;
       transition: .5s;
-      border-bottom: 3px solid #329CD6;
     }
   }
   .logo-container {
@@ -89,6 +119,7 @@ z-index: 1;
       border: none;
       background: RGB(46, 129, 0);
       color: white;
+      padding: .5rem;
       
       :hover {
         background: darkgreen;
@@ -119,6 +150,7 @@ z-index: 1;
 
       a {
         margin: 0 1.5rem;
+        line-height: 3.3;
       }
     }
     .donate {
@@ -158,7 +190,6 @@ z-index: 1;
       padding-right: .5rem;
       a {
         margin: 0;
-        line-height: 1.5;
         padding: .25rem;
       }
     }
@@ -168,8 +199,9 @@ z-index: 1;
       margin: 0;
       justify-content: space-evenly;
       a {
+        height: 100%;
         margin: 0;
-        padding: .25rem 0;
+        padding: 0 .25rem;
       }
     }
     
@@ -216,10 +248,22 @@ export default function Nav() {
           <img src={lhbLogo} alt="LHB logo"/>
         </div>
         <div className = "links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/bricks">Bricks</Link>
-          <Link to="/sponsorship">Sponsor Us</Link>
+          <div className="link-item">
+            <Link to="/">Home</Link>
+            <div className="underline"></div>
+          </div>
+          <div className="link-item">
+            <Link to="/about">About</Link>
+            <div className="underline"></div>
+          </div>
+          <div className="link-item">
+            <Link to="/bricks">Bricks</Link>
+            <div className="underline"></div>
+          </div>
+          <div className="link-item">
+            <Link to="/sponsorship">Sponsor Us</Link>
+            <div className="underline"></div>
+          </div>
         </div>
         <div className="donate">
           <Link to="/donate">Donate</Link>

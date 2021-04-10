@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router';
 import thermometer from '../assets/images/thermometer.png';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
@@ -8,7 +8,6 @@ import Sponsors from './Sponsors';
 
 const StyledHome = styled.div`
   padding-top: 50px;
-  padding-bottom: 3rem;
   color: white;
   max-width: 90%;
   margin: 0 auto;
@@ -29,26 +28,28 @@ const StyledHome = styled.div`
     padding: .5rem 0;
 
   }
-  a.link {
-    margin: 20rem auto 1rem auto;
+  button.link {
+    margin: 2rem auto 4rem auto;
     padding: 1rem;
     background-color: #329CD6;
     color: white;
     text-decoration: none;
+    font-family: inherit;
     font-weight: bold;
     font-size: 1rem;
+    border: none;
     border-radius: 10px;
     text-transform: uppercase;
+    transition: .5s;
     :hover {
-      transform: scale(1.1);
-      transition: .5s;
+      transform: scale(1.05);
     }
   }
   img {
     width: 400px;
     max-width: 100%;
-    padding-bottom: 2rem;
-    margin: 2rem auto 3rem auto;
+    padding: 2rem 0;
+    margin: 0 auto;
     border-bottom: 5px solid #329CD6; 
     display: block;
   }
@@ -93,11 +94,18 @@ const StyledHome = styled.div`
 
 export default function Home() {
 
+  const history = useHistory();
+
   useEffect(() => {
         //report page view
     ReactGA.pageview('/')
   }, [])
   
+  const handleClick = e => {
+    e.preventDefault();
+    history.push('/donate');
+  }
+
   return (
     <>
       <StyledHome className="component-container">
@@ -105,7 +113,7 @@ export default function Home() {
           <h1>Valley For All</h1>
           <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
           <img src={thermometer} alt="fundraising status" />
-          <Link to="/donate" className="link">Donate today</Link>
+          <button onClick={handleClick} className="link">Donate today</button>
         </div>
       </StyledHome>
       {/* <Ticker /> */}

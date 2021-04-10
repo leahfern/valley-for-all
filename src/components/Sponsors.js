@@ -11,7 +11,7 @@ const StyledSponsors = styled.div`
   z-index: 1;
   padding-bottom: 3rem;
   h2 {
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 0 2rem 0;
     font-size: 2rem;
     text-transform: uppercase;
     max-width: 90%;
@@ -79,20 +79,20 @@ const StyledSponsors = styled.div`
   }
 
   button {
-    border: none;
     margin-top: 2rem;
-    font-family: inherit;
     padding: 1rem;
     background-color: #329CD6;
     color: white;
     text-decoration: none;
+    font-family: inherit;
     font-weight: bold;
     font-size: 1rem;
+    border: none;
     border-radius: 10px;
     text-transform: uppercase;
+    transition: .5s;
     :hover {
-      transform: scale(1.1);
-      transition: .5s;
+      transform: scale(1.05);
     }
   }
   .hidden {

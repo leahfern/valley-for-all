@@ -28,7 +28,7 @@ z-index: 1;
       border: none;
       :hover {
         border: none;
-        color: #36454F;
+        color: rgba(0,0,0,.67);
         transition: .1s;
       }
     }
@@ -63,7 +63,7 @@ z-index: 1;
     justify-content: space-evenly;
   }
   a {
-    color: green;
+    color: RGB(46, 129, 0);
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
@@ -87,7 +87,7 @@ z-index: 1;
     padding-right: 3rem;
     a {
       border: none;
-      background: green;
+      background: RGB(46, 129, 0);
       color: white;
       
       :hover {

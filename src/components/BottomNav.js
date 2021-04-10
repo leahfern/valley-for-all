@@ -23,7 +23,7 @@ const StyledBottomNav = styled.div`
     text-decoration: none;
     :hover {
       border: none;
-      color: #36454F;
+      color: rgba(0,0,0,.67);
       transition: .1s;
     }
   }

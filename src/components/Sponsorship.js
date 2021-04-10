@@ -72,7 +72,7 @@ const StyledSponsorship = styled.div`
     margin: 1rem auto 3rem auto;
   }
   table {
-    color: #36454F;
+    color: rgba(0,0,0,.67);
     width: 100%;
     max-width: 1000px;
     min-width: 750px;
@@ -94,7 +94,7 @@ const StyledSponsorship = styled.div`
       line-height: 1.2;
     }
     th.category {
-      background: #36454F;
+      background: rgba(0,0,0,.67);
       color: white;
       vertical-align: middle;
       border-bottom: 1px solid grey;

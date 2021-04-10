@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import styled from 'styled-components';
 
 import tortuga from '../assets/images/sponsors/tortuga.png';
@@ -17,18 +17,34 @@ const StyledSponsors = styled.div`
     max-width: 90%;
     margin: 0 auto;
     line-height: 1;
-    color: green;
+    color: rgba(46, 129, 0);
+    font-weight: 500;
+  }
+  h3 {
+    color: rgba(46, 129, 0);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding-top: 1rem;
   }
   .sponsors {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .border {
+    height: 1px;
+    border-bottom: 1px solid rgba(0,0,0,.37);
+    margin: 0 auto;
+    width: 800px;
+    max-width: 60%;
   }
   .platinum{
     font-size: 3.75rem;
     a {
       width: 500px;
-      max-width: 100%;
+      max-width: 90%;
     }
     img {
       width: 100%;
@@ -47,7 +63,6 @@ const StyledSponsors = styled.div`
     }
   }
   .silver {
-    margin-bottom: 2rem;
     a {
       width: 125px;
       max-width: 40%;
@@ -63,7 +78,10 @@ const StyledSponsors = styled.div`
     }
   }
 
-  a.button {
+  button {
+    border: none;
+    margin-top: 2rem;
+    font-family: inherit;
     padding: 1rem;
     background-color: #329CD6;
     color: white;
@@ -85,24 +103,35 @@ const StyledSponsors = styled.div`
 export default function Sponsors() {
 
   const location = window.location.pathname;
+  let history = useHistory();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    history.push('/sponsorship');
+  }
 
   return (
     <StyledSponsors>
       <h2 className="effect-shine">Thank you to our sponsors!</h2>
+      <h3>platinum</h3>
       <div className="platinum sponsors">
         <a href="http://www.levinehomes.com/">
           <img src={levine} alt="Levine Homes"/>
         </a>
       </div>
+      <div className="border"></div>
+      <h3>gold</h3>
       <div className="gold sponsors">
         <a href="http://www.tortugawealth.com/">
           <img src={tortuga} alt="Tortuga Wealth Management"/>
         </a>
       </div>
+      <div className="border"></div>
+      <h3>silver</h3>
       <div className="silver sponsors">
         <h4 className="silver">Ryan and Karen Nowicki</h4>
       </div>
-      <Link to="/sponsorship" className={location === "/sponsorship" ? "button hidden" : "button"} >Sponsor Us</Link>
+      <button onClick={handleClick} className={location === "/sponsorship" ? "button hidden" : "button"} >Sponsor Us</button>
     </StyledSponsors>
   )
 }

@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 const StyledTicker = styled.div`
   height: 50px;
-  background: #36454F;
+  background: rgba(0,0,0,.67);
   color: white;
   display: flex;
 
   div.thank-you {
-    background: #36454F;
+    background: rgba(0,0,0,.67);
     width: 120px;
     line-height: 50px;
   }

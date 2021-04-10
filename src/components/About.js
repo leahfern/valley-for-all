@@ -122,6 +122,7 @@ export default function About() {
       </p>
       <ul>
         <li>{star} The installation of a new entrance ramp</li>
+        <li>{star} Addition of brick(paver) surface for better access to picnic tables & BBQ</li>
         <li>{star} Ground leveling throughout the perimeter</li>
         <li>{star} Replacement of key amenities, such as the BBQs and sink</li>
         <li>{star} General power washing and cleanup </li>

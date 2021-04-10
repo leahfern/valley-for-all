@@ -33,7 +33,7 @@ const StyledLanding = styled.div`
   }
   button {
     font-family: inherit;
-    background: transparent;
+    background: rgba(50,156,214,.37);
     height: 250px;
     width: 250px;
     border: 3px solid #329CD6;

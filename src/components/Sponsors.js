@@ -1,7 +1,9 @@
 import React from 'react';
-import tortuga from '../assets/images/sponsors/tortuga.png';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import {Link, useParams} from 'react-router-dom';
+
+import tortuga from '../assets/images/sponsors/tortuga.png';
+import levine from '../assets/images/sponsors/levine.png';
 
 const StyledSponsors = styled.div`
   width: 100%;
@@ -9,7 +11,7 @@ const StyledSponsors = styled.div`
   z-index: 1;
   padding-bottom: 3rem;
   h2 {
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 4rem 0;
     font-size: 2rem;
     text-transform: uppercase;
     max-width: 90%;
@@ -20,12 +22,17 @@ const StyledSponsors = styled.div`
   .sponsors {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 1rem;
   }
   .platinum{
     font-size: 3.75rem;
     a {
       width: 500px;
       max-width: 100%;
+    }
+    img {
+      width: 100%;
+      height: auto;
     }
   }
   .gold {
@@ -49,6 +56,10 @@ const StyledSponsors = styled.div`
     h4 {
       width: 125px;
       padding: 1rem 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -79,7 +90,9 @@ export default function Sponsors() {
     <StyledSponsors>
       <h2 className="effect-shine">Thank you to our sponsors!</h2>
       <div className="platinum sponsors">
-          
+        <a href="http://www.levinehomes.com/">
+          <img src={levine} alt="Levine Homes"/>
+        </a>
       </div>
       <div className="gold sponsors">
         <a href="http://www.tortugawealth.com/">

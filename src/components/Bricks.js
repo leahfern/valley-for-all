@@ -334,8 +334,8 @@ export default function Bricks() {
           <span>Enter the names of individuals, families or businesses/organizations you would like to appear on the brick. Please note that only names (no other messages) will be accepted. All engravings are subject to approval.<br />
           <br />
 
-          4" x 8" bricks include three lines of 16 characters.<br/>
-          8" x 8" bricks include six lines of 16 characters. <br/><br/>
+          4" x 8" bricks include three lines of up to 16 characters each.<br/>
+          8" x 8" bricks include six lines of up to 16 characters each.<br/><br/>
 
           If you wish to specify line breaks, please use "/".<br />
           <span>ex: "John & Jane/Smith", "Kevin Bidenkap/Tortuga Wealth/Management", "The Smith Family"</span><br /><br />

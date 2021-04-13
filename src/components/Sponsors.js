@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import tortuga from '../assets/images/sponsors/tortuga.png';
 import levine from '../assets/images/sponsors/levine.png';
+import remax from '../assets/images/sponsors/remax.jpg';
 
 const StyledSponsors = styled.div`
   width: 100%;
@@ -131,6 +132,10 @@ export default function Sponsors() {
       <h3>silver</h3>
       <div className="silver sponsors">
         <h4 className="silver">Ryan and Karen Nowicki</h4>
+        
+        <a href="https://devrazandell.com/">
+          <img src={remax} alt="RE/MAX Devra Zandell"/>
+        </a>
       </div>
       <button onClick={handleClick} className={location === "/sponsorship" ? "button hidden" : "button"} >Sponsor Us</button>
     </StyledSponsors>

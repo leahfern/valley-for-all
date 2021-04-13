@@ -285,6 +285,7 @@ export default function SponsorDonate() {
             total={formValues.amount}
             setFormValues={setFormValues}
             type={`${formValues.level} Sponsorship`}
+            order={formValues}
           />
         </div> 
         : ''

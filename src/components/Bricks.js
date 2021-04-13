@@ -359,6 +359,7 @@ export default function Bricks() {
             total={formValues.brick === "large" ? 250.00 : 160.00}
             setFormValues={setFormValues}
             type={`${brick} brick`}
+            order={formValues}
           />
         </div> 
 

@@ -72,10 +72,74 @@ const StyledTest = styled.div`
 export default function PayPalTest(props) {
   const [paid, setPaid] = React.useState(false);
   const [error, setError] = React.useState(null);
-  const { total, setFormValues, type } = props;
+  const { total, setFormValues, type, order } = props;
 
   const paypalRef = React.useRef();
+  const paidTemplateID = "template_3qta6ra";
+
+  const notifyPaid = (templateId, variables) => {
+    window.emailjs.send(
+      'gmail', templateId, variables
+    ).then(res => {
+      console.log('paid sent');
+    }).catch( err => {
+      console.error('Error', err)
+    })
+  }
   
+  //const initialValues = {
+  //   companyName: '',
+  //   contactName: '',
+  //   contactTitle: '',
+  //   email: '',
+  //   phone: '',
+  //   amount: '',
+  //   level: ''
+  // }
+
+  //const initialValues = {
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   brick: '',
+  //   brickName: ''
+  // }
+
+  //const initialValues = {
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   brick: '',
+  //   amount: '',
+  //   brickName: ''
+  // }
+
+  const submitPaidOrder = async () => {
+    try {
+      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Paid', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify([[
+          order.name ? order.name : '',
+          order.email ? order.email : '',
+          order.phone ? order.phone : '',
+          order.amount ? order.amount : '',
+          order.companyName ? order.companyName : '',
+          order.contactName ? order.contactName : '',
+          order.contactTitle ? order.contactTitle : '',
+          order.level ? order.level : '',
+          order.brick ? order.brick : '',
+          order.brickName ? order.brickName : '',
+          new Date().toLocaleString()]])
+      });
+      await response.json()
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   React.useEffect(() => {
     console.log(total)
     console.log(type)
@@ -98,7 +162,9 @@ export default function PayPalTest(props) {
         shippingPreference: "NO_SHIPPING",
         onApprove: async (data, actions) => {
           // const order = await actions.order.capture();
+          // console.log(order);
           setPaid(true);
+          submitPaidOrder();
           alert("Payment successful. THANK YOU for your donation! You will receive a personalized receipt reflecting your tax-deductible donation within 7-10 business days.")
           setFormValues({name: '', email: '', phone: '', amount: ''})
         },

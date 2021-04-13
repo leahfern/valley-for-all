@@ -378,6 +378,7 @@ export default function BrickUpgrade() {
             total={formValues.amount}
             setFormValues={setFormValues}
             type={`${brick} brick upgrade`}
+            order={formValues}
           />
         </div> 
 

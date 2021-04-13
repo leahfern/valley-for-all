@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import venmo from '../assets/images/venmo-logo.png';
 
 const StyledTest = styled.div` 
   font-size: 2rem;
@@ -30,6 +31,32 @@ const StyledTest = styled.div`
     :hover {
       transform: scale(1.0);
       background: #14a8f7;
+    }
+  }
+  a.venmopayment {
+    height: 45px;
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    background-color: white;
+    color: #3d95ce;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    font-size: 1.2rem;
+    font-family: inherit;
+    line-height: 1.2;
+    padding-top: 10px;
+
+    :hover {
+      transform: scale(1.0);
+      background: #efefef;
+    }
+
+    img {
+      height: 22px;
+      width: auto;
     }
   }
   .assistance {
@@ -102,6 +129,7 @@ export default function PayPalTest(props) {
     <StyledTest>
       <h4>Select a payment type:</h4>
       <Link to="/donate/check" className="checkpayment">Check Payment</Link>
+      <Link to='/donate/venmo' className="venmopayment"><img src={venmo} alt="venmo" /></Link>
       <div ref={paypalRef} />
       <p className="assistance">Having trouble? Contact Eric Foster at <a href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a href="tel:310-877-3822">310-877-3822</a></p>
     </StyledTest>

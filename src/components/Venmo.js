@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import ReactGA from 'react-ga';
+import star from '../assets/images/lhb-star.png';
 
 const StyledVenmo = styled.div`
   color: white;
@@ -19,14 +20,23 @@ const StyledVenmo = styled.div`
     font-size: 2rem;
     text-transform: uppercase;
   }
- p {
-   font-size: 1.2rem;
-   margin: 3rem;
-   line-height: 1.5;
- }
- p.address {
-   font-size: 1.5rem;
- }
+  p {
+    font-size: 1.2rem;
+    margin: 3rem 0;
+    line-height: 1.5;
+    span {
+      color: red;
+      display: inline;
+    }
+  }
+  p.address {
+    font-size: 1.5rem;
+  }
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
 `
 
 export default function Venmo() {
@@ -44,8 +54,9 @@ export default function Venmo() {
       <h3>
         DONATE BY VENMO
       </h3>
+      <img src={star} alt="LHB star, same as profile on Venmo" />
       <p>
-        Please send donations to @LeadershipHermosaBeach on Venmo.
+        Please send payments to <span>@LeadershipHermosaBeach</span> on Venmo, including your name and Valley For All in the comments.
       </p>
       <p>All Donations are 100% tax deductible. The Leadership Hermosa Beach tax ID no. is 06-1721283</p>
     </StyledVenmo>

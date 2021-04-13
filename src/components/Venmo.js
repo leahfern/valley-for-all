@@ -54,7 +54,7 @@ export default function Venmo() {
       <h3>
         DONATE BY VENMO
       </h3>
-      <p>Your brick message has been recorded, but please note the order is not complete until payment is received.</p>
+      <p>Your donation has been recorded, but please note the order is not complete until payment is received.</p>
       <img src={star} alt="LHB star, same as profile on Venmo" />
 
       <p>

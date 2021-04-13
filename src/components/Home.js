@@ -54,6 +54,10 @@ const StyledHome = styled.div`
     margin: 0 auto;
     border-bottom: 5px solid #329CD6; 
     display: block;
+
+    :hover {
+      cursor: pointer;
+    }
   }
   @media(max-width: 787px) {
     h1 {
@@ -108,13 +112,18 @@ export default function Home() {
     history.push('/donate');
   }
 
+  const handleBricksClick = e => {
+    e.preventDefault();
+    history.push('/bricks');
+  }
+
   return (
     <>
       <StyledHome className="component-container">
         <div className="hero">
           <h1>Valley For All</h1>
           <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
-          <img src={bricks} alt="fundraising status" />
+          <img onClick={handleBricksClick} src={bricks} alt="fundraising status" />
           <button onClick={handleClick} className="link">Donate today</button>
         </div>
       </StyledHome>

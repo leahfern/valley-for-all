@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import {useHistory} from 'react-router';
 import thermometer from '../assets/images/thermometer.png';
+import bricks from '../assets/images/social-bricks.png';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
 // import Ticker from './Ticker';
@@ -80,13 +81,13 @@ const StyledHome = styled.div`
       padding: 0;
       padding-bottom: .5rem;
     }
-    a {
+    button {
       font-size: 1.5rem;
       padding: 1.5rem;
       margin: 2rem auto 0 auto;
     }
     img {
-      width: 700px;
+      width: 500px;
     }
   }
 `
@@ -112,7 +113,7 @@ export default function Home() {
         <div className="hero">
           <h1>Valley For All</h1>
           <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
-          <img src={thermometer} alt="fundraising status" />
+          <img src={bricks} alt="fundraising status" />
           <button onClick={handleClick} className="link">Donate today</button>
         </div>
       </StyledHome>

@@ -54,9 +54,11 @@ export default function Venmo() {
       <h3>
         DONATE BY VENMO
       </h3>
+      <p>Your brick message has been recorded, but please note the order is not complete until payment is received.</p>
       <img src={star} alt="LHB star, same as profile on Venmo" />
+
       <p>
-        Please send payments to <span>@LeadershipHermosaBeach</span> on Venmo, including your name and Valley For All in the comments.
+        Please send payments to <span>@LeadershipHermosaBeach</span> on Venmo, including your name and Valley For All in the comments. We will email you within 3 business days of receipt to confirm the details of your purchase.
       </p>
       <p>All Donations are 100% tax deductible. The Leadership Hermosa Beach tax ID no. is 06-1721283</p>
     </StyledVenmo>

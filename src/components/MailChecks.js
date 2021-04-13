@@ -42,8 +42,9 @@ export default function MailChecks() {
         VALLEY FOR ALL
       </h2>
       <h3>
-        DONATE
+        DONATE BY CHECK
       </h3>
+      <p>Your brick message has been recorded, but please note the order is not complete until payment is received.</p>
       <p>
         Please make checks payable to “Leadership Hermosa Beach” with reference to "Valley For All". We will send your tax receipt to the email address provided, unless directed otherwise.
       </p>

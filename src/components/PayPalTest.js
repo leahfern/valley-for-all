@@ -72,6 +72,7 @@ export default function PayPalTest(props) {
         onApprove: async (data, actions) => {
           // const order = await actions.order.capture();
           setPaid(true);
+          alert("Payment successful. THANK YOU for your donation! You will receive a personalized receipt reflecting your tax-deductible donation within 7-10 business days.")
           setFormValues({name: '', email: '', phone: '', amount: ''})
         },
         onError: (err) => {
@@ -89,7 +90,7 @@ export default function PayPalTest(props) {
   }, [total]);
 
   if (paid) {
-    return <StyledTest className="status">Payment successful. THANK YOU for your donation!</StyledTest>;
+    return <StyledTest className="status">Payment successful. THANK YOU for your donation! You will receive a personalized receipt reflecting your tax-deductible donation within 7-10 business days. </StyledTest>;
   }
 
   // If any error occurs

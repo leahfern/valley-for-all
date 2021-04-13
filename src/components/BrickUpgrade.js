@@ -261,7 +261,7 @@ export default function BrickUpgrade() {
       <section id="middle">
         <p>Leadership Hermosa Beach Class of 2021 is giving individuals a chance to personalize a brick(paver) that will be a fixture in the lower barbecue area of Valley Park.</p>
         
-        <p>Whether you utilize Valley Park's beautiful facilities through local organizations, for special events, or are simply an advocate of green spaces, you now have a limited time to engrave your name into a brick that will become a staple of this park for decades to come. All proceeds support the Valley For All project.</p>
+        <p>Whether you utilize Valley Park's beautiful facilities through local organizations, for special events, or are simply an advocate of green spaces, you now have a limited time to engrave your name into a brick that will become a staple of this park for years to come. All proceeds support the Valley For All project.</p>
       </section>
       <form onSubmit={handleSubmit}>
         <h4>Upgrade Order Form</h4>

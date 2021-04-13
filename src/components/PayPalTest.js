@@ -75,13 +75,14 @@ export default function PayPalTest(props) {
   const { total, setFormValues, type, order } = props;
 
   const paypalRef = React.useRef();
-  const paidTemplateID = "template_3qta6ra";
+  const autoResponseTemplateID = "template_80n79yr";
+  const autoResponseServiceID = "service_a8kogah";
 
-  const notifyPaid = (templateId, variables) => {
+  const autoResponse = (serviceID, templateId, variables) => {
     window.emailjs.send(
-      'gmail', templateId, variables
+      serviceID, templateId, variables
     ).then(res => {
-      console.log('paid sent');
+      console.log('auto response email sent');
     }).catch( err => {
       console.error('Error', err)
     })
@@ -165,6 +166,10 @@ export default function PayPalTest(props) {
           // console.log(order);
           setPaid(true);
           submitPaidOrder();
+          autoResponse(autoResponseServiceID, autoResponseTemplateID, {
+            to_name: order.contactName ? order.contactName : order.name,
+            to_email: order.email
+          })
           alert("Payment successful. THANK YOU for your donation! You will receive a personalized receipt reflecting your tax-deductible donation within 7-10 business days.")
           setFormValues({name: '', email: '', phone: '', amount: ''})
         },

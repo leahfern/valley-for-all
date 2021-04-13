@@ -46,11 +46,20 @@ const StyledSponsors = styled.div`
     a {
       width: 500px;
       max-width: 90%;
+      text-decoration: none;
+      p {
+        font-size: .9rem;
+        color: rgba(0,0,0,.87);
+        line-height: 1.2;
+        width: 90%;
+        margin: 0 auto;
+      }
     }
     img {
       width: 100%;
       height: auto;
     }
+
   }
   .gold {
     font-size: 2.5rem;
@@ -119,6 +128,7 @@ export default function Sponsors() {
       <div className="platinum sponsors">
         <a href="http://www.levinehomes.com/">
           <img src={levine} alt="Levine Homes"/>
+          <p>Levine Homes is a full-service Real Estate Broker and General Contractor.  We will help you prepare and sell your home or help you find a new home and make it your dream home.  Levine Homes is The South Bay's best choice for Real Estate & Construction.</p>
         </a>
       </div>
       <div className="border"></div>

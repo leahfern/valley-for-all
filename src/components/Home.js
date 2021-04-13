@@ -44,6 +44,7 @@ const StyledHome = styled.div`
     transition: .5s;
     :hover {
       transform: scale(1.05);
+      cursor: pointer;
     }
   }
   img {

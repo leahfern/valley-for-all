@@ -93,6 +93,7 @@ const StyledSponsors = styled.div`
     transition: .5s;
     :hover {
       transform: scale(1.05);
+      cursor: pointer;
     }
   }
   .hidden {

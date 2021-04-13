@@ -146,6 +146,7 @@ const StyledBricks = styled.div`
     :hover {
       transform: scale(1.05);
       transition: .5s;
+      cursor: pointer;
     }
     :focus {
       outline: none;

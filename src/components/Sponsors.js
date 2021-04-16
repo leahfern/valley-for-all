@@ -7,6 +7,7 @@ import levine from '../assets/images/sponsors/levine.png';
 import remax from '../assets/images/sponsors/remax.jpg';
 import culturedslice from '../assets/images/sponsors/culturedslice.jpg';
 import hermosacyclery from '../assets/images/sponsors/hermosacyclery.png';
+import bchd from '../assets/images/sponsors/bchd.jpeg';
 
 const StyledSponsors = styled.div`
   width: 100%;
@@ -30,6 +31,7 @@ const StyledSponsors = styled.div`
     margin: 0 auto;
     padding-top: 1rem;
   }
+
   .sponsors {
     display: flex;
     justify-content: space-evenly;
@@ -64,7 +66,7 @@ const StyledSponsors = styled.div`
     }
 
   }
-  .gold {
+  .gold, .supporter {
     font-size: 2.5rem;
     a {
       width: 250px;
@@ -90,7 +92,9 @@ const StyledSponsors = styled.div`
       height: auto;
     }
   }
-
+  .supporter {
+    padding: 2rem 0;
+  }
   button {
     margin-top: 2rem;
     padding: 1rem;
@@ -150,10 +154,17 @@ export default function Sponsors() {
           <img src={remax} alt="RE/MAX Devra Zandell"/>
         </a>
         <a href="https://www.culturedslice.com/">
-          <img src={culturedslice} alt="RE/MAX Devra Zandell"/>
+          <img src={culturedslice} alt="Cultured Slice"/>
         </a>
         <a href="https://www.hermosacyclery.com/">
-          <img src={hermosacyclery} alt="RE/MAX Devra Zandell"/>
+          <img src={hermosacyclery} alt="Hermosa Cyclery"/>
+        </a>
+      </div>
+      <div className="border"></div>
+      <h3>financial supporter</h3>
+      <div className = "supporter sponsors">
+        <a href="https://bchd.org/">
+          <img src={bchd} alt="Beach Cities Health District"/>
         </a>
       </div>
       <button onClick={handleClick} className={location === "/sponsorship" ? "button hidden" : "button"} >Sponsor Us</button>

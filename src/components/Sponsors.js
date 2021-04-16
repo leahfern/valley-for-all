@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import tortuga from '../assets/images/sponsors/tortuga.png';
 import levine from '../assets/images/sponsors/levine.png';
 import remax from '../assets/images/sponsors/remax.jpg';
+import culturedslice from '../assets/images/sponsors/culturedslice.jpg';
+import hermosacyclery from '../assets/images/sponsors/hermosacyclery.png';
 
 const StyledSponsors = styled.div`
   width: 100%;
@@ -33,6 +35,7 @@ const StyledSponsors = styled.div`
     justify-content: space-evenly;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    align-items: center;
   }
   .border {
     height: 1px;
@@ -145,6 +148,12 @@ export default function Sponsors() {
         
         <a href="https://devrazandell.com/">
           <img src={remax} alt="RE/MAX Devra Zandell"/>
+        </a>
+        <a href="https://www.culturedslice.com/">
+          <img src={culturedslice} alt="RE/MAX Devra Zandell"/>
+        </a>
+        <a href="https://www.hermosacyclery.com/">
+          <img src={hermosacyclery} alt="RE/MAX Devra Zandell"/>
         </a>
       </div>
       <button onClick={handleClick} className={location === "/sponsorship" ? "button hidden" : "button"} >Sponsor Us</button>

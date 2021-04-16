@@ -210,7 +210,7 @@ export default function Donate() {
         </div> 
         : ''
       }
-      <p className="nonprofit">All Donations are 100% tax deductible. PayPal takes a fee of up to 2.9% + $0.30 from each donation. To avoid fees, please consider sending a check.<br />
+      <p className="nonprofit">All Donations are 100% tax deductible.<br />
       Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254</p>
     </StyledDonate>
   )

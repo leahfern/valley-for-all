@@ -52,16 +52,16 @@ export default function Venmo() {
         VALLEY FOR ALL
       </h2>
       <h3>
-        DONATE BY VENMO
+        DONATE BY PAYPAL
       </h3>
       <p>Your donation has been recorded, but please note the order is not complete until payment is received.</p>
 
-      <a href="https://venmo.com/LeadershipHermosaBeach" target="_blank" rel="noreferrer">
+      <a href="https://www.paypal.com/paypalme/valley4all" target="_blank" rel="noreferrer">
         <img src={star} alt="LHB star, same as profile on Venmo" />
       </a>
 
       <p>
-        Please send payments to <a className="red" href="https://venmo.com/LeadershipHermosaBeach" target="_blank" rel="noreferrer">@LeadershipHermosaBeach</a> on Venmo, including your name and Valley For All in the comments. We will email you within 3 business days of receipt to confirm the details of your purchase.
+        Please send payments to <a className="red" href="https://www.paypal.com/paypalme/valley4all" target="_blank" rel="noreferrer">@Valley4All</a> on PayPal, including your name and Valley For All in the comments. We will email you within 3 business days of receipt to confirm the details of your purchase.
       </p>
       <p>All Donations are 100% tax deductible. The Leadership Hermosa Beach tax ID no. is 06-1721283</p>
     </StyledVenmo>

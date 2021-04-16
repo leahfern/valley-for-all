@@ -12,7 +12,7 @@ const StyledTest = styled.div`
     font-size: 1.2rem;
     color: white;
   }
-  a.checkpayment {
+  a.paypalme {
     height: 45px;
     display: block;
     width: 100%;
@@ -70,23 +70,23 @@ const StyledTest = styled.div`
 `
 
 export default function PayPalTest(props) {
-  const [paid, setPaid] = React.useState(false);
-  const [error, setError] = React.useState(null);
-  const { total, setFormValues, type, order } = props;
+  // const [paid, setPaid] = React.useState(false);
+  // const [error, setError] = React.useState(null);
+  // const { total, setFormValues, type, order } = props;
 
   const paypalRef = React.useRef();
-  const autoResponseTemplateID = "template_80n79yr";
-  const autoResponseServiceID = "service_a8kogah";
+  // const autoResponseTemplateID = "template_80n79yr";
+  // const autoResponseServiceID = "service_a8kogah";
 
-  const autoResponse = (serviceID, templateId, variables) => {
-    window.emailjs.send(
-      serviceID, templateId, variables
-    ).then(res => {
-      console.log('auto response email sent');
-    }).catch( err => {
-      console.error('Error', err)
-    })
-  }
+  // const autoResponse = (serviceID, templateId, variables) => {
+  //   window.emailjs.send(
+  //     serviceID, templateId, variables
+  //   ).then(res => {
+  //     console.log('auto response email sent');
+  //   }).catch( err => {
+  //     console.error('Error', err)
+  //   })
+  // }
   
   //const initialValues = {
   //   companyName: '',
@@ -115,94 +115,94 @@ export default function PayPalTest(props) {
   //   brickName: ''
   // }
 
-  const submitPaidOrder = async () => {
-    try {
-      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Paid', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify([[
-          order.name ? order.name : '',
-          order.email ? order.email : '',
-          order.phone ? order.phone : '',
-          order.amount ? order.amount : '',
-          order.companyName ? order.companyName : '',
-          order.contactName ? order.contactName : '',
-          order.contactTitle ? order.contactTitle : '',
-          order.level ? order.level : '',
-          order.brick ? order.brick : '',
-          order.brickName ? order.brickName : '',
-          new Date().toLocaleString()]])
-      });
-      await response.json()
-    } catch (err) {
-      console.log(err)
-    }
-  }
+  // const submitPaidOrder = async () => {
+  //   try {
+  //     const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Paid', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify([[
+  //         order.name ? order.name : '',
+  //         order.email ? order.email : '',
+  //         order.phone ? order.phone : '',
+  //         order.amount ? order.amount : '',
+  //         order.companyName ? order.companyName : '',
+  //         order.contactName ? order.contactName : '',
+  //         order.contactTitle ? order.contactTitle : '',
+  //         order.level ? order.level : '',
+  //         order.brick ? order.brick : '',
+  //         order.brickName ? order.brickName : '',
+  //         new Date().toLocaleString()]])
+  //     });
+  //     await response.json()
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
 
-  React.useEffect(() => {
-    console.log(total)
-    console.log(type)
-    window.paypal
-      .Buttons({
-        createOrder: (data, actions) => {
-          return actions.order.create({
-            intent: "CAPTURE",
-            purchase_units: [
-              {
-                description: `Valley For All ${type}`,
-                amount: {
-                  currency_code: "USD",
-                  value: total,
-                },
-              },
-            ],
-          });
-        },
-        shippingPreference: "NO_SHIPPING",
-        onApprove: async (data, actions) => {
-          // const order = await actions.order.capture();
-          // console.log(order);
-          setPaid(true);
-          submitPaidOrder();
-          autoResponse(autoResponseServiceID, autoResponseTemplateID, {
-            to_name: order.contactName ? order.contactName : order.name,
-            to_email: order.email
-          })
-          alert("Payment successful. THANK YOU for your donation! You will receive a personalized receipt reflecting your tax-deductible donation within 7-10 business days.")
-          setFormValues({name: '', email: '', phone: '', amount: ''})
-        },
-        onError: (err) => {
-          setError(err);
-          // console.error(err);
-        },
-        style: {
-          layout:  'vertical',
-          color:   'blue',
-          shape:   'rect',
-          label:   'paypal'
-        }
-      })
-      .render(paypalRef.current);
-  }, [total]);
+  // React.useEffect(() => {
+  //   console.log(total)
+  //   console.log(type)
+  //   window.paypal
+  //     .Buttons({
+  //       createOrder: (data, actions) => {
+  //         return actions.order.create({
+  //           intent: "CAPTURE",
+  //           purchase_units: [
+  //             {
+  //               description: `Valley For All ${type}`,
+  //               amount: {
+  //                 currency_code: "USD",
+  //                 value: total,
+  //               },
+  //             },
+  //           ],
+  //         });
+  //       },
+  //       shippingPreference: "NO_SHIPPING",
+  //       onApprove: async (data, actions) => {
+  //         // const order = await actions.order.capture();
+  //         // console.log(order);
+  //         setPaid(true);
+  //         submitPaidOrder();
+  //         autoResponse(autoResponseServiceID, autoResponseTemplateID, {
+  //           to_name: order.contactName ? order.contactName : order.name,
+  //           to_email: order.email
+  //         })
+  //         alert("Payment successful. THANK YOU for your donation! You will receive a personalized receipt reflecting your tax-deductible donation within 7-10 business days.")
+  //         setFormValues({name: '', email: '', phone: '', amount: ''})
+  //       },
+  //       onError: (err) => {
+  //         setError(err);
+  //         // console.error(err);
+  //       },
+  //       style: {
+  //         layout:  'vertical',
+  //         color:   'blue',
+  //         shape:   'rect',
+  //         label:   'paypal'
+  //       }
+  //     })
+  //     .render(paypalRef.current);
+  // }, [total]);
 
-  if (paid) {
-    return <StyledTest className="status">Payment successful. THANK YOU for your donation! You will receive a personalized receipt reflecting your tax-deductible donation within 7-10 business days. </StyledTest>;
-  }
+  // if (paid) {
+  //   return <StyledTest className="status">Payment successful. THANK YOU for your donation! You will receive a personalized receipt reflecting your tax-deductible donation within 7-10 business days. </StyledTest>;
+  // }
 
-  // If any error occurs
-  if (error) {
-    return <StyledTest className="status">Error Occurred in processing payment! Please try again. If problems persist, please contact us at ValleyForAll@gmail.com.</StyledTest>;
-  }
+  // // If any error occurs
+  // if (error) {
+  //   return <StyledTest className="status">Error Occurred in processing payment! Please try again. If problems persist, please contact us at ValleyForAll@gmail.com.</StyledTest>;
+  // }
   
   return (
     <StyledTest>
-      <h4>Select a payment type:</h4>
-      {/* <Link to="/donate/check" className="checkpayment">Check Payment</Link> */}
+      <h4>Please click below to finalize payment:</h4>
+      <Link to="/donate/paypal" className="paypalme">Pay with PayPal Account</Link>
       <Link to='/donate/venmo' className="venmopayment"><img src={venmo} alt="venmo" /></Link>
       <div ref={paypalRef} />
-      <p className="assistance">Having trouble? Contact Eric Foster at <a href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a href="tel:310-877-3822">310-877-3822</a></p>
+      <p className="assistance">Questions or need ? Contact Eric Foster at <a href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a href="tel:310-877-3822">310-877-3822</a></p>
     </StyledTest>
   )
 }

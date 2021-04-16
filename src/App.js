@@ -16,6 +16,7 @@ import Bricks from './components/Bricks';
 import DonateLanding from './components/DonateLanding';
 import BrickUpgrade from './components/BrickUpgrade';
 import Venmo from './components/Venmo';
+import PayPalMe from './components/PayPalMe';
 
 //google analytics
 const TRACKING_ID = "UA-193586281-1";
@@ -60,7 +61,7 @@ function App() {
             <Route exact path="/sponsorship" component={Sponsorship}/>
             <Route exact path="/donate" component={DonateLanding} />
             <Route exact path="/donate/straight" component={Donate} />
-            {/* <Route exact path="/donate/check" component={MailChecks} /> */}
+            <Route exact path="/donate/paypal" component={PayPalMe} />
             <Route exact path="/donate/venmo" component={Venmo} />
             <Route exact path="/sponsorship/payment" component={SponsorDonate} />
             <Route exact path="/bricks" component={Bricks} />

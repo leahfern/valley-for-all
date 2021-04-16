@@ -12,7 +12,7 @@ const StyledTest = styled.div`
     font-size: 1.2rem;
     color: white;
   }
-  a.paypalme {
+  a.checkpayment {
     height: 45px;
     display: block;
     width: 100%;
@@ -198,11 +198,11 @@ export default function PayPalTest(props) {
   
   return (
     <StyledTest>
-      <h4>Please click below to finalize payment:</h4>
-      <Link to="/donate/paypal" className="paypalme">Pay with PayPal Account</Link>
+      <h4>Please select payment type:</h4>
+      <Link to="/donate/check" className="checkpayment">Check Payment</Link>
       <Link to='/donate/venmo' className="venmopayment"><img src={venmo} alt="venmo" /></Link>
       <div ref={paypalRef} />
-      <p className="assistance">Questions or need ? Contact Eric Foster at <a href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a href="tel:310-877-3822">310-877-3822</a></p>
+      <p className="assistance">Questions or need assistance? Contact Eric Foster at <a href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a href="tel:310-877-3822">310-877-3822</a></p>
     </StyledTest>
   )
 }

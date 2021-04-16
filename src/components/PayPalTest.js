@@ -199,8 +199,8 @@ export default function PayPalTest(props) {
   return (
     <StyledTest>
       <h4>Please select payment type:</h4>
-      <Link to="/donate/check" className="checkpayment">Check Payment</Link>
       <Link to='/donate/venmo' className="venmopayment"><img src={venmo} alt="venmo" /></Link>
+      <Link to="/donate/check" className="checkpayment">Check Payment</Link>
       <div ref={paypalRef} />
       <p className="assistance">Questions or need assistance? Contact Eric Foster at <a href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a href="tel:310-877-3822">310-877-3822</a></p>
     </StyledTest>

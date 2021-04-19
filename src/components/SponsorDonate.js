@@ -290,8 +290,7 @@ export default function SponsorDonate() {
         </div> 
         : ''
       }
-      <p className="nonprofit">All Donations are 100% tax deductible. The Leadership Hermosa Beach tax ID no. is 06-1721283<br />
-      Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254</p>
+      <p className="nonprofit">All Donations are 100% tax deductible (Tax ID # 06-1721283). A donation by check can be mailed (and is payable) to Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254. Please write “Valley for All” in the check memo. We also offer Venmo as a method of donation. A confirmation email with your message will be sent 7-10 days after your donation has been received and processed.</p>
     </StyledDonate>
   )
 }

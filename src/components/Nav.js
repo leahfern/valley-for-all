@@ -52,7 +52,7 @@ z-index: 1;
     width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     background-color: white;
@@ -87,7 +87,8 @@ z-index: 1;
   .links {
     display: flex;
     justify-content: space-evenly;
-
+    padding-right: 2rem;
+    // width: calc(100% - 300px);
     a {
       line-height: 2.5;
 
@@ -153,11 +154,6 @@ z-index: 1;
         line-height: 3.3;
       }
     }
-    .donate {
-      width: 100px;
-      padding: 0;
-      margin: 0;
-    }
     #top-nav {
       font-size: .9rem;
       a {
@@ -194,7 +190,7 @@ z-index: 1;
       }
     }
     .links {
-      width: 75%;
+      width: 95%;
       padding: 0;
       margin: 0;
       justify-content: space-evenly;
@@ -265,9 +261,9 @@ export default function Nav() {
             <div className="underline"></div>
           </div>
         </div>
-        <div className="donate">
+        {/* <div className="donate">
           <Link to="/donate">Donate</Link>
-        </div>
+        </div> */}
       </div>
     </StyledNav>
   )

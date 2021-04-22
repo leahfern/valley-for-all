@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import PayPalTest from './PayPalTest';
 import ReactGA from 'react-ga';
-import paver from '../assets/images/paver.png';
+// import paver from '../assets/images/paver.png';
+import waitlist from '../assets/images/paver-waitlist.png';
 
 const StyledBricks = styled.div`
   max-width: 90%;
@@ -13,7 +13,7 @@ const StyledBricks = styled.div`
 
   img {
     width: 100%;
-    border: 2px solid white;
+    // border: 2px solid white;
   }
   .img-container {
     width: 500px;
@@ -27,7 +27,7 @@ const StyledBricks = styled.div`
     width: 800px;
     max-width: 95%;
     margin: 0 auto;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +41,16 @@ const StyledBricks = styled.div`
       line-height: 1.5;
       padding: 1rem;
       text-align: left;
+    }
+    p.update {
+      width: 100%;
+      font-size: 1.1rem;
+
+      span {
+        color: red;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
     }
   }
 
@@ -225,19 +235,39 @@ export default function Bricks() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setCheckout(true);
+    //********WHILE SALES ARE LIVE */
+    // setCheckout(true);
+    // try {
+    //   const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Bricks-NOEDIT', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify([[name, email, phone, brick, brickName, new Date().toLocaleString()]])
+    //   });
+    //   await response.json()
+    // } catch (err) {
+    //   console.log(err)
+    // }
+
+    //*****WAITLIST FORM SUBMISSION */
     try {
-      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Bricks-NOEDIT', {
+      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Waitlist-NOEDIT', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify([[name, email, phone, brick, brickName, new Date().toLocaleString()]])
       });
-      await response.json()
+      await response.json().then(res => {
+        if (res.message === "Successfully Inserted") {
+          alert("Thank you for your brick request! We will contact you by phone or email to finalize payment if we can add it to our project.")
+        }
+      })
     } catch (err) {
       console.log(err)
     }
+    setFormValues(initialValues);
   }
 
   return (
@@ -251,9 +281,9 @@ export default function Bricks() {
           Purchase an engraved brick and cement your legacy in Valley Park!
         </p>
         <div className="img-container">
-          <img src={paver} alt="example paver from previous LHB project" />
-          <span>Example from a past LHB project</span>
+          <img src={waitlist} alt="example paver from previous LHB project" />
         </div>
+        <p className="update"><span>UPDATE 4/21</span>: Due to popular demand, brick sales have paused. We are accepting names to be added to our waitlist. Please fill out the order form below and should capacity allow, we will contact you to coordinate payment. Thank you to all our wonderful supporters! </p>
       </section>
       <section id="middle">
         <p>Leadership Hermosa Beach Class of 2021 is giving individuals a chance to personalize a brick(paver) that will be a fixture in the lower barbecue area of Valley Park.</p>
@@ -261,7 +291,7 @@ export default function Bricks() {
         <p>Whether you utilize Valley Park's beautiful facilities through local organizations, for special events, or are simply an advocate of green spaces, you now have a limited time to engrave your name into a brick that will become a staple of this park for years to come. All proceeds support the Valley For All project.</p>
       </section>
       <form onSubmit={handleSubmit}>
-        <h4>Order Form</h4>
+        <h4> Waitlist Form</h4>
         <label>
           Name:
           <input
@@ -350,21 +380,9 @@ export default function Bricks() {
           <span id="count">Characters remaining: {remaining}</span>
         </label>
         <div className="centered">
-          <button className={checkout ? "checkout-button hidden" : "checkout-button"}>Continue</button>
+          <button className="checkout-button">Submit Waitlist Request</button>
         </div>
       </form>
-      {(checkout === true) 
-        ? <div className="payment-div">
-          <PayPalTest 
-            total={formValues.brick === "large" ? 250.00 : 160.00}
-            setFormValues={setFormValues}
-            type={`${brick} brick`}
-            order={formValues}
-          />
-        </div> 
-
-        : ''
-      }
       <p className="nonprofit">All Donations are 100% tax deductible (Tax ID # 06-1721283). A donation by check can be mailed (and is payable) to Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254. Please write “Valley for All” in the check memo. We also offer Venmo as a method of donation. A confirmation email with your message will be sent 7-10 days after your donation has been received and processed.</p>
 
     </StyledBricks>

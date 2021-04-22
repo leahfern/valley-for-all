@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import {useHistory} from 'react-router';
 import thermometer from '../assets/images/thermometer.png';
-import bricks from '../assets/images/social-bricks.png';
+// import bricks from '../assets/images/social-bricks.png';
+import winecheese from '../assets/images/LHBWC.jpg';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
 // import Ticker from './Ticker';
@@ -29,8 +30,9 @@ const StyledHome = styled.div`
     padding: .5rem 0;
 
   }
-  button.link {
-    margin: 2rem auto 4rem auto;
+  a.link {
+    margin: 1rem auto 4rem auto;
+    display: inline;
     padding: 1rem;
     background-color: #329CD6;
     color: white;
@@ -47,12 +49,20 @@ const StyledHome = styled.div`
       cursor: pointer;
     }
   }
-  img {
-    width: 400px;
+  .linkPadding {
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+  }
+  a {
+    margin: 0 auto;
+    display: block;
+    width: 800px;
     max-width: 100%;
+  }
+  img {
+    width: 100%;
     padding: 2rem 0;
     margin: 0 auto;
-    border-bottom: 5px solid #329CD6; 
     display: block;
 
     :hover {
@@ -86,14 +96,18 @@ const StyledHome = styled.div`
       padding: 0;
       padding-bottom: .5rem;
     }
-    button {
+    a.link {
       font-size: 1.5rem;
       padding: 1.5rem;
       margin: 2rem auto 0 auto;
     }
-    img {
-      width: 500px;
+    .linkPadding {
+      padding-top: 3rem;
+      padding-bottom: 7rem;
     }
+    // img {
+    //   width: 500px;
+    // }
   }
 `
 
@@ -112,10 +126,11 @@ export default function Home() {
     history.push('/donate');
   }
 
-  const handleBricksClick = e => {
-    e.preventDefault();
-    history.push('/bricks');
-  }
+  // const handleBricksClick = e => {
+  //   e.preventDefault();
+  //   history.push('/bricks');
+  // }
+
 
   return (
     <>
@@ -123,8 +138,12 @@ export default function Home() {
         <div className="hero">
           <h1>Valley For All</h1>
           <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
-          <img onClick={handleBricksClick} src={bricks} alt="fundraising status" />
-          <button onClick={handleClick} className="link">Donate today</button>
+          <a href="https://uncorkedwineshops.com/event/leadership-hermosa-virtual-tasting/" target="_blank" rel="noreferrer">
+            <img src={winecheese} alt="virtual wine and cheese tasting on 4/28 at 6 pm" />
+          </a>
+          <div className="linkPadding">
+            <a href="https://uncorkedwineshops.com/event/leadership-hermosa-virtual-tasting/" target="_blank" rel="noreferrer" className="link">buy a ticket</a>
+          </div>
         </div>
       </StyledHome>
       {/* <Ticker /> */}

@@ -8,6 +8,9 @@ import remax from '../assets/images/sponsors/remax.jpg';
 import culturedslice from '../assets/images/sponsors/culturedslice.jpg';
 import hermosacyclery from '../assets/images/sponsors/hermosacyclery.png';
 import bchd from '../assets/images/sponsors/bchd.jpeg';
+import kiwanis from '../assets/images/sponsors/kiwanis.png';
+import socalgas from '../assets/images/sponsors/socalgas.jpg';
+
 
 const StyledSponsors = styled.div`
   width: 100%;
@@ -34,10 +37,15 @@ const StyledSponsors = styled.div`
 
   .sponsors {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 1rem;
     padding-bottom: 1rem;
     align-items: center;
+
+    a {
+      padding: 10px;
+    }
   }
   .border {
     height: 1px;
@@ -133,7 +141,7 @@ export default function Sponsors() {
       <h2 className="effect-shine">Thank you to our sponsors!</h2>
       <h3>platinum</h3>
       <div className="platinum sponsors">
-        <a href="http://www.levinehomes.com/">
+        <a href="http://www.levinehomes.com/" target="_blank" rel="noreferrer">
           <img src={levine} alt="Levine Homes"/>
           <p>Levine Homes is a full-service Real Estate Broker and General Contractor.  We will help you prepare and sell your home or help you find a new home and make it your dream home.  Levine Homes is The South Bay's best choice for Real Estate & Construction.</p>
         </a>
@@ -141,7 +149,7 @@ export default function Sponsors() {
       <div className="border"></div>
       <h3>gold</h3>
       <div className="gold sponsors">
-        <a href="http://www.tortugawealth.com/">
+        <a href="http://www.tortugawealth.com/" target="_blank" rel="noreferrer">
           <img src={tortuga} alt="Tortuga Wealth Management"/>
         </a>
       </div>
@@ -150,20 +158,26 @@ export default function Sponsors() {
       <div className="silver sponsors">
         <h4 className="silver">Ryan and Karen Nowicki</h4>
         
-        <a href="https://devrazandell.com/">
+        <a href="https://devrazandell.com/" target="_blank" rel="noreferrer">
           <img src={remax} alt="RE/MAX Devra Zandell"/>
         </a>
-        <a href="https://www.culturedslice.com/">
+        <a href="https://www.culturedslice.com/" target="_blank" rel="noreferrer">
           <img src={culturedslice} alt="Cultured Slice"/>
         </a>
-        <a href="https://www.hermosacyclery.com/">
+        <a href="https://www.hermosacyclery.com/" target="_blank" rel="noreferrer">
           <img src={hermosacyclery} alt="Hermosa Cyclery"/>
+        </a>
+        <a href="https://www.socalgas.com/" target="_blank" rel="noreferrer">
+          <img src={socalgas} alt="So Cal Gas"/>
+        </a>
+        <a href="http://hermosakiwanis.org/" target="_blank" rel="noreferrer">
+          <img src={kiwanis} alt="Kiwanis Hermosa Beach"/>
         </a>
       </div>
       <div className="border"></div>
       <h3>financial supporter</h3>
       <div className = "supporter sponsors">
-        <a href="https://bchd.org/">
+        <a href="https://bchd.org/" target="_blank" rel="noreferrer">
           <img src={bchd} alt="Beach Cities Health District"/>
         </a>
       </div>

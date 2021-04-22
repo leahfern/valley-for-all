@@ -152,6 +152,9 @@ export default function Sponsors() {
         <a href="http://www.tortugawealth.com/" target="_blank" rel="noreferrer">
           <img src={tortuga} alt="Tortuga Wealth Management"/>
         </a>
+        <a href="http://hermosakiwanis.org/" target="_blank" rel="noreferrer">
+          <img src={kiwanis} alt="Kiwanis Hermosa Beach"/>
+        </a>
       </div>
       <div className="border"></div>
       <h3>silver</h3>
@@ -169,9 +172,6 @@ export default function Sponsors() {
         </a>
         <a href="https://www.socalgas.com/" target="_blank" rel="noreferrer">
           <img src={socalgas} alt="So Cal Gas"/>
-        </a>
-        <a href="http://hermosakiwanis.org/" target="_blank" rel="noreferrer">
-          <img src={kiwanis} alt="Kiwanis Hermosa Beach"/>
         </a>
       </div>
       <div className="border"></div>

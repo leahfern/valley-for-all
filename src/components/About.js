@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import PhotoGallery from './PhotoGallery';
 import ReactGA from 'react-ga';
-import {useHistory} from 'react-router';
+
+ReactGA.initialize("UA-193586281-1");
 
 const StyledAbout = styled.div`
   margin: 0 auto;
@@ -107,7 +108,6 @@ const StyledOrg = styled.div`
 `
 
 export default function About() {
-  const history = useHistory();
   const star = <FontAwesomeIcon icon={faStar} />
 
   useEffect(() => {

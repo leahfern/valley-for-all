@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import {useHistory} from 'react-router';
-import thermometer from '../assets/images/thermometer.png';
+// import {useHistory} from 'react-router';
+// import thermometer from '../assets/images/thermometer.png';
 // import bricks from '../assets/images/social-bricks.png';
 import winecheese from '../assets/images/LHBWC.jpg';
 import ReactGA from 'react-ga';
@@ -114,17 +114,19 @@ const StyledHome = styled.div`
 
 export default function Home() {
 
-  const history = useHistory();
+  // const history = useHistory();
+
+  ReactGA.initialize("UA-193586281-1");
 
   useEffect(() => {
         //report page view
     ReactGA.pageview('/')
   }, [])
   
-  const handleClick = e => {
-    e.preventDefault();
-    history.push('/donate');
-  }
+  // const handleClick = e => {
+  //   e.preventDefault();
+  //   history.push('/donate');
+  // }
 
   // const handleBricksClick = e => {
   //   e.preventDefault();

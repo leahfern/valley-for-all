@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import PayPalTest from './PayPalTest';
+// import PayPalTest from './PayPalTest';
 import ReactGA from 'react-ga';
 import paver from '../assets/images/paver.png';
 
@@ -203,6 +203,7 @@ export default function BrickUpgrade() {
 
   const { name, email, phone, brick, amount, brickName } = formValues;
 
+  ReactGA.initialize("UA-193586281-1");
 
   useEffect(() => {
 
@@ -374,12 +375,12 @@ export default function BrickUpgrade() {
       </form>
       {(checkout === true) 
         ? <div className="payment-div">
-          <PayPalTest 
+          {/* <PayPalTest 
             total={formValues.amount}
             setFormValues={setFormValues}
             type={`${brick} brick upgrade`}
             order={formValues}
-          />
+          /> */}
         </div> 
 
         : ''

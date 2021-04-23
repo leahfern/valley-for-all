@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
-import PayPalTest from './PayPalTest';
+// import PayPalTest from './PayPalTest';
 import ReactGA from 'react-ga';
 
 const StyledDonate = styled.div`
@@ -107,6 +107,7 @@ export default function Donate() {
   const [checkout, setCheckout] = useState(false);
   const [formValues, setFormValues] = useState(initialValues)
 
+  ReactGA.initialize("UA-193586281-1");
   useEffect(() => {
 
     //report page view
@@ -201,12 +202,12 @@ export default function Donate() {
 
       {(checkout === true) 
         ? <div className="payment-div">
-          <PayPalTest 
+          {/* <PayPalTest 
             total={formValues.amount}
             setFormValues={setFormValues}
             type="Donation"
             order={formValues}
-          />
+          /> */}
         </div> 
         : ''
       }

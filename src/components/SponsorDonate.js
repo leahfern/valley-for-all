@@ -119,6 +119,8 @@ export default function SponsorDonate() {
 
   const { companyName, contactName, contactTitle, email, phone, level, amount } = formValues;
 
+  ReactGA.initialize("UA-193586281-1");
+
   useEffect(() => {
       //report page view
     ReactGA.pageview('/sponsorship/payment')

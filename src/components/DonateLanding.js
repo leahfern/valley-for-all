@@ -127,6 +127,8 @@ export default function DonateLanding() {
 
   let history = useHistory();
 
+  ReactGA.initialize("UA-193586281-1");
+
   useEffect(() => {
 
     //report page view

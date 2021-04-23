@@ -74,7 +74,7 @@ export default function PayPalTest(props) {
   // const [error, setError] = React.useState(null);
   // const { total, setFormValues, type, order } = props;
 
-  const paypalRef = React.useRef();
+  // const paypalRef = React.useRef();
   // const autoResponseTemplateID = "template_80n79yr";
   // const autoResponseServiceID = "service_a8kogah";
 
@@ -201,7 +201,7 @@ export default function PayPalTest(props) {
       <h4>Please select payment type:</h4>
       <Link to='/donate/venmo' className="venmopayment"><img src={venmo} alt="venmo" /></Link>
       <Link to="/donate/check" className="checkpayment">Check Payment</Link>
-      <div ref={paypalRef} />
+      {/* <div ref={paypalRef} /> */}
       <p className="assistance">Questions or need assistance? Contact Eric Foster at <a href="mailto:valleyforall@gmail.com">ValleyForAll@gmail.com</a> or <a href="tel:310-877-3822">310-877-3822</a></p>
     </StyledTest>
   )

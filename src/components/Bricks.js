@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ReactGA from 'react-ga';
 // import paver from '../assets/images/paver.png';
 import waitlist from '../assets/images/paver-waitlist.png';
+import LoaderHolder from './LoaderHolder';
 
 const StyledBricks = styled.div`
   max-width: 90%;
@@ -202,13 +203,14 @@ const initialValues = {
 }
 
 export default function Bricks() {
-  const [checkout, setCheckout] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState(initialValues);
   const [allowed, setAllowed] = useState(48);
   const [remaining, setRemaining] = useState(48);
 
   const { name, email, phone, brick, brickName } = formValues;
 
+  ReactGA.initialize("UA-193586281-1");
 
   useEffect(() => {
 
@@ -261,11 +263,13 @@ export default function Bricks() {
       });
       await response.json().then(res => {
         if (res.message === "Successfully Inserted") {
-          alert("Thank you for your brick request! We will contact you by phone or email to finalize payment if we can add it to our project.")
+          alert("Thank you for your brick request! We will contact you by phone or email to finalize payment if we can add it to our project.");
         }
+        setLoading(false);
       })
     } catch (err) {
-      console.log(err)
+      alert("Request failed. Please try again and contact ValleyForAll@gmail.com if you continue to receive errors. Thanks for your patience!");
+      setLoading(false);
     }
     setFormValues(initialValues);
   }
@@ -380,7 +384,7 @@ export default function Bricks() {
           <span id="count">Characters remaining: {remaining}</span>
         </label>
         <div className="centered">
-          <button className="checkout-button">Submit Waitlist Request</button>
+          <button className="checkout-button" onClick={e => setLoading(true)}>{loading ? <LoaderHolder /> : 'Submit Waitlist Request'}</button>
         </div>
       </form>
       <p className="nonprofit">All Donations are 100% tax deductible (Tax ID # 06-1721283). A donation by check can be mailed (and is payable) to Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254. Please write “Valley for All” in the check memo. We also offer Venmo as a method of donation. A confirmation email with your message will be sent 7-10 days after your donation has been received and processed.</p>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';∂
 import { useHistory } from 'react-router';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
@@ -147,6 +147,8 @@ const StyledSponsorship = styled.div`
 export default function Sponsorship() {
 
   const history = useHistory();
+
+  ReactGA.initialize("UA-193586281-1");
 
   useEffect(() => {
     //report page view

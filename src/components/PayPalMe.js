@@ -41,6 +41,8 @@ const StyledVenmo = styled.div`
 
 export default function Venmo() {
 
+  ReactGA.initialize("UA-193586281-1");
+
   useEffect(() => {
       //report page view
     ReactGA.pageview('/donate/venmo')

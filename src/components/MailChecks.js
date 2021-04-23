@@ -31,6 +31,8 @@ const StyledChecks = styled.div`
 
 export default function MailChecks() {
 
+  ReactGA.initialize("UA-193586281-1");
+
   useEffect(() => {
       //report page view
     ReactGA.pageview('/donate/check')

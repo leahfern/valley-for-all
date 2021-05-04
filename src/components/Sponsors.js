@@ -93,6 +93,8 @@ const StyledSponsors = styled.div`
     a {
       width: 125px;
       max-width: 40%;
+      color: black;
+      text-decoration: none;
     }
     font-size: 1rem;
     h4 {
@@ -173,6 +175,8 @@ export default function Sponsors() {
         
         <a href="https://devrazandell.com/" target="_blank" rel="noreferrer">
           <img src={remax} alt="RE/MAX Devra Zandell"/>
+          <br />
+          Devra Zandell
         </a>
         <a href="https://www.culturedslice.com/" target="_blank" rel="noreferrer">
           <img src={culturedslice} alt="Cultured Slice"/>

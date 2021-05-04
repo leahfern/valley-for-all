@@ -10,6 +10,8 @@ import hermosacyclery from '../assets/images/sponsors/hermosacyclery.png';
 import bchd from '../assets/images/sponsors/bchd.jpeg';
 import kiwanis from '../assets/images/sponsors/kiwanis.png';
 import socalgas from '../assets/images/sponsors/socalgas.jpg';
+import chevron from '../assets/images/sponsors/chevron.jpg';
+import athens from '../assets/images/sponsors/athens.jpg';
 
 
 const StyledSponsors = styled.div`
@@ -39,8 +41,7 @@ const StyledSponsors = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem .5rem;
     align-items: center;
 
     a {
@@ -172,6 +173,12 @@ export default function Sponsors() {
         </a>
         <a href="https://www.socalgas.com/" target="_blank" rel="noreferrer">
           <img src={socalgas} alt="So Cal Gas"/>
+        </a>
+        <a href="http://www.chevronelsegundo.com/" target="_blank" rel="noreferrer">
+          <img src={chevron} alt="Chevron El Segundo"/>
+        </a>
+        <a href="https://athensservices.com/" target="_blank" rel="noreferrer">
+          <img src={athens} alt="Athens Services"/>
         </a>
       </div>
       <div className="border"></div>

@@ -10,9 +10,14 @@ import Sponsors from './Sponsors';
 
 const StyledHome = styled.div`
   padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: white;
   max-width: 90%;
   margin: 0 auto;
+  height: 80vh;
+  min-height: 400px;
   h1 {
     font-size: 4.5rem;
     text-transform: uppercase;
@@ -50,7 +55,7 @@ const StyledHome = styled.div`
     }
   }
   .linkPadding {
-    padding-top: 1rem;
+    padding-top: 3rem;
     padding-bottom: 5rem;
   }
   a {
@@ -71,9 +76,12 @@ const StyledHome = styled.div`
   }
   @media(max-width: 787px) {
     h1 {
-      margin-top: 9rem;
-      font-size: 4rem;
+      margin-top: 10rem;
+      font-size: 3rem;
     }
+    // .linkPadding {
+    //   padding-bottom: 15rem;
+    // }
   }
   @media(max-width: 500px ) {
     h1 {
@@ -140,11 +148,11 @@ export default function Home() {
         <div className="hero">
           <h1>Valley For All</h1>
           <h3>LEADERSHIP HERMOSA BEACH CLASS OF 2021 PROJECT</h3>
-          <a href="https://uncorkedwineshops.com/event/leadership-hermosa-virtual-tasting/" target="_blank" rel="noreferrer">
+          {/* <a href="https://uncorkedwineshops.com/event/leadership-hermosa-virtual-tasting/" target="_blank" rel="noreferrer">
             <img src={winecheese} alt="virtual wine and cheese tasting on 4/28 at 6 pm" />
-          </a>
+          </a> */}
           <div className="linkPadding">
-            <a href="https://uncorkedwineshops.com/event/leadership-hermosa-virtual-tasting/" target="_blank" rel="noreferrer" className="link">buy a ticket</a>
+            <a href="https://uncorkedwineshops.com/event/leadership-hermosa-virtual-tasting/" target="_blank" rel="noreferrer" className="link">learn more</a>
           </div>
         </div>
       </StyledHome>

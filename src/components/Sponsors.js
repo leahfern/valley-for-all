@@ -19,6 +19,9 @@ const StyledSponsors = styled.div`
   background-color: white;
   z-index: 1;
   padding-bottom: 3rem;
+  .sponsorship-page {
+    padding-top: 12rem;
+  }
   h2 {
     padding: 4rem 0 2rem 0;
     font-size: 2rem;
@@ -139,14 +142,20 @@ export default function Sponsors() {
 
   return (
     <StyledSponsors>
-      <h2 className="effect-shine">Thank you to our sponsors!</h2>
+      <h2 className={location === '/sponsorship' ? 'sponsorship-page' : ''}>
+        {location === '/sponsorship'
+          ? 'thank you to valley for all sponsors'
+          : 'Thank you to our sponsors!'
+        }
+        
+      </h2>
       <h3>platinum</h3>
       <div className="platinum sponsors">
         <a href="http://www.levinehomes.com/" target="_blank" rel="noreferrer">
           <img src={levine} alt="Levine Homes"/>
           <p>Levine Homes is a full-service Real Estate Broker and General Contractor.  We will help you prepare and sell your home or help you find a new home and make it your dream home.  Levine Homes is The South Bay's best choice for Real Estate & Construction.</p>
         </a>
-      </div>
+      </div>                          
       <div className="border"></div>
       <h3>gold</h3>
       <div className="gold sponsors">
@@ -188,7 +197,7 @@ export default function Sponsors() {
           <img src={bchd} alt="Beach Cities Health District"/>
         </a>
       </div>
-      <button onClick={handleClick} className={location === "/sponsorship" ? "button hidden" : "button"} >Sponsor Us</button>
+      {/* <button onClick={handleClick} className={location === "/sponsorship" ? "button hidden" : "button"} >Sponsor Us</button> */}
     </StyledSponsors>
   )
 }

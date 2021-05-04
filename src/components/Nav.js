@@ -257,7 +257,7 @@ export default function Nav() {
             <div className="underline"></div>
           </div>
           <div className="link-item">
-            <Link to="/sponsorship">Sponsor Us</Link>
+            <Link to="/sponsorship">Sponsors</Link>
             <div className="underline"></div>
           </div>
         </div>

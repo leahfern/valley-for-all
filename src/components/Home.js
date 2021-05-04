@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import winecheese from '../assets/images/LHBWC.jpg';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
+import { Link } from 'react-router-dom';
 // import Ticker from './Ticker';
 
 const StyledHome = styled.div`
@@ -152,7 +153,7 @@ export default function Home() {
             <img src={winecheese} alt="virtual wine and cheese tasting on 4/28 at 6 pm" />
           </a> */}
           <div className="linkPadding">
-            <a href="https://uncorkedwineshops.com/event/leadership-hermosa-virtual-tasting/" target="_blank" rel="noreferrer" className="link">learn more</a>
+            <Link to="/about" className="link">learn more</Link>
           </div>
         </div>
       </StyledHome>

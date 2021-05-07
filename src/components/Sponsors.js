@@ -12,6 +12,7 @@ import kiwanis from '../assets/images/sponsors/kiwanis.png';
 import socalgas from '../assets/images/sponsors/socalgas.jpg';
 import chevron from '../assets/images/sponsors/chevron.jpg';
 import athens from '../assets/images/sponsors/athens.jpg';
+import hbfop from '../assets/images/sponsors/hbfop.png';
 
 
 const StyledSponsors = styled.div`
@@ -156,6 +157,11 @@ export default function Sponsors() {
         <a href="http://www.levinehomes.com/" target="_blank" rel="noreferrer">
           <img src={levine} alt="Levine Homes"/>
           <p>Levine Homes is a full-service Real Estate Broker and General Contractor.  We will help you prepare and sell your home or help you find a new home and make it your dream home.  Levine Homes is The South Bay's best choice for Real Estate & Construction.</p>
+        </a>
+        <a href="http://www.hbfop.org/" target="_blank" rel="noreferrer">
+          <img src={hbfop} alt="Hermosa Beach Friends of the Parks"/>
+            <p>Hermosa Beach Friends of the Parks (FOP) is a 501(c)(3) non-profit corporation, dedicated to identifying, prioritizing and fundraising for parks and recreation improvements throughout the City of Hermosa Beach. In addition, FOP promotes the use of Hermosa Beach parks to the community and promotes the parks as a valuable resource to the city's residents and visitors. HBFOP is the official legacy partner of this year’s Valley For All project and a proud supporter of Leadership Hermosa Beach. 
+          </p>
         </a>
       </div>                          
       <div className="border"></div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 import styled from 'styled-components';
 
 import tortuga from '../assets/images/sponsors/tortuga.png';
@@ -136,12 +136,12 @@ const StyledSponsors = styled.div`
 export default function Sponsors() {
 
   const location = window.location.pathname;
-  let history = useHistory();
+  // let history = useHistory();
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    history.push('/sponsorship');
-  }
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   history.push('/sponsorship');
+  // }
 
   return (
     <StyledSponsors>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // import {useHistory} from 'react-router';
 // import thermometer from '../assets/images/thermometer.png';
 // import bricks from '../assets/images/social-bricks.png';
-import winecheese from '../assets/images/LHBWC.jpg';
+// import winecheese from '../assets/images/LHBWC.jpg';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
 import { Link } from 'react-router-dom';

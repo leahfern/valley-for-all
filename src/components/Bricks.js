@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ReactGA from 'react-ga';
 // import paver from '../assets/images/paver.png';
 import waitlist from '../assets/images/paver-waitlist.png';
+import soldOut from '../assets/images/paver-soldout.png';
 import LoaderHolder from './LoaderHolder';
 
 const StyledBricks = styled.div`
@@ -285,8 +286,9 @@ export default function Bricks() {
           Purchase an engraved brick and cement your legacy in Valley Park!
         </p>
         <div className="img-container">
-          <img src={waitlist} alt="example paver from previous LHB project" />
+          <img src={soldOut} alt="example paver from previous LHB project" />
         </div>
+        <p className="update"><span>UPDATE 5/15</span>: The waitlist is now closed. Construction is underway soon. Stay tuned for details about our unveiling event in Valley Park in late June!</p>
         <p className="update"><span>UPDATE 4/21</span>: Due to popular demand, brick sales have paused. We are accepting names to be added to our waitlist. Please fill out the order form below and should capacity allow, we will contact you to coordinate payment. Thank you to all our wonderful supporters! </p>
       </section>
       <section id="middle">
@@ -294,7 +296,7 @@ export default function Bricks() {
         
         <p>Whether you utilize Valley Park's beautiful facilities through local organizations, for special events, or are simply an advocate of green spaces, you now have a limited time to engrave your name into a brick that will become a staple of this park for years to come. All proceeds support the Valley For All project.</p>
       </section>
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <h4> Waitlist Form</h4>
         <label>
           Name:
@@ -386,7 +388,7 @@ export default function Bricks() {
         <div className="centered">
           <button className="checkout-button" onClick={e => setLoading(true)}>{loading ? <LoaderHolder /> : 'Submit Waitlist Request'}</button>
         </div>
-      </form>
+      </form> */}
       <p className="nonprofit">All Donations are 100% tax deductible (Tax ID # 06-1721283). A donation by check can be mailed (and is payable) to Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254. Please write “Valley for All” in the check memo. We also offer Venmo as a method of donation. A confirmation email with your message will be sent 7-10 days after your donation has been received and processed.</p>
 
     </StyledBricks>

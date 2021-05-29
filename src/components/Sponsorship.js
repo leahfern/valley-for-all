@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+// import styled from 'styled-components';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faStar } from '@fortawesome/free-solid-svg-icons';
 // import {Link} from 'react-router-dom';∂
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 import ReactGA from 'react-ga';
 import Sponsors from './Sponsors';
 
-const star = <FontAwesomeIcon icon={faStar} />
+// const star = <FontAwesomeIcon icon={faStar} />
   
-const StyledSponsorship = styled.div`
+// const StyledSponsorship = styled.div`
   // margin: 0 auto;
   // padding-top: 50px;
   // padding-bottom: 3rem;
@@ -141,12 +141,12 @@ const StyledSponsorship = styled.div`
   //     width: 100%;
   //   }
   // }
-`;
+// `;
 
 
 export default function Sponsorship() {
 
-  const history = useHistory();
+  // const history = useHistory();
 
   ReactGA.initialize("UA-193586281-1");
 
@@ -155,10 +155,10 @@ export default function Sponsorship() {
   ReactGA.pageview('/sponsorship')
 }, [])
 
-  const handleClick = e => {
-    e.preventDefault();
-    history.push('/sponsorship/payment');
-  }
+  // const handleClick = e => {
+  //   e.preventDefault();
+  //   history.push('/sponsorship/payment');
+  // }
 
   return (
     <>

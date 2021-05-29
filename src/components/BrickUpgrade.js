@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 // import PayPalTest from './PayPalTest';
 import ReactGA from 'react-ga';
-import paver from '../assets/images/paver.png';
+// import paver from '../assets/images/paver.png';
+import {useHistory} from 'react-router';
 
 const StyledBricks = styled.div`
   max-width: 90%;
@@ -186,22 +187,24 @@ const StyledBricks = styled.div`
   }
 `
 
-const initialValues = {
-  name: '',
-  email: '',
-  phone: '',
-  brick: '',
-  amount: '',
-  brickName: ''
-}
+// const initialValues = {
+//   name: '',
+//   email: '',
+//   phone: '',
+//   brick: '',
+//   amount: '',
+//   brickName: ''
+// }
 
 export default function BrickUpgrade() {
-  const [checkout, setCheckout] = useState(false);
-  const [formValues, setFormValues] = useState(initialValues);
-  const [allowed, setAllowed] = useState(48);
-  const [remaining, setRemaining] = useState(48);
+  // const [checkout, setCheckout] = useState(false);
+  // const [formValues, setFormValues] = useState(initialValues);
+  // const [allowed, setAllowed] = useState(48);
+  // const [remaining, setRemaining] = useState(48);
 
-  const { name, email, phone, brick, amount, brickName } = formValues;
+  // const { name, email, phone, brick, amount, brickName } = formValues;
+
+  const history = useHistory();
 
   ReactGA.initialize("UA-193586281-1");
 
@@ -209,45 +212,47 @@ export default function BrickUpgrade() {
 
     //report page view
     ReactGA.pageview('/bricks')
-  }, [])
+    //redirect to main bricks page
+    history.push('/bricks')
+  }, [history])
 
-  const handleChange = e => {
-    const { name, value, type, checked } = e.target;
-    const newValue = type === 'checkbox' ? checked : value
-    if (name === "brick") {
-      setAllowed(
-        value === "large"
-        ? 96
-        : 48
-      )
-    }
-    setFormValues({ ...formValues, [name]: newValue });
-    if (name === "brickName") {
-      const trimmedValue = value.split('/').join('');
-      setRemaining(allowed - trimmedValue.length);
-    }
-  }
+  // const handleChange = e => {
+  //   const { name, value, type, checked } = e.target;
+  //   const newValue = type === 'checkbox' ? checked : value
+  //   if (name === "brick") {
+  //     setAllowed(
+  //       value === "large"
+  //       ? 96
+  //       : 48
+  //     )
+  //   }
+  //   setFormValues({ ...formValues, [name]: newValue });
+  //   if (name === "brickName") {
+  //     const trimmedValue = value.split('/').join('');
+  //     setRemaining(allowed - trimmedValue.length);
+  //   }
+  // }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setCheckout(true);
-    try {
-      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=BrickUpgrades-NOEDIT', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify([[name, email, phone, brick, amount, brickName, new Date().toLocaleString()]])
-      });
-      await response.json()
-    } catch (err) {
-      console.log(err)
-    }
-  }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setCheckout(true);
+  //   try {
+  //     const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=BrickUpgrades-NOEDIT', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify([[name, email, phone, brick, amount, brickName, new Date().toLocaleString()]])
+  //     });
+  //     await response.json()
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
 
   return (
     <StyledBricks>
-      <h2>
+      {/* <h2>
         Valley For All
       </h2>
       <h3>UPGRADE TO A Brick</h3>
@@ -372,21 +377,22 @@ export default function BrickUpgrade() {
         <div className="centered">
           <button className={checkout ? "checkout-button hidden" : "checkout-button"}>Continue</button>
         </div>
-      </form>
-      {(checkout === true) 
-        ? <div className="payment-div">
-          {/* <PayPalTest 
-            total={formValues.amount}
-            setFormValues={setFormValues}
-            type={`${brick} brick upgrade`}
-            order={formValues}
-          /> */}
-        </div> 
+      </form> */}
+      {
+      // (checkout === true) 
+      //   ? <div className="payment-div">
+      //     {/* <PayPalTest 
+      //       total={formValues.amount}
+      //       setFormValues={setFormValues}
+      //       type={`${brick} brick upgrade`}
+      //       order={formValues}
+      //     /> */}
+      //   </div> 
 
-        : ''
+      //   : ''
       }
-      <p className="nonprofit">All Donations are 100% tax deductible. PayPal takes a fee of up to 2.9% + $0.30 from each donation. To avoid fees, please consider sending a check.<br />
-      Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254</p>
+      {/* <p className="nonprofit">All Donations are 100% tax deductible. PayPal takes a fee of up to 2.9% + $0.30 from each donation. To avoid fees, please consider sending a check.<br />
+      Leadership Hermosa Beach, PO Box 362, Hermosa Beach, CA 90254</p> */}
 
     </StyledBricks>
   )

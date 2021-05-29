@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ReactGA from 'react-ga';
 // import paver from '../assets/images/paver.png';
-import waitlist from '../assets/images/paver-waitlist.png';
+// import waitlist from '../assets/images/paver-waitlist.png';
 import soldOut from '../assets/images/paver-soldout.png';
-import LoaderHolder from './LoaderHolder';
+// import LoaderHolder from './LoaderHolder';
 
 const StyledBricks = styled.div`
   max-width: 90%;
@@ -195,21 +195,21 @@ const StyledBricks = styled.div`
   }
 `
 
-const initialValues = {
-  name: '',
-  email: '',
-  phone: '',
-  brick: '',
-  brickName: ''
-}
+// const initialValues = {
+//   name: '',
+//   email: '',
+//   phone: '',
+//   brick: '',
+//   brickName: ''
+// }
 
 export default function Bricks() {
-  const [loading, setLoading] = useState(false);
-  const [formValues, setFormValues] = useState(initialValues);
-  const [allowed, setAllowed] = useState(48);
-  const [remaining, setRemaining] = useState(48);
+  // const [loading, setLoading] = useState(false);
+  // const [formValues, setFormValues] = useState(initialValues);
+  // const [allowed, setAllowed] = useState(48);
+  // const [remaining, setRemaining] = useState(48);
 
-  const { name, email, phone, brick, brickName } = formValues;
+  // const { name, email, phone, brick, brickName } = formValues;
 
   ReactGA.initialize("UA-193586281-1");
 
@@ -219,61 +219,61 @@ export default function Bricks() {
     ReactGA.pageview('/bricks')
   }, [])
 
-  const handleChange = e => {
-    const { name, value, type, checked } = e.target;
-    const newValue = type === 'checkbox' ? checked : value
-    if (name === "brick") {
-      setAllowed(
-        value === "large"
-        ? 96
-        : 48
-      )
-    }
-    setFormValues({ ...formValues, [name]: newValue });
-    if (name === "brickName") {
-      const trimmedValue = value.split('/').join('');
-      setRemaining(allowed - trimmedValue.length);
-    }
-  }
+  // const handleChange = e => {
+  //   const { name, value, type, checked } = e.target;
+  //   const newValue = type === 'checkbox' ? checked : value
+  //   if (name === "brick") {
+  //     setAllowed(
+  //       value === "large"
+  //       ? 96
+  //       : 48
+  //     )
+  //   }
+  //   setFormValues({ ...formValues, [name]: newValue });
+  //   if (name === "brickName") {
+  //     const trimmedValue = value.split('/').join('');
+  //     setRemaining(allowed - trimmedValue.length);
+  //   }
+  // }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    //********WHILE SALES ARE LIVE */
-    // setCheckout(true);
-    // try {
-    //   const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Bricks-NOEDIT', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify([[name, email, phone, brick, brickName, new Date().toLocaleString()]])
-    //   });
-    //   await response.json()
-    // } catch (err) {
-    //   console.log(err)
-    // }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   //********WHILE SALES ARE LIVE */
+  //   // setCheckout(true);
+  //   // try {
+  //   //   const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Bricks-NOEDIT', {
+  //   //     method: 'POST',
+  //   //     headers: {
+  //   //       'Content-Type': 'application/json'
+  //   //     },
+  //   //     body: JSON.stringify([[name, email, phone, brick, brickName, new Date().toLocaleString()]])
+  //   //   });
+  //   //   await response.json()
+  //   // } catch (err) {
+  //   //   console.log(err)
+  //   // }
 
-    //*****WAITLIST FORM SUBMISSION */
-    try {
-      const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Waitlist-NOEDIT', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify([[name, email, phone, brick, brickName, new Date().toLocaleString()]])
-      });
-      await response.json().then(res => {
-        if (res.message === "Successfully Inserted") {
-          alert("Thank you for your brick request! We will contact you by phone or email to finalize payment if we can add it to our project.");
-        }
-        setLoading(false);
-      })
-    } catch (err) {
-      alert("Request failed. Please try again and contact ValleyForAll@gmail.com if you continue to receive errors. Thanks for your patience!");
-      setLoading(false);
-    }
-    setFormValues(initialValues);
-  }
+  //   //*****WAITLIST FORM SUBMISSION */
+  //   try {
+  //     const response = await fetch('https://v1.nocodeapi.com/leahfern/google_sheets/rkKLSMqOufyVjLPe?tabId=Waitlist-NOEDIT', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify([[name, email, phone, brick, brickName, new Date().toLocaleString()]])
+  //     });
+  //     await response.json().then(res => {
+  //       if (res.message === "Successfully Inserted") {
+  //         alert("Thank you for your brick request! We will contact you by phone or email to finalize payment if we can add it to our project.");
+  //       }
+  //       setLoading(false);
+  //     })
+  //   }catch (err) {
+  //     alert("Request failed. Please try again and contact ValleyForAll@gmail.com if you continue to receive errors. Thanks for your patience!");
+  //     setLoading(false);
+  //   }
+  //   setFormValues(initialValues);
+  // }
 
   return (
     <StyledBricks>
